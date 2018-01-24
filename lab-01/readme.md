@@ -245,12 +245,12 @@ Next, using the same loop print out the value of each character as a numeric val
 std::cout << (int) str[counter] << std::endl;
 ```
 #### Questions
-1 What is the maximum length of a string you can store in this array? How many bytes long is that?
-2 What is the memory address of the null character?
-3 What happens if you try to assign a string longer than the max length?  If you are unsure, try it!
-4 What do the numeric values printed out when a `char` is cast to an int represent?
-5 What happens if you print the contents of the array without making an assignment (initializing the array)?
-6 What happens if you print the contents of the array past the `null` character?
+1. What is the maximum length of a string you can store in this array? How many bytes long is that?
+2. What is the memory address of the null character?
+3. What happens if you try to assign a string longer than the max length?  If you are unsure, try it!
+4. What do the numeric values printed out when a `char` is cast to an int represent?
+5. What happens if you print the contents of the array without making an assignment (initializing the array)?
+6. What happens if you print the contents of the array past the `null` character?
 
 ## Google Form submission
 [Form Link](#)
