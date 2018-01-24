@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int main (int argc, char** argv) {
 
 	//Declare an int variable, assign it the value 5
@@ -11,19 +9,19 @@ int main (int argc, char** argv) {
 	int *numberPtr = &number;
 	
 	//Prints the value of number and its memory address
-	cout << "The variable number is set to: " << number << endl;
-	cout << "The address of number is: " << numberPtr << endl;
+	std::cout << "The variable number is set to: " << number << std::endl;
+	std::cout << "The address of number is: " << numberPtr << std::endl;
 	
 	//Change the value of number using the pointer
 	*numberPtr = 10;
 	
 	//Declare an int array on the stack
 	int array_on_stack[number];
-	cout << "The address of array_on_stack is: " << array_on_stack << endl;
+	std::cout << "The address of array_on_stack is: " << array_on_stack << std::endl;
 	
 	//Declare an int array on the heap
 	int *array_on_heap = new int[number];
-	cout << "The address of array_on_heap is: " << array_on_heap << endl;
+	std::cout << "The address of array_on_heap is: " << array_on_heap << std::endl;
 	
 	//Set each element of array_on_heap
 	for (int i = 0; i < number; i++) 
