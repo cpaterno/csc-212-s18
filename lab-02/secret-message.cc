@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 //Function Prototype
 void printMessage(char* charray, int typeSize);
 
@@ -28,7 +26,7 @@ int main (int argc, char** argv) {
 		printMessage((char*)&secret_message[i],typeSize);
 	}
 	
-	cout<<endl;
+	std::cout << std::endl;
 	
 	return 0;
 }
@@ -38,7 +36,7 @@ int main (int argc, char** argv) {
 void printMessage(char *charray, int typeSize) {
 	for (int j = 0; j < sizeof(long); j++)
 	{
-		cout << charray[j];
+		std::cout << charray[j];
 	}
-	cout<<" ";
+	std::cout << " ";
 }
