@@ -253,4 +253,4 @@ std::cout << (int) str[counter] << std::endl;
 6. What happens if you print the contents of the array past the `null` character?
 
 ## Google Form submission
-[Form Link](#)
+[Form Link](https://goo.gl/forms/jw55Kxq8f7oPn9bs2)
