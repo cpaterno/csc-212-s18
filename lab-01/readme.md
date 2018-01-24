@@ -1,4 +1,4 @@
-# Lab 00: C++, Docker, and CS50, oh my!
+# Lab 01: C++, Docker, and CS50, oh my!
 
 > **IF you ALREADY HAVE docker installed skip [1. Installing Docker](https://github.com/URI-CSC/csc-212-f17/blob/master/lab-00/readme.md#1-installing-docker), and go to ['2. Cleaning a Docker Installation'](https://github.com/URI-CSC/csc-212-f17/blob/master/lab-00/readme.md#2-cleaning-a-docker-installation-optional-for-fresh-installs)**
 
