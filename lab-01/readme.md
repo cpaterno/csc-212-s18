@@ -206,7 +206,7 @@ You will notice some new information in your debugger window, under Local Variab
 
 ## 6. Exercises
 
->___Please record the answers to the following questions on a separate file.___
+>___Please record the answers to the following questions on a separate file.  Your attendance will be recorded after you submit these answers to the Google Form.___
 
 ### 6.1: Exercise 1
 
@@ -251,3 +251,6 @@ std::cout << (int) str[counter] << std::endl;
 2.4. What do the numeric values printed out when a `char` is cast to an int represent?
 2.5. What happens if you print the contents of the array without making an assignment (initializing the array)?
 2.6 What happens if you print the contents of the array past the `null` character?
+
+## Google Form submission
+[Form Link](#)
