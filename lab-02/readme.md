@@ -69,16 +69,16 @@ Now set a breakpoint at line `35` and type `debug50 main` to run the program aga
 
 ## 4. Declaring and instantiating an array on the stack and on the heap using `int *`
 
-The next two assignments create an array on the stack, and an array on the heap.
+The next two assignments create an array on the stack, and an array on the heap. You should read [this pdf](http://cslibrary.stanford.edu/102/PointersAndMemory.pdf) regarding stack, heap, and memory allocation to familiarize yourself on this topic. Section 1 is simply an introduction to pointers, so you may skip it if you would like, but sections 2 through 4 contain information that is important in understanding how pointers work.
 
 ```C++
 //Declare an int array on the stack
 int array_on_stack[number];
-cout << "The address of array_on_stack is: " << array_on_stack << endl;
+std::cout << "The address of array_on_stack is: " << array_on_stack << std::endl;
 
 //Declare an int array on the heap
 int *array_on_heap = new int[number];
-cout << "The address of array_on_heap is: " << array_on_heap << endl;
+std::cout << "The address of array_on_heap is: " << array_on_heap << std::endl;
 
 //Set each element of array_on_heap
 for (int i = 0; i < number; i++)
@@ -208,7 +208,7 @@ for (int i = 0; i < arraySize; i++)
 	printMessage((char*)&secret_message[i],typeSize);
 }
 
-cout<<endl;
+std::cout << std::endl;
 ```
 
 > **Question 19:** In your own words describe how to create a secret message of your own.  What is the process to create an integer that encodes a word?  How many letters can an `int` hold?  How many letters can a `long` hold?
