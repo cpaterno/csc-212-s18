@@ -222,11 +222,11 @@ Remember to print newlines after every value to help readability (`std::endl` or
 
 #### Questions
 
-1.1. What is the range of the memory addresses of the array?  (Optionally, try changing the size of the array to see what happens)
-1.2. What is the difference between the addresses of two consecutive elements in the array?  Is this constant throughout the whole array?
-1.3. How do these factors change when you declare your array as a `long int` instead of `int`?
-1.4. How do these factors change when you declare your array as a `double` instead of `int`?
-1.5. How do these factors change when you declare your array as a `char` instead of `int`?
+1. What is the range of the memory addresses of the array?  (Optionally, try changing the size of the array to see what happens)
+2. What is the difference between the addresses of two consecutive elements in the array?  Is this constant throughout the whole array?
+3. How do these factors change when you declare your array as a `long int` instead of `int`?
+4. How do these factors change when you declare your array as a `double` instead of `int`?
+5. How do these factors change when you declare your array as a `char` instead of `int`?
 
 ### 6.2: Exercise 2
 
