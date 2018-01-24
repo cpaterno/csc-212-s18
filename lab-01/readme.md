@@ -206,11 +206,13 @@ You will notice some new information in your debugger window, under Local Variab
 
 ## 6. Exercises
 
->___Please record the answers to your question on notebook paper. Put your name at the top, because this will also count as attendance.___
+>___Please record the answers to the following questions on a separate file.___
 
 ### 6.1: Exercise 1
 
-For this exercise you will create an integer array of 10 elements and print the memory addresses of each element.  You can fill the array with any values you like, or leave it empty.  The contents of the array do not matter for this exercise.  The syntax to print the 3rd element in an array is as follows: 
+> If you are not familiar with arrays, read [this](http://www.cplusplus.com/doc/tutorial/arrays/) first.
+
+For this exercise you will create an integer array of 10 elements and print the memory addresses of each element. You can fill the array with any values you like, or leave it empty.  The contents of the array do not matter for this exercise.  The syntax to print the memory address of the 3rd element in an array is as follows: 
 
 ```c++
 std::cout << &array[2] << std::endl;
@@ -218,29 +220,34 @@ std::cout << &array[2] << std::endl;
 
 Remember to print newlines after every value to help readability (`std::endl` or `'\n'`). Make sure to `#include <iostream>` so that you can use `std::cout` to print your results for each exercise.
 
-#### Questions to consider
+#### Questions
 
-1. What is the range of the memory addresses of the array?  Why?  If you are unsure, try changing the size of the array to see what happens.
-2. What is the difference between the addresses of two consecutive elements in the array?  Is this constant throughout the whole array?
-3. How do these factors change when you declare your array as a `long int` instead of `int`?  As a `char`?
+1.1. What is the range of the memory addresses of the array?  (Optionally, try changing the size of the array to see what happens)
+1.2. What is the difference between the addresses of two consecutive elements in the array?  Is this constant throughout the whole array?
+1.3. How do these factors change when you declare your array as a `long int` instead of `int`?
+1.4. How do these factors change when you declare your array as a `double` instead of `int`?
+1.5. How do these factors change when you declare your array as a `char` instead of `int`?
 
 ### 6.2: Exercise 2
 
+> If you are not familiar with character sequences (strings), read [this](http://www.cplusplus.com/doc/tutorial/ntcs/) first.
+
 For this exercise, you will be creating a character array and use it to investigate C style strings and their behaviors.  Declare and initialize the character array as follows:
 ```c++
-char str[100] = "Hello CSC212";
+char str[15] = "Hello CSC212";
 ```
-Ensure you use double quotes for this operation.  Your program will be able to tell how long the string is due to the `'\0'` or `null` character inserted by the assignment.  
+Ensure you use double quotes for this operation.  Your program will be able to tell how long the string is due to the `'\0'` or `null` character inserted automatically by the assignment.  
 
-Write a loop to traverse the string and print out its length.  You can tell you've reached the end of the string when you find the `null` character (This character is equal to 0).  
+Write a loop to traverse the string and print out its length (number of characters excluding the `null` character).  You can tell you've reached the end of the string when you find the `null` character (This character is always equal to 0).  
 
 Next, using the same loop print out the value of each character as a numeric value.  You can accomplish that with the following line:
 ```c++
 std::cout << (int) str[counter] << std::endl;
 ```
-#### Questions to consider
-1. What is the maximum length of a string you can store in this array? How many bytes long is that?
-2. What is the memory address of the null character?  How many bytes long is your string?
-3. What happens if you try to assign a string longer than the max length?  If you are unsure, try it!
-4. What do the numeric values printed out when a `char` is cast to an int represent?
-5. What happens if you print the contents of the array without making an assignment? Similarly, what happens if you continue past the `null` character?
+#### Questions
+2.1. What is the maximum length of a string you can store in this array? How many bytes long is that?
+2.2. What is the memory address of the null character?
+2.3. What happens if you try to assign a string longer than the max length?  If you are unsure, try it!
+2.4. What do the numeric values printed out when a `char` is cast to an int represent?
+2.5. What happens if you print the contents of the array without making an assignment (initializing the array)?
+2.6 What happens if you print the contents of the array past the `null` character?
