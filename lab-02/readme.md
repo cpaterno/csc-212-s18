@@ -69,7 +69,9 @@ Now set a breakpoint at line `35` and type `debug50 main` to run the program aga
 
 ## 4. Declaring and instantiating an array on the stack and on the heap using `int *`
 
-The next two assignments create an array on the stack, and an array on the heap. You should read [this pdf](http://cslibrary.stanford.edu/102/PointersAndMemory.pdf) regarding stack, heap, and memory allocation to familiarize yourself on this topic. Section 1 is simply an introduction to pointers, so you may skip it if you would like, but sections 2 through 4 contain information that is important in understanding how pointers work.
+The next two assignments create an array on the stack, and an array on the heap.
+
+You should read [this pdf](http://cslibrary.stanford.edu/102/PointersAndMemory.pdf) regarding stack, heap, and memory allocation to familiarize yourself with this topic. Section 1 is simply an introduction to pointers, so you may skip it if you would like, but sections 2 through 4 contain information that is important in understanding how pointers work.
 
 ```C++
 //Declare an int array on the stack
