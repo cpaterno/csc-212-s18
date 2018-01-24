@@ -71,7 +71,7 @@ Now set a breakpoint at line `35` and type `debug50 main` to run the program aga
 
 The next two assignments create an array on the stack, and an array on the heap.
 
-You should read [this pdf](http://cslibrary.stanford.edu/102/PointersAndMemory.pdf) regarding stack, heap, and memory allocation to familiarize yourself with this topic. Section 1 is simply an introduction to pointers, so you may skip it if you would like, but sections 2 through 4 contain information that is important in understanding how pointers work.
+You should read [this pdf](http://cslibrary.stanford.edu/102/PointersAndMemory.pdf) regarding stack, heap, and memory allocation to familiarize yourself with this topic. Section 1 is simply an introduction to pointers, so you may skip it if you would like, but sections 2 through 4 contain information that is important in understanding how pointers work. You need not do any of the "Extra Optional Material" problems, although they may be used as extra practice in your free time.
 
 ```C++
 //Declare an int array on the stack
