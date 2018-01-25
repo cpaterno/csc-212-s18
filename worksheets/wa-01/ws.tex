@@ -1,1 +1,97 @@
-% include source here
+\documentclass[11pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[margin=.9in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\linespread{1.3}
+\setlength{\parindent}{0pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Fall 2017}\chead{}\rhead{\scriptsize Weekly Problem Set \#1}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#1}
+\end{center}
+
+\vspace{25pt} 
+
+\begin{enumerate}[leftmargin=*]
+
+% 1
+\item Write a function that returns the length of a given string. EX: Given \verb|"Test"|, return \verb|4|.
+
+\vspace{4in}
+
+% GeeksForGeeks
+\item Using the function you defined above, create another function that returns true if a given string is a palindrome, and false if it is not. EX: "ABCBA" is a palindrome, "ABC" is not.
+
+\vspace{4in}
+
+% GeeksForGeeks
+\item Define a function that returns the most frequently occuring character inside of a string. What would you have to change in order for this program to return the least frequently occuring character? 
+
+\vspace{4in}
+
+% GeeksForGeeks
+\item Write a \textit{program} that prints the number of words in a given string. For this exercise please define the string you'll be using within your program, do not use \verb|std::cin|.
+
+\vspace{4in}
+
+% CodeForWin
+\item Define a function to \textit{toggle} the case of a given string. (Running this twice on a given string should yield the starting string)
+
+\vspace{4in}
+
+% CodeForWin
+\item Write a program that can find a missing number in an array of integers ranging from 1 to $n$. EX: Given \verb|[1, 2, 3, 5]|, ouput \verb|4|. 
+
+\vspace{4in}
+
+% CodeForWin
+\item Define a function that prints the minimum and maximum elements in an unsorted array of integers. How would this code change if the array were sorted?
+
+\vspace{4in}
+
+% CodeForWin
+\item Write a program that removes any duplicate integers from an array. EX: Given \verb|[1, 2, 2, 3, 4, 2, 5]|, the program should print \verb|[1, 2, 3, 4, 5]|.
+
+\vspace{4in}
+
+% CodeForWin
+\item How would you implement a function that reverses a given array in place? Write a high-level psuedo-code for this function.
+
+\vspace{4in}
+
+%
+\item Briefly describe the difference between an array of integers and characters. How would you find their length? Space Requirements?
+
+\vspace{4in}
+
+%
+\item Using psuedo code, write a function that converts a string of numbers to their decimal equivalent. EX: Given \verb|"1 2 3 4 5"|, generate the array \verb|[1, 2, 3, 4, 5]|.
+
+\vspace{4in}
+
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
