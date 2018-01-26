@@ -2,9 +2,47 @@
 
 ## Description
 
-In this lab you will be using arrays to solve various problems. Below is a quick explaination of arrays, and standard input. Don't forget to register for the session by clicking, "Join Session" at the top right. This is the only way to get credit for the lab. The link to the morning contest is [here](https://uri.kattis.com/sessions/rrccok) and the afternoon is [here](https://uri.kattis.com/sessions/insytp).
+In this lab you will be using arrays to solve various problems. Below is a quick explaination of arrays, and standard input. 
 
-Side Note, the standings and timings of you and your classmates solving the problems will be availble publicly. If you do not want your name displayed, there is an anonomyous option in your profile settings. You will still get credit for attendance.
+We will be running and executing code in the lab, so we will need to have the IDE running through docker.
+
+#### Docker Startup
+Open docker, for some it will be opening docker toolbox and for others it will be opening a terminal.
+Run this command to start up the IDE.
+```bash
+$ docker start cs50ide
+```
+##### Next to get access to the IDE:
+
+Type the following in your browser to access the IDE:
+
+> [http://localhost:5050](http://localhost:5050)
+
+or
+
+> [http://0.0.0.0:5050](http://0.0.0.0:5050])
+
+If you installed the Docker Toolbox, the above links may not work. Instead type and enter the following line in the Docker QuickStart Terminal:
+```bash
+$ docker-machine ip
+```
+And you will be given the ip address of your local Docker machine. 
+In your browser type the ip address you received followed by the port :5050 to access the cs50ide.
+
+For example:
+> [http://192.168.99.100:5050](http://192.168.99.100:5050)
+
+##### Important  Notes:
+
+
+1. At this point you may notice a banner along the top of your window noting that your current version is out of date, you're welcome to update now, though it won't make any difference for this lab. To update, run `update50` in the built-in shell, which should be titled 'workspace/'. You'll then have to restart the docker instance by running `docker restart cs50ide` **Please note that this name may be different than the one the IDE will tell you to restart**
+
+2. After restarting docker or your computer, you will no longer be able to connect to the IDE using your browser. 
+In order to access the IDE again, run Docker and type the following:
+
+```bash
+$ docker start cs50ide
+```
 
 ## Arrays
 
@@ -119,7 +157,4 @@ int main () {
    return 0;
 }
 ```
-When the above code is compiled and executed, it produces the following result −
-```C++
-Greeting message: Hello
-```
+Take the code above
