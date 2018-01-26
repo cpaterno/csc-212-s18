@@ -1,4 +1,4 @@
-# Lab 02 - Arrays, Strings & Functions
+# Lab 02: Arrays, Strings & Functions
 
 ## Description
 
