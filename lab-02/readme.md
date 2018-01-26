@@ -61,7 +61,7 @@ Since you stepped through your code only once so far, you should be at line `9`,
 
 ***Dereferencing*** a pointer uses the memory address of the element pointed to and directly accesses the element so it can be updated.
 
-> **Question 5:** Step through the code using the command "step over" button until you reach line `16`.  Inspect the value of number.  What is the value of number now?
+> **Question 5:** Step through the code using the command "step over" button until you reach line `16`.  Inspect the value of number, and step over once more. What is the value of number now?
 
 ***BEFORE PROCEEDING***: Let's get out of our debugging session so we can set a new breakpoint.  Either press the play button to let the program run to completion, or click on the terminal and press Control-C.  Next, delete your breakpoint at line `6` by clicking on the red circle you created earlier.
 
