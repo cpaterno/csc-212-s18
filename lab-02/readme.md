@@ -2,7 +2,7 @@
 
 ## Description
 
-In this lab you will be using arrays to solve various problems. The problems are a selection from Kattis. Below is a quick explaination of arrays, and standard input. Don't forget to register for the session by clicking, "Join Session" at the top right. This is the only way to get credit for the lab. The link to the morning contest is [here](https://uri.kattis.com/sessions/rrccok) and the afternoon is [here](https://uri.kattis.com/sessions/insytp).
+In this lab you will be using arrays to solve various problems. Below is a quick explaination of arrays, and standard input. Don't forget to register for the session by clicking, "Join Session" at the top right. This is the only way to get credit for the lab. The link to the morning contest is [here](https://uri.kattis.com/sessions/rrccok) and the afternoon is [here](https://uri.kattis.com/sessions/insytp).
 
 Side Note, the standings and timings of you and your classmates solving the problems will be availble publicly. If you do not want your name displayed, there is an anonomyous option in your profile settings. You will still get credit for attendance.
 
