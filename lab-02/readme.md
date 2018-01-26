@@ -16,7 +16,7 @@ This program takes no arguments so the command is `./main`
 
 Make sure your program runs without errors before proceeding.
 
-### 1.2 Set a Breakpoint at Line 8
+### 1.2 Set a Breakpoint at Line 6
 
 On the left side of your `cs50ide` screen you should see line numbers.  Click just to the left of the line numbers and a red circle should appear.
 
