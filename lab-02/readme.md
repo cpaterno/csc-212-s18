@@ -12,7 +12,7 @@ Side Note, the standings and timings of you and your classmates solving the prob
 
 The first row in this picture is how to reference the cell. The second row is the actual data stored. The third row is the memory addresses of each. This was explained in detail during sections.
 
-To decalre an array:
+To declare an array:
 
 ```C++
 type name[size];
