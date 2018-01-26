@@ -147,3 +147,31 @@ int main () {
 }
 ```
 Take the code above
+
+## Functions
+
+When writing programs, particularly ones that are large and complex, or have to carry out many different tasks, it is often unwieldly and impractical to try to write all of your code just in main(). One of the most common and most powerful solutions to this problem is the use of functions.
+
+#### Definition and Declaration
+
+On the most basic level, functions are blocks of code that can be used over and over, almost anywhere in your code. Here is an example function that prints out "Hello world!":
+
+```C++
+int say_hello() {
+   std::cout << "Hello world!" << std::endl;
+}
+```
+Just having this bit of code in a file is not enough to actually print "Hello world!" though. That's because the above code is a **function definition**, which just states what a function should do when used. To actually make use of this function, we must write this statement somewhere in our code:
+
+```C++
+say_hello();
+```
+
+When we do this, we say that we **call** the function. A function can be called from inside another function, (and even inside itself, but that's for a later day), but it must be **declared** in the code before it can be called.
+
+A function declaration is essentially the same as a variable declaration: it tells the program that a function exists, even if it hasn't been defined yet. This allows the function to be defined after it is used somewhere else in the code. One situation where this may be helpful is when you have two different functions that need to call each other.
+
+It's also worth noting that `main()` is a function. In fact, it is a special function in C (and C++), as it is needed in every C program and is always called before anything else when the program starts.
+
+#### Parameters
+
