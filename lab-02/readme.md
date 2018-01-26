@@ -32,17 +32,6 @@ In your browser type the ip address you received followed by the port :5050 to a
 For example:
 > [http://192.168.99.100:5050](http://192.168.99.100:5050)
 
-##### Important  Notes:
-
-
-1. At this point you may notice a banner along the top of your window noting that your current version is out of date, you're welcome to update now, though it won't make any difference for this lab. To update, run `update50` in the built-in shell, which should be titled 'workspace/'. You'll then have to restart the docker instance by running `docker restart cs50ide` **Please note that this name may be different than the one the IDE will tell you to restart**
-
-2. After restarting docker or your computer, you will no longer be able to connect to the IDE using your browser. 
-In order to access the IDE again, run Docker and type the following:
-
-```bash
-$ docker start cs50ide
-```
 
 ## Arrays
 
