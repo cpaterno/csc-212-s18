@@ -90,3 +90,36 @@ int main()
        
 } 
 ```
+
+## Strings
+
+Strings are actually one-dimensional array of characters terminated by a null character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.
+
+The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."
+```C++
+char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+```
+If you follow the rule of array initialization then you can write the above statement as follows −
+```C++
+char greeting[] = "Hello";
+```
+Following is the memory presentation of the above defined string in C/C++ −
+
+![Strings](https://www.tutorialspoint.com/cprogramming/images/string_representation.jpg)
+
+Actually, you do not place the null character at the end of a string constant. The C compiler automatically places the '\0' at the end of the string when it initializes the array. Let us try to print the above mentioned string −
+
+```C++
+#include <stdio.h>
+
+int main () {
+
+   char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+   printf("Greeting message: %s\n", greeting );
+   return 0;
+}
+```
+When the above code is compiled and executed, it produces the following result −
+```C++
+Greeting message: Hello
+```
