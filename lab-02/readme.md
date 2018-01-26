@@ -32,6 +32,8 @@ In your browser type the ip address you received followed by the port :5050 to a
 For example:
 > [http://192.168.99.100:5050](http://192.168.99.100:5050)
 
+You will find the file that this lab refers to above, named `lab2.cc`. You should either copy or upload this file into cs50ide to follow along with the lab.
+
 
 ## Arrays
 
@@ -150,7 +152,7 @@ Take the code above
 
 ## Functions
 
-When writing programs, particularly ones that are large and complex, or have to carry out many different tasks, it is often unwieldly and impractical to try to write all of your code just in main(). One of the most common and most powerful solutions to this problem is the use of functions.
+When writing programs, particularly ones that are large and complex, or have to carry out many different tasks, it is often unwieldly and impractical to try to write all of your code just in main(). One of the most common and most powerful solutions to this problem is the use of functions. If you already feel you understand the basics about functions in C/C++, you may skip to **Passing by Value vs by Reference**.
 
 #### Definition and Declaration
 
@@ -173,5 +175,31 @@ A function declaration is essentially the same as a variable declaration: it tel
 
 It's also worth noting that `main()` is a function. In fact, it is a special function in C (and C++), as it is needed in every C program and is always called before anything else when the program starts.
 
-#### Parameters
+**A quick word about scope:** If you have some variables in your main function, say `foo` and `bar`, and you try to use or change their values in some other function, you will probably get an error. This is because variables in one function are separate from variables in other functions, and so cannot be accessed outside of their own function.
+
+#### Passing and Returning Values
+
+While having a quick and easy way to print "Hello world! to the console at any time is pretty cool, it's not the most practical piece of code. We know that we cannot access a variable outside of the function block, so how can we use functions to actually make meaningful changes to our code? We do this by using parameters. The following function is shown at line `5`:
+
+```C++
+int add(int num1, int num2) {
+   
+   int sum = num1 + num2;
+   return sum;
+}
+```
+
+This function has two important new parts to it, the variables between the parentheses and the `return` statement. The variables between the parentheses of a function are the **parameters** to the function, i.e., the values that are taken as input when the function is called. Likewise, the `return` statement represents the output of the function.
+
+You may have noticed that this function starts with `int` instead of `void`. This is because when a function is declared, it must start with the data type that it will return after being called. Since the first function did not return anything, its definition began with `void`. At line `14`, `add` is called.
+
+```C++
+int seven = add(3, 4);
+```
+
+Here we say that the values 3 and 4 are **passed** to the function. Thus when `add` runs, `num1` and `num2` get the values 3 and 4 respectively. Alternatively, 3 and 4 could be variables defined within the body of the main function. When the function reaches the return statement, the function is returned, and the function call gets the value that was returned. So `add(3, 4)` becomes equivalent to the returned value `7`, which is then given to the variable `seven`.
+
+#### Passing by Value vs by Reference
+
+
 
