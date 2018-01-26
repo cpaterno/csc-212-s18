@@ -55,7 +55,7 @@ int arr[100];
 
 ## Standard Input Examples
 
-###Example 1
+### Example 1
 Suppose your input is described as a set of test cases. Each test case is one line of input, which begins with an integer **n**, and is followed by **n** integers which make up the sample to work with. 
 
 **Example Input:**
@@ -154,7 +154,7 @@ Take the code above
 
 When writing programs, particularly ones that are large and complex, or have to carry out many different tasks, it is often unwieldly and impractical to try to write all of your code just in main(). One of the most common and most powerful solutions to this problem is the use of functions. If you already feel you understand the basics about functions in C/C++, you may skip to **Passing by Value vs by Reference**.
 
-#### Definition and Declaration
+### Definition and Declaration
 
 On the most basic level, functions are blocks of code that can be used over and over, almost anywhere in your code. Here is an example function that prints out "Hello world!":
 
@@ -177,7 +177,7 @@ It's also worth noting that `main()` is a function. In fact, it is a special fun
 
 **A quick word about scope:** If you have some variables in your main function, say `foo` and `bar`, and you try to use or change their values in some other function, you will probably get an error. This is because variables in one function are separate from variables in other functions, and so cannot be accessed outside of their own function.
 
-#### Passing and Returning Values
+### Passing and Returning Values
 
 While having a quick and easy way to print "Hello world! to the console at any time is pretty cool, it's not the most practical piece of code. We know that we cannot access a variable outside of the function block, so how can we use functions to actually make meaningful changes to our code? We do this by using parameters. The following function is shown at line `5`:
 
@@ -199,7 +199,28 @@ int seven = add(3, 4);
 
 Here we say that the values 3 and 4 are **passed** to the function. Thus when `add` runs, `num1` and `num2` get the values 3 and 4 respectively. Alternatively, 3 and 4 could be variables defined within the body of the main function. When the function reaches the return statement, the function is returned, and the function call gets the value that was returned. So `add(3, 4)` becomes equivalent to the returned value `7`, which is then given to the variable `seven`.
 
-#### Passing by Value vs by Reference
+### Passing by Value vs by Reference
 
+It turns out there are actually two ways to pass data to a function, **by value** and **by reference**. The difference is in what happens to variables when passed to a function. When a function is called by value, the values of any variables passed to it are copied into the function's parameters. In this way, when functions are returned, the variables passed to them remain the same. This is the default way of constructing and calling functions in C++.
 
+On the other hand, you can define a function to be called by reference. When a function is called by reference, it will "link" the passed variables to their corresponding parameters in the function for the duration of the function call. The effect of this is that any changes made to the parameter variables in the function body will actually change the corresponding variable in the function call in the same way.
 
+A function called by reference is actually defined and called slightly different from a function called by value, as at lines `12` and `31`:
+
+```C++
+int subtract_five(int *num1) {
+   *num1 -= 5;
+}
+```
+
+```C++
+subtract_five(&a);
+```
+
+As shown above, a function defined to be called by reference has the **\*** symbol before any use of the parameter variable. In addition, the variable passed in the function call is preceeded by the **&** symbol. Understanding the reason for this requires knowledge about pointers, the next lab's topic, but for now it's enough to just know that it works.
+
+Line `28` calls `add`, passing it the variables `a` and `b`. If you set a breakpoint there, compile the program, run it using `debug50`, and step over once, you will see that `a` and `b` are still the same. You should now be on line `31`, which calls `subtract_five` on `a`. Step over once more, and now `a` has changed to five less than its original value.
+
+### Questions/Exercises
+
+**TODO**
