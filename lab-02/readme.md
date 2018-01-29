@@ -286,4 +286,4 @@ Note: A function call need not pass all variables in the same way. Sometimes you
 
 ### Final Questions/Exercises
 
-> **Question 10:** Create a function that performs a union between two char arrays. The function should have two inputs, one for each array, and one output (the union of the two inputs). A union is when you combine two things without duplicating. So the union of [1,2,3,4,5,6] and [3,4,5,6,7,8,9,10,11,12] is [1,2,3,4,5,6,7,8,9,10,11,12]. See how they were combined but the parts they both had were not duplicated? Once done, copy and paste the code into the answer box
+> **Question 10:** Create a function that performs a union between two char arrays that are a maximum of 10 characters long. The function should have two inputs, one for each array, and one output (the union of the two inputs). A union is when you combine two things without duplicating. So the union of [1,2,3,4,5,6] and [3,4,5,6,7,8,9,10,11,12] is [1,2,3,4,5,6,7,8,9,10,11,12]. Or [A,B,C,D,D,F] and [A,B,G,H,J] is [A,B,C,D,F,G,H,J]. Notice how they were combined but the parts they both had were not duplicated. Once done, copy and paste the code into the answer box
