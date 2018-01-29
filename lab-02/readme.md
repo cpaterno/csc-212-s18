@@ -149,6 +149,8 @@ int main () {
 }
 ```
 Take the code above
+> **Question 5:** Run the following code above. What is the message that is printed?
+> **Question 6:** What character in the array lets the program know that it has reached the end?
 
 ## Functions
 
