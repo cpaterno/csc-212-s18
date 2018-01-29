@@ -1,5 +1,7 @@
 # Lab 02: Arrays, Strings & Functions
 
+As you go, make sure to answer the questions for the google form.
+
 ## Description
 
 In this lab you will be using arrays to solve various problems. Below is a quick explaination of arrays, and standard input. 
@@ -37,9 +39,11 @@ You will find the file that this lab refers to above, named `lab2.cc`. You shoul
 
 ## Arrays
 
-![Arrays](http://beginnersbook.com/wp-content/uploads/2014/01/c-arrays.png)
+In computer science, an array type is a data type that represents a collection of elements (values or variables), each selected by one or more indices (identifying keys) that can be computed at run time during program execution. 
 
 The first row in this picture is how to reference the cell. The second row is the actual data stored. The third row is the memory addresses of each. This was explained in detail during sections.
+
+![Arrays](http://beginnersbook.com/wp-content/uploads/2014/01/c-arrays.png)
 
 To declare an array:
 
@@ -71,13 +75,13 @@ We will begin by handling the first line of input.
 We first want to read the first integer in the line and store it into a variable **n**. Using *std::cin* we have the following:
 ```C++
 int n;
-std::cin>>n
+std::cin >> n
 ```
 In the example input, **n** would be *3*. In this example we will be storing the portion of the input that we want to work with into an array. Since we know this test case has **n** amount of inputs (*3* in this case), we will read from the line **n** (or *3*) more times. 
 ```C++
 int sample [n];				//Creating an array of size n
-for(int i =0; i < n; i++){	//Reading from standard input n number of times
-	std::cin>>sample[i];
+for(int i = 0; i < n; i++){	//Reading from standard input n number of times
+	std::cin >> sample[i];
 }
 
 //Do something with n and your sample array
@@ -89,10 +93,10 @@ Now this is how you read one line of input from this example. We want to do this
 
 ```C++
 int n;
-while(std::cin>>n){
+while(std::cin >> n){
 	int sample [n];
 	for(int i = 0; i < n; i++){
-		std::cin>>sample[i];
+		std::cin >> sample[i];
 	}
 	
 	//Do something with n and your sample array
