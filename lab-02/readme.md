@@ -53,6 +53,8 @@ An example would be:
 int arr[100];
 ```
 
+> ***Question 1:*** Write the code to create an array of type double that can fit 500 doubles inside it.
+
 ## Standard Input Examples
 
 ### Example 1
