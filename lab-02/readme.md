@@ -201,6 +201,18 @@ int seven = add(3, 4);
 
 Here we say that the values 3 and 4 are **passed** to the function. Thus when `add` runs, `num1` and `num2` get the values 3 and 4 respectively. Alternatively, 3 and 4 could be variables defined within the body of the main function. When the function reaches the return statement, the function is returned, and the function call gets the value that was returned. So `add(3, 4)` becomes equivalent to the returned value `7`, which is then given to the variable `seven`.
 
+> **Question n+1:** What would the function signature of the following code block look like, assuming all variables that aren't declared in the block are parameter variables? Are there multiple options for any of the data types?
+
+```C++
+		{
+   int result;
+   x--;
+   (*y)++;
+   result = x - *y + 4;
+   return result;
+}
+```
+
 ### Passing by Value vs by Reference
 
 It turns out there are actually two ways to pass data to a function, **by value** and **by reference**. The difference is in what happens to variables when passed to a function. When a function passes a variable by value, the value stored in the variable is copied into the function's parameters. In this way, when functions are returned, the variables passed to them remain the same. This is the default way of constructing and calling functions in C++.
