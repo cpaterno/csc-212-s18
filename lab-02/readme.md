@@ -150,12 +150,7 @@ int main () {
 ```
 Take the code above
 > **Question 5:** Run the following code above. What is the message that is printed?
-
 > **Question 6:** What character in the array lets the program know that it has reached the end?
-
-> **Question 7:** Imagine a character array of the word "Chuck's". If the memory address of the first 'C' is 0x14250, what is the memory address of the 'k'?
-
-
 
 ## Functions
 
@@ -170,7 +165,7 @@ int say_hello() {
    std::cout << "Hello world!" << std::endl;
 }
 ```
-Just having this bit of code in a file is not enough to actually print "Hello world!" though. That's because the above code is a **function definition**, which just states what a function should do when used. To actually make use of this function, we must write this statement somewhere in our code:
+Just having this bit of code in a file is not enough to actually print "Hello world!" though. That's because the above code is a **function definition**, which just states what a function should do when used. In a function definition, everything that comes before the function block is called the **function signature**. In this case the signature is `int say_hello()`. To actually make use of this function, we must write this statement somewhere in our code:
 
 ```C++
 say_hello();
