@@ -201,11 +201,11 @@ Here we say that the values 3 and 4 are **passed** to the function. Thus when `a
 
 ### Passing by Value vs by Reference
 
-It turns out there are actually two ways to pass data to a function, **by value** and **by reference**. The difference is in what happens to variables when passed to a function. When a function is called by value, the values of any variables passed to it are copied into the function's parameters. In this way, when functions are returned, the variables passed to them remain the same. This is the default way of constructing and calling functions in C++.
+It turns out there are actually two ways to pass data to a function, **by value** and **by reference**. The difference is in what happens to variables when passed to a function. When a function passes a variable by value, the value stored in the variable is copied into the function's parameters. In this way, when functions are returned, the variables passed to them remain the same. This is the default way of constructing and calling functions in C++.
 
-On the other hand, you can define a function to be called by reference. When a function is called by reference, it will "link" the passed variables to their corresponding parameters in the function for the duration of the function call. The effect of this is that any changes made to the parameter variables in the function body will actually change the corresponding variable in the function call in the same way.
+On the other hand, you can define a function to pass by reference. When a function passes a variable by reference, it will "link" the passed variables to their corresponding parameters in the function for the duration of the function call. The effect of this is that any changes made to the parameter variables in the function body will actually change the corresponding variable in the function call in the same way.
 
-A function called by reference is actually defined and called slightly different from a function called by value, as at lines `12` and `31`:
+A function call that passes by reference is actually defined and called slightly different from a function called by value, as at lines `12` and `31`:
 
 ```C++
 int subtract_five(int *num1) {
@@ -217,9 +217,11 @@ int subtract_five(int *num1) {
 subtract_five(&a);
 ```
 
-As shown above, a function defined to be called by reference has the **\*** symbol before any use of the parameter variable. In addition, the variable passed in the function call is preceeded by the **&** symbol. Understanding the reason for this requires knowledge about pointers, the next lab's topic, but for now it's enough to just know that it works.
+As shown above, a variable defined to be passed by reference has the **\*** symbol before any use of the parameter variable (in the function header **and** the body). In addition, the variable passed in the function call is preceeded by the **&** symbol. Understanding the reason for this requires knowledge about pointers, the next lab's topic, but for now it's enough to just know that it works.
 
 Line `28` calls `add`, passing it the variables `a` and `b`. If you set a breakpoint there, compile the program, run it using `debug50`, and step over once, you will see that `a` and `b` are still the same. You should now be on line `31`, which calls `subtract_five` on `a`. Step over once more, and now `a` has changed to five less than its original value.
+
+Note: A function call need not pass all variables in the same way. Sometimes you may want a function that passes some variables by value and some by reference, which is completely fine. Just remember that parameters passed by value are in the form `foo` and those passed by reference in the form `*foo`.
 
 ### Questions/Exercises
 
