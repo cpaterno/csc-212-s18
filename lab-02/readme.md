@@ -150,7 +150,43 @@ int main () {
 ```
 Take the code above
 > **Question 5:** Run the following code above. What is the message that is printed?
+
 > **Question 6:** What character in the array lets the program know that it has reached the end?
+
+> **Question 7:** Imagine a character array of the word "Chuck's". If the memory address of the first 'C' is 0x14250, what is the memory address of the 'k'?
+
+```C++
+#include <stdio.h>
+
+int main () {
+   int length;
+   char message[] = "Tide Pods are not food";
+   char message2[length] = {'T','i','d','e',' ','P','o','d','s',' ','a','r','e',' ','n','o','t',' ','f','o','o','d','\0'};
+   return 0;
+}
+```
+> **Question 7:** Looking at the code above, what would the variable 'length' need to be in order for the code to work properly?
+
+```C++
+#include <stdio.h>
+
+int main () {
+   char letters[20];
+   
+```
+
+> **Question 7:** How long of a word could fit inside of the char array above named letters?
+
+
+```C++
+#include <stdio.h>
+
+int main () {
+   char game[8] = "fortnite"
+   return 0;
+```
+
+> **Question 7:** Would this code work? If it works, why does it work? If it doesn't work, what would need to be changed?
 
 ## Functions
 
