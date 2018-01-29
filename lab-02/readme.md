@@ -203,6 +203,8 @@ Here we say that the values 3 and 4 are **passed** to the function. Thus when `a
 
 > **Question n+1:** What would the function signature of the following code block look like, assuming all variables that aren't declared in the block are parameter variables? Are there multiple options for any of the data types?
 
+> **Question n+2:** What would a call to this function look like, with variables `a` and `b` passed in order? What changes to `a` and `b` would occur, if any?
+
 ```C++
 		{
    int result;
