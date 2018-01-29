@@ -155,11 +155,11 @@ int main () {
 }
 ```
 Take the code above
-> **Question 5:** Run the following code above. What is the message that is printed?
+> **Question 2:** Run the following code above. What is the message that is printed?
 
-> **Question 6:** What character in the array lets the program know that it has reached the end?
+> **Question 3:** What character in the array lets the program know that it has reached the end?
 
-> **Question 7:** Imagine a character array of the word "Chuck's". If the memory address of the first 'C' is 0x14250, what is the memory address of the 'k'?
+> **Question 4:** Imagine a character array of the word "Chuck's". If the memory address of the first 'C' is 0x14250, what is the memory address of the 'k'?
 
 ```C++
 #include <stdio.h>
@@ -171,7 +171,7 @@ int main () {
    return 0;
 }
 ```
-> **Question 7:** Looking at the code above, what would the variable 'length' need to be in order for the code to work properly?
+> **Question 5:** Looking at the code above, what would the variable 'length' need to be in order for the code to work properly?
 
 ```C++
 #include <stdio.h>
@@ -181,7 +181,7 @@ int main () {
    
 ```
 
-> **Question 7:** How long of a word could fit inside of the char array above named letters?
+> **Question 6:** How long of a word could fit inside of the char array above named letters?
 
 
 ```C++
