@@ -129,6 +129,8 @@ int main()
 
 ## Strings
 
+A char *, (character pointer) is a data-type that is used as a string in C. The char * points to the memory address of the first letter in the string. You can find out what the string just by having the address of the starting letter since the end of a string is always a '\0' or 0, so you have the start and the end.
+
 Strings are actually one-dimensional array of characters terminated by a null character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.
 
 The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."
