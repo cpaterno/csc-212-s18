@@ -230,7 +230,7 @@ Note: A function call need not pass all variables in the same way. Sometimes you
 > **Question n+2:** What would a call to this function look like, with variables `a` and `b` passed in order? What changes to `a` and `b` would occur, if any?
 
 ```C++
-		{
+//Function signature goes here {
    int result;
    x--;
    (*y)++;
