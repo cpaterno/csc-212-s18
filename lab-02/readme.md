@@ -267,9 +267,9 @@ Line `28` calls `add`, passing it the variables `a` and `b`. If you set a breakp
 
 Note: A function call need not pass all variables in the same way. Sometimes you may want a function that passes some variables by value and some by reference, which is completely fine. Just remember that parameters passed by value are in the form `foo` and those passed by reference in the form `*foo`.
 
-> **Question n+1:** What would the function signature of the following code block look like, assuming all variables that aren't declared in the block are parameter variables? Are there multiple options for any of the data types?
+> **Question 8:** What would the function signature of the following code block look like, assuming all variables that aren't declared in the block are parameter variables? Are there multiple options for any of the data types?
 
-> **Question n+2:** What would a call to this function look like, with variables `a` and `b` passed in order? What changes to `a` and `b` would occur, if any?
+> **Question 9:** What would a call to this function look like, with variables `a` and `b` passed in order? What changes to `a` and `b` would occur, if any?
 
 ```C++
 /*Function signature goes here*/ {
