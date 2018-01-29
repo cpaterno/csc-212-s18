@@ -1,6 +1,7 @@
 # Lab 02: Arrays, Strings & Functions
 
-As you go, make sure to answer the questions for the google form.
+As you work on the lab, make sure to answer the questions for the google form. https://docs.google.com/forms/d/e/1FAIpQLSc6Habr1adzTKJx5MXV6r0ESkTX8fiyYYsjptNnSJGvraykjg/viewform?usp=sf_link
+
 
 ## Description
 
