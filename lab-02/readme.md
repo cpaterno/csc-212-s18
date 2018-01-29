@@ -286,6 +286,17 @@ Note: A function call need not pass all variables in the same way. Sometimes you
 
 ### Final Questions/Exercises
 
-> **Question 10:** Create a function that performs a union between two char arrays that are a maximum of 10 characters long. The function should have two inputs, one for each array, and one output (the union of the two inputs). A union is when you combine two things without duplicating. So the union of [1,2,3,4,5,6] and [3,4,5,6,7,8,9,10,11,12] is [1,2,3,4,5,6,7,8,9,10,11,12]. Or [A,B,C,D,D,F] and [A,B,G,H,J] is [A,B,C,D,F,G,H,J]. Notice how they were combined but the parts they both had were not duplicated. Once done, copy and paste the code into the answer box
+The intersection of two sets (where a set is essentially an array without duplicates) is the set of all items found in both sets. For example, the intersection of the sets (1,2,3,4,5) and (1,3,5,7,9) is the set (1,3,5). In C, intersection also works with strings, as each char in a char array has a numerical value, allowing for mathematical comparisons.
 
-> **Question 11 (Optional?):** Create a function that performs an intersection between two strings, each with a max length of 10 characters (not including the null character). You may use the file `intersect.cc` at the top of the page as your starting code.
+> **Question 10:** Create a function that performs an intersection between two strings (char arrays), each with a max length of 10 characters (not including the null character). We will assume all input arrays are acting as sets, and thus have no duplicate elements. You may use the file `intersect.cc` at the top of the page as your starting code. If your implementation functions properly, the output of the program should be as shown below. Again, copy and paste the code into the answer box once completed.
+
+```
+~/workspace/ $ ./intersect
+bdehi
+deh
+therd
+```
+
+On the other hand, the union of two sets is a set containing all elements of **both** sets, with no duplicates. For example, the union of (1,2,3,4,5,6) and (3,4,5,6,7,8,9,10,11,12) is (1,2,3,4,5,6,7,8,9,10,11,12), and the union of (A,B,C,D,D,F) and (A,B,G,H,J) is (A,B,C,D,F,G,H,J). Notice how they were combined but the parts they both had were not duplicated.
+
+> **Question 11:** Create a function that performs a union between two strings that are a maximum of 10 characters long. The function may use the same parameters and return type as the intersection problem, but will this time return the union instead of the intersection. Once done, copy and paste the code into the answer box.
