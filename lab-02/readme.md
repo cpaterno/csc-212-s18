@@ -153,7 +153,7 @@ Actually, you do not place the null character at the end of a string constant. T
 int main () {
 
    char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
-   printf("Greeting message: %s\n", greeting );
+   std::cout << "Greeting message: " << greeting << std::endl;
    return 0;
 }
 ```
