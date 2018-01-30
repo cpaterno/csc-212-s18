@@ -55,7 +55,7 @@ type name[size];
 An example would be:
 
 ```C++
-int arr[100];
+int val[100];
 ```
 
 > ***Question 1:*** Write the code to create an array of type double that can fit 500 doubles inside it.
@@ -80,8 +80,8 @@ std::cin >> n
 ```
 In the example input, **n** would be *3*. In this example we will be storing the portion of the input that we want to work with into an array. Since we know this test case has **n** amount of inputs (*3* in this case), we will read from the line **n** (or *3*) more times. 
 ```C++
-int sample [n];				//Creating an array of size n
-for(int i = 0; i < n; i++){	//Reading from standard input n number of times
+int sample [n];			//Creating an array of size n
+for(int i = 0; i < n; i++) {	//Reading from standard input n number of times
    std::cin >> sample[i];
 }
 
@@ -94,15 +94,15 @@ Now this is how you read one line of input from this example. We want to do this
 
 ```C++
 int n;
-while(std::cin >> n){
+while(std::cin >> n) {
    int sample [n];
-   for(int i = 0; i < n; i++){
+   for(int i = 0; i < n; i++) {
       std::cin >> sample[i];
    }
-	
-   //Do something with n and your sample array
-   //Which will change with each passing of the while loop
-   //...or each line of input
+   // Do something with n and your sample array
+   // Which will change with each passing of the while loop
+   // ...or each line of input
+}
 ```
 	
 ### Reading an Unknown amount of input
@@ -111,19 +111,19 @@ What if a problem poses to you input that is separated by spaces, and then seper
 ```C++
 int main()
 {
-    std::string input;
-    while(std::getline(std::cin, input)){
-        std::istringstream iss(input);
-        int integers[32];
-        int n = 0;
-        while(iss >> integers[n]){
-            n++;
-        }
-        //Setup ends here
-        //n = number of elemends in the array of integers
-        //integers = array that you must find the member of the list
-        //  that is the sum of all other integers in the list
-       
+   std::string input;
+   while(std::getline(std::cin, input)) {
+      std::istringstream iss(input);
+      int integers[32];
+      int n = 0;
+      while(iss >> integers[n]) {
+         n++;
+      }
+      // Setup ends here
+      // n = number of elemends in the array of integers
+      // integers = array that you must find the member of the list
+      // that is the sum of all other integers in the list
+   }
 } 
 ```
 
@@ -148,7 +148,7 @@ Following is the memory presentation of the above defined string in C/C++ −
 Actually, you do not place the null character at the end of a string constant. The C compiler automatically places the '\0' at the end of the string when it initializes the array. Let us try to print the above mentioned string −
 
 ```C++
-#include <stdio.h>
+#include <iostream>
 
 int main () {
 
@@ -165,8 +165,6 @@ Take the code above
 > **Question 4:** Imagine a character array of the word "Chuck's". If the memory address of the first 'C' is 0x14250, what is the memory address of the 'k'?
 
 ```C++
-#include <stdio.h>
-
 int main () {
    int length;
    char message[] = "Tide Pods are not food";
@@ -177,22 +175,19 @@ int main () {
 > **Question 5:** Looking at the code above, what would the variable 'length' need to be in order for the code to work properly?
 
 ```C++
-#include <stdio.h>
-
 int main () {
    char letters[20];
-   
+}
 ```
 
 > **Question 6:** How long of a word could fit inside of the char array above named letters?
 
 
 ```C++
-#include <stdio.h>
-
 int main () {
    char game[8] = "fortnite"
    return 0;
+}
 ```
 
 > **Question 7:** Would this code work? If it works, why does it work? If it doesn't work, what would need to be changed?
