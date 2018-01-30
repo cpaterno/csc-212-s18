@@ -135,11 +135,11 @@ Strings are actually one-dimensional array of characters terminated by a null ch
 
 The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."
 ```C++
-char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+char val[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
 ```
 If you follow the rule of array initialization then you can write the above statement as follows −
 ```C++
-char greeting[] = "Hello";
+char val[] = "Hello";
 ```
 Following is the memory presentation of the above defined string in C/C++ −
 
@@ -152,8 +152,8 @@ Actually, you do not place the null character at the end of a string constant. T
 
 int main () {
 
-   char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
-   std::cout << "Greeting message: " << greeting << std::endl;
+   char val[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+   std::cout << "Greeting message: " << val << std::endl;
    return 0;
 }
 ```
