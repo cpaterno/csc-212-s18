@@ -82,7 +82,7 @@ In the example input, **n** would be *3*. In this example we will be storing the
 ```C++
 int sample [n];				//Creating an array of size n
 for(int i = 0; i < n; i++){	//Reading from standard input n number of times
-	std::cin >> sample[i];
+   std::cin >> sample[i];
 }
 
 //Do something with n and your sample array
@@ -95,14 +95,14 @@ Now this is how you read one line of input from this example. We want to do this
 ```C++
 int n;
 while(std::cin >> n){
-	int sample [n];
-	for(int i = 0; i < n; i++){
-		std::cin >> sample[i];
-	}
+   int sample [n];
+   for(int i = 0; i < n; i++){
+      std::cin >> sample[i];
+   }
 	
-	//Do something with n and your sample array
-	//Which will change with each passing of the while loop
-	//...or each line of input
+   //Do something with n and your sample array
+   //Which will change with each passing of the while loop
+   //...or each line of input
 ```
 	
 ### Reading an Unknown amount of input
