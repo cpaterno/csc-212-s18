@@ -44,8 +44,6 @@ In computer science, an array type is a data type that represents a collection o
 
 The first row in this picture is how to reference the cell. The second row is the actual data stored. The third row is the memory addresses of each. This was explained in detail during sections.
 
-![Arrays](http://beginnersbook.com/wp-content/uploads/2014/01/c-arrays.png)
-
 To declare an array:
 
 ```C++
@@ -57,6 +55,8 @@ An example would be:
 ```C++
 int val[100];
 ```
+
+![Arrays](http://beginnersbook.com/wp-content/uploads/2014/01/c-arrays.png)
 
 > ***Question 1:*** Write the code to create an array of type double that can fit 500 doubles inside it.
 
