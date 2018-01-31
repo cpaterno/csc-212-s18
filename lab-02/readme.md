@@ -77,31 +77,31 @@ while (std::cin >> n) {
 	
 ### Reading an Unknown amount of input
 
-What if a problem poses to you input that is separated by spaces, and then seperate test cases by lines? This strange setup strangely coincides with sumoftheothers.
+What if a problem poses to you input that is separated by spaces, and then seperate test cases by lines?
+
 ```C++
-int main()
-{
-   std::string input;
-   while(std::getline(std::cin, input)) {
-      std::istringstream iss(input);
-      int integers[32];
-      int n = 0;
-      while(iss >> integers[n]) {
-         n++;
-      }
-      // Setup ends here
-      // n = number of elemends in the array of integers
-      // integers = array that you must find the member of the list
-      // that is the sum of all other integers in the list
-   }
-} 
+int main() {
+    std::string input;
+    while (std::getline(std::cin, input)) {
+        std::istringstream iss(input);
+        int integers[32];
+        int n = 0;
+        while (iss >> integers[n]) {
+            n++;
+        }
+        // Setup ends here
+        // n = number of elemends in the array of integers
+        // integers = array that you must find the member of the list
+        // that is the sum of all other integers in the list
+    }
+}
 ```
 
 ## Strings
 
-A char *, (character pointer) is a data-type that is used as a string in C. The char * points to the memory address of the first letter in the string. You can find out what the string just by having the address of the starting letter since the end of a string is always a '\0' or 0, so you have the start and the end.
+A `char *`, (character pointer) is a data-type that is used as a string in C. The `char *` points to the memory address of the first letter in the string. You can find out the contents of a string just by having the address of the starting letter since the end of a string is always a '\x0' or `0`, so you have the start and the end.
 
-Strings are actually one-dimensional array of characters terminated by a null character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.
+Strings are actually one-dimensional array of characters terminated by a null character '\x0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.
 
 The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."
 ```C++
@@ -115,43 +115,43 @@ Following is the memory presentation of the above defined string in C/C++ −
 
 ![Strings](https://www.tutorialspoint.com/cprogramming/images/string_representation.jpg)
 
-Actually, you do not place the null character at the end of a string constant. The C compiler automatically places the '\0' at the end of the string when it initializes the array. Let us try to print the above mentioned string −
+Actually, you do not place the null character at the end of a string constant. The C compiler automatically places the '\x0' at the end of the string when it initializes the array. Let us try to print the above mentioned string −
 
 ```C++
 #include <iostream>
 
 int main () {
 
-   char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+   char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\x0'};
    std::cout << "Greeting message: " << greeting << std::endl;
    return 0;
 }
 ```
-Take the code above
-> **Question 2:** Run the following code above. What is the message that is printed?
+
+> **Question 2:** Running the code above. What is the message that is printed?
 
 > **Question 3:** What character in the array lets the program know that it has reached the end?
 
 > **Question 4:** Imagine a character array of the word "Chuck's". If the memory address of the first 'C' is 0x14250, what is the memory address of the 'k'?
 
+> **Question 5:** Looking at the code below, what would the variable 'length' need to be in order for the code to work properly?
+
 ```C++
 int main () {
-   int length;
-   char message[] = "Tide Pods are not food";
-   char message2[length] = {'T','i','d','e',' ','P','o','d','s',' ','a','r','e',' ','n','o','t',' ','f','o','o','d','\0'};
-   return 0;
+    int length;
+    char message[] = "Tide Pods are not food";
+    char message2[length] = {'T','i','d','e',' ','P','o','d','s',' ','a','r','e',' ','n','o','t',' ','f','o','o','d','\x0'};
+    return 0;
 }
 ```
-> **Question 5:** Looking at the code above, what would the variable 'length' need to be in order for the code to work properly?
+
+> **Question 6:** How long of a word could fit inside of the char array named letters (shown below)?
 
 ```C++
 int main () {
    char letters[20];
 }
 ```
-
-> **Question 6:** How long of a word could fit inside of the char array above named letters?
-
 
 ```C++
 int main () {
