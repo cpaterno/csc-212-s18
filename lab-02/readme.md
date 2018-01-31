@@ -1,60 +1,32 @@
 # Lab 02: Arrays, Strings & Functions
 
-As you work on the lab, make sure to answer the questions for the google form. https://docs.google.com/forms/d/e/1FAIpQLSc6Habr1adzTKJx5MXV6r0ESkTX8fiyYYsjptNnSJGvraykjg/viewform?usp=sf_link
-
+As you work on the lab, make sure to answer the questions for the [google form](#).
 
 ## Description
 
-In this lab you will be using arrays to solve various problems. Below is a quick explaination of arrays, and standard input. 
+In this lab you will be using arrays to solve various problems. Below is a quick explaination of arrays, and how to read data from the standard input (`stdin`). 
 
 We will be running and executing code in the lab, so we will need to have the IDE running through docker.
 
-#### Docker Startup
-Open docker, for some it will be opening docker toolbox and for others it will be opening a terminal.
-Run this command to start up the IDE.
-```bash
-$ docker start cs50ide
-```
-##### Next to get access to the IDE:
-
-Type the following in your browser to access the IDE:
-
-> [http://localhost:5050](http://localhost:5050)
-
-or
-
-> [http://0.0.0.0:5050](http://0.0.0.0:5050])
-
-If you installed the Docker Toolbox, the above links may not work. Instead type and enter the following line in the Docker QuickStart Terminal:
-```bash
-$ docker-machine ip
-```
-And you will be given the ip address of your local Docker machine. 
-In your browser type the ip address you received followed by the port :5050 to access the cs50ide.
-
-For example:
-> [http://192.168.99.100:5050](http://192.168.99.100:5050)
-
-You will find the file that this lab refers to above, named `lab2.cc`. You should either copy or upload this file into cs50ide to follow along with the lab.
-
+You will find the file (starter code) that this lab refers to above, named `lab2.cc`. You should either copy or upload this file into cs50ide to follow along with the lab.
 
 ## Arrays
 
-In computer science, an array type is a data type that represents a collection of elements (values or variables), each selected by one or more indices (identifying keys) that can be computed at run time during program execution. 
+In computer science, an array type is a data type that represents a collection of consecutive elements (values). 
 
-The first row in this picture is how to reference the cell. The second row is the actual data stored. The third row is the memory addresses of each. This was explained in detail during sections.
-
-To declare an array:
+To declare (create) an array in C/C++ you will need to provide the data type and size:
 
 ```C++
 type name[size];
 ```
 
-An example would be:
+Consider for exmple creating an array of six integers:
 
 ```C++
-int val[100];
+int val[6];
 ```
+
+The figure below shows a memory representation of the array `val`.  First row in this picture shows the indices used to reference single elements in the array. The second row shows the actual data stored. The third row shows the memory addresses of each data element. This was explained in detail during sections.
 
 ![Arrays](http://beginnersbook.com/wp-content/uploads/2014/01/c-arrays.png)
 
@@ -80,13 +52,11 @@ std::cin >> n
 ```
 In the example input, **n** would be *3*. In this example we will be storing the portion of the input that we want to work with into an array. Since we know this test case has **n** amount of inputs (*3* in this case), we will read from the line **n** (or *3*) more times. 
 ```C++
-int sample [n];			//Creating an array of size n
-for(int i = 0; i < n; i++) {	//Reading from standard input n number of times
-   std::cin >> sample[i];
+int sample [100];                // Assuming a maximum size of 100
+for (int i = 0 ; i < n ; i++) {  // Reading from standard input n number of times
+    std::cin >> sample[i];
 }
-
-//Do something with n and your sample array
-
+// Do something with n and your sample array
 ```
 The array **sample** in this example ends up being *[6,3,5]*.
 
@@ -94,14 +64,14 @@ Now this is how you read one line of input from this example. We want to do this
 
 ```C++
 int n;
-while(std::cin >> n) {
-   int sample [n];
-   for(int i = 0; i < n; i++) {
-      std::cin >> sample[i];
-   }
-   // Do something with n and your sample array
-   // Which will change with each passing of the while loop
-   // ...or each line of input
+while (std::cin >> n) {
+    int sample [n];
+    for (int i = 0 ; i < n ; i++) {
+        std::cin >> sample[i];
+    }
+    // Do something with n and your sample array
+    // Which will change with each passing of the while loop
+    // ... or each line of input
 }
 ```
 	
