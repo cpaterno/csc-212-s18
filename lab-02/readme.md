@@ -149,18 +149,18 @@ int main () {
 
 ```C++
 int main () {
-   char letters[20];
-}
-```
-
-```C++
-int main () {
-   char game[8] = "fortnite"
-   return 0;
+    char letters[20];
 }
 ```
 
 > **Question 7:** Would this code work? If it works, why does it work? If it doesn't work, what would need to be changed?
+
+```C++
+int main () {
+    char game[8] = "fortnite"
+    return 0;
+}
+```
 
 ## Functions
 
@@ -171,11 +171,13 @@ When writing programs, particularly ones that are large and complex, or have to 
 On the most basic level, functions are blocks of code that can be used over and over, almost anywhere in your code. Here is an example function that prints out "Hello world!":
 
 ```C++
-int say_hello() {
-   std::cout << "Hello world!" << std::endl;
+void say_hello() {
+    std::cout << "Hello world !" << std::endl;
 }
 ```
-Just having this bit of code in a file is not enough to actually print "Hello world!" though. That's because the above code is a **function definition**, which just states what a function should do when used. In a function definition, everything that comes before the function block is called the **function signature**. In this case the signature is `int say_hello()`. To actually make use of this function, we must write this statement somewhere in our code:
+Just having this bit of code in a file is not enough to actually print "Hello world!" though. That's because the above code is a **function definition**, which just states what a function should do when used. In a function definition, everything that comes before the function block is called the **function declaration** or **function prototype**. In this case the prototype is `void say_hello()`. It tells the compiler about a function's name, return type, and parameters.
+
+In order to use a function, we provide the function's name and parameters. For example, we could use this statement somewhere in our code:
 
 ```C++
 say_hello();
@@ -191,25 +193,20 @@ It's also worth noting that `main()` is a function. In fact, it is a special fun
 
 ### Passing and Returning Values
 
-While having a quick and easy way to print "Hello world! to the console at any time is pretty cool, it's not the most practical piece of code. We know that we cannot access a variable outside of the function block, so how can we use functions to actually make meaningful changes to our code? We do this by using parameters. The following function is shown at line `5`:
+While having a quick and easy way to print "Hello world!" to the console at any time is pretty cool, it's not the most practical piece of code. We know that we cannot access a variable outside of the function block, so how can we use functions to actually make meaningful changes to our code? We do this by using parameters. Consider the following function:
 
 ```C++
 int add(int num1, int num2) {
-   
-   int sum = num1 + num2;
-   return sum;
+    int sum = num1 + num2;
+    return sum;
 }
 ```
 
 This function has two important new parts to it, the variables between the parentheses and the `return` statement. The variables between the parentheses of a function are the **parameters** to the function, i.e., the values that are taken as input when the function is called. Likewise, the `return` statement represents the output of the function.
 
-You may have noticed that this function starts with `int` instead of `void`. This is because when a function is declared, it must start with the data type that it will return after being called. Since the first function did not return anything, its definition began with `void`. At line `14`, `add` is called.
+You may have noticed that this function starts with `int` instead of `void`. This is because when a function is declared, it must start with the data type that it will return after being called. Since the first function did not return anything, its definition began with `void`.
 
-```C++
-int seven = add(3, 4);
-```
-
-Here we say that the values 3 and 4 are **passed** to the function. Thus when `add` runs, `num1` and `num2` get the values 3 and 4 respectively. Alternatively, 3 and 4 could be variables defined within the body of the main function. When the function reaches the return statement, the function is returned, and the function call gets the value that was returned. So `add(3, 4)` becomes equivalent to the returned value `7`, which is then given to the variable `seven`.
+Consider this function call `add(3,4)`. Here we say that the values 3 and 4 are **passed** to the function. Thus when `add` runs, `num1` and `num2` get the values 3 and 4 respectively. Alternatively, 3 and 4 could be variables defined within the body of the main function. When the function reaches the return statement, the function is returned, and the function call gets the value that was returned. So `add(3, 4)` becomes equivalent to the returned value `7`.
 
 ### Passing by Value vs by Reference
 
@@ -217,11 +214,11 @@ It turns out there are actually two ways to pass data to a function, **by value*
 
 On the other hand, you can define a function to pass by reference. When a function passes a variable by reference, it will "link" the passed variables to their corresponding parameters in the function for the duration of the function call. The effect of this is that any changes made to the parameter variables in the function body will actually change the corresponding variable in the function call in the same way.
 
-A function call that passes by reference is actually defined and called slightly different from a function called by value, as at lines `12` and `31`:
+A function call that passes by reference is actually defined and called slightly different from a function called by value:
 
 ```C++
 int subtract_five(int *num1) {
-   *num1 -= 5;
+    *num1 -= 5;
 }
 ```
 
@@ -231,21 +228,21 @@ subtract_five(&a);
 
 As shown above, a variable defined to be passed by reference has the **\*** symbol before any use of the parameter variable (in the function header **and** the body). In addition, the variable passed in the function call is preceeded by the **&** symbol. Understanding the reason for this requires knowledge about pointers, the next lab's topic, but for now it's enough to just know that it works.
 
-Line `28` calls `add`, passing it the variables `a` and `b`. If you set a breakpoint there, compile the program, run it using `debug50`, and step over once, you will see that `a` and `b` are still the same. You should now be on line `31`, which calls `subtract_five` on `a`. Step over once more, and now `a` has changed to five less than its original value.
+In the starter code provide, line `28` calls `add`, passing it the variables `a` and `b`. If you set a breakpoint there, compile the program, run it using `debug50`, and step over once, you will see that `a` and `b` are still the same. You should now be on line `31`, which calls `subtract_five` on `a`. Step over once more, and now `a` has changed to five less than its original value.
 
 Note: A function call need not pass all variables in the same way. Sometimes you may want a function that passes some variables by value and some by reference, which is completely fine. Just remember that parameters passed by value are in the form `foo` and those passed by reference in the form `*foo`.
 
-> **Question 8:** What would the function signature of the following code block look like, assuming all variables that aren't declared in the block are parameter variables? Are there multiple options for any of the data types?
+> **Question 8:** What would the function signature of the code block shown below look like, assuming all variables that aren't declared in the block are parameter variables? Are there multiple options for any of the data types?
 
 > **Question 9:** What would a call to this function look like, with variables `a` and `b` passed in order? What changes to `a` and `b` would occur, if any?
 
 ```C++
-/*Function signature goes here*/ {
-   int result;
-   x--;
-   (*y)++;
-   result = x - *y + 4;
-   return result;
+/* Function signature goes here */ {
+    int result;
+    x --;
+    (*y) ++;
+    result = x - *y + 4;
+    return result;
 }
 ```
 
