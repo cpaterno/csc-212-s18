@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[margin=.9in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\linespread{1.3}
+\setlength{\parindent}{0pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2018}\chead{}\rhead{\scriptsize Weekly Problem Set \#1}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf Spring 2018}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#2}
+\end{center}
+
+Due Wednesday 2/7 before lab. Please turn in neat, and organized, answers hand-written on standard-sized paper \textbf{without any fringe}. 
+The only library you're allowed to use in your answers is \verb|iostream|, though you can test with whatever you'd like. The goal is to understand the low-level functionality behind what the STL offers.
+
+\begin{enumerate}[leftmargin=*]
+
+\item Draw the array represented by \verb|int arr[5];| use null to denote uninitialized memory.
+
+\item Now redraw the array after this code executes: 
+\begin{verbatim}
+    *arr = 1;
+    *(arr+2) = 5;
+\end{verbatim}
+
+% 12, 24
+\item What is the output of the following code? If it breaks at any point, indicate what went wrong.
+\begin{verbatim}
+    #include <iostream>
+
+    int mystery(int x, int* y) {
+        x = x + 10;
+        *y = x * 2;
+        return x;
+    }
+
+    int* mystery2() {
+        int x = 50;
+        return &x;
+    }
+
+    int main() {
+        int x = 2, y = 3;
+        x = mystery(x, &y);
+        std::cout << "(x, y): (" << x << ", " << y << ")" << std::endl;
+        int* z = mystery2();
+        std::cout << "z: " << *z << std::endl;
+    }
+\end{verbatim}
+
+\item Define a void function that takes a pointer to an integer variable as a parameter, and increments its value by 10. (Hint: void functions return type is void)
+
+\item Define a function that sets an arbitrary value of an array. The function should have the following prototype: \verb|void set_value(int* arr, const int n, const int idx, const int val);| It should prevent users from inserting values beyond the end of the array.
+
+\item Define a function that creates a new integer array on the heap and returns a pointer to that array. The function should take the length of the array to generate as a parameter. (Hint: this requires the \verb|new| operator!)
+
+\item Define a second function that receives a pointer to a previously allocated array and frees the memory. \verb|void free_mem(int* arr);|
+
+\end{enumerate}
+
+The following exercises are considered {\it optional}.  You don't need to report answers on these.
+
+\begin{enumerate}[leftmargin=*]
+
+\item Provide a detailed explanation as to what happened in question 4, can you suggest any ways to fix the issue present in the code?
+
+\item The \verb|std::vector| class uses arrays internally, yet a \verb|std::vector| is capable of dynamically resizing itself. Can you think of how you would write the method \verb|expand|? \textit{This is a challenging question, which is why it is optional, but this type of thinking is highly valuable.}
+
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
+    
