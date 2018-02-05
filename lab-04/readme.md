@@ -1,9 +1,13 @@
-# Lab 04: 
+# Lab 04 (Rough Draft): 
 
 Case study on the complexities of different implementations of Max Subarray Sum:
 http://www.ics.uci.edu/~goodrich/teach/cs161/notes/MaxSubarray.pdf
 
 ## Introduction
+
+This lab will be completed in teams of three students. Each team will discuss how to solve the problem the lab presents. If a team feels that they have the correct solution they may check with the TA, and if their solution is correct they may show their result to the rest of the class (Just the result, no code).
+
+The goal of the lab is to get a hands-on look at algorithm complexity, which will be accomplished by benchmarking three different implementations of the Maximum Subarray Sum algorithm for different input sizes, and printing a table of the results to the console.
 
 ## Compiling
 
@@ -30,3 +34,5 @@ int main() {
     return 0;
 }
 ```
+
+## About Maximum Subarray Sum
