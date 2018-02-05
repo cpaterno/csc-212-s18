@@ -6,7 +6,7 @@ In this lab you will use `debug50` to understand how pointers work when working 
 
 Make sure to update your local repository from Github to your `cs50ide` instance.
 
-You can follow along with the questions on the [google form.](https://docs.google.com/forms/d/e/1FAIpQLSc-mlIKbAdz-ElZVFBwf3UA44qE9tY5AtMc6i6DsEY7mj5-DQ/viewform?usp=sf_link)
+You can follow along with the questions on the [google form.](https://goo.gl/forms/WohX8lTZHeiUiPjb2)
 
 ### 1.1 Compiling
 
