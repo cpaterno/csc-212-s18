@@ -27,5 +27,6 @@ int main() {
     // This finds the time your code took to run, and assigns it to the variable  t  as a double
     // Now you can use std::cout to print  t  to the console.
     double t = std::chrono::duration<double> (end - start).count();
+    return 0;
 }
 ```
