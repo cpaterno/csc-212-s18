@@ -24,8 +24,8 @@ int main() {
     */
     auto end = std::chrono::steady_clock::now();
     
-    // This finds the time your code took to run, and assigns it to the variable  time  as a double
-    // Now you can use std::cout to print  time  to the console.
-    double time = std::chrono::duration<double> (end - start).count();
+    // This finds the time your code took to run, and assigns it to the variable  t  as a double
+    // Now you can use std::cout to print  t  to the console.
+    double t = std::chrono::duration<double> (end - start).count();
 }
 ```
