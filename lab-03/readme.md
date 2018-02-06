@@ -46,7 +46,7 @@ The first line of the program in `main()` declares an `int` called `number` and 
 
 > **Question 2:** Step through line `6` only once using the step button located just next to the play button in the debug menu (reads "step over" when you hover your mouse over it) and inspect the value of `number` again.  What is the value of `number` now?  Why did it change?
 
-Since you stepped through your code only once so far, you should be at line `9`, the second line of code in `main()`.  Line `9` declares an `int *` called `numberPtr` and sets it to the value of the address of `number` using the `&` syntax.  The `&` is called the ***address-of operator*** and is used when ***referencing*** a variable to get its memory address.
+Since you stepped through your code only once so far, you should be at line `9`, the second line of code in `main()`.  Line `9` declares an `int *` called `numberPtr` and sets it to the address of `number` using the ***address-of operator:*** `&`, which is used when ***referencing*** a variable to get its memory address.
 
 > **Question 3:** When you pause at line `9` inspect the value of `numberPtr`.  What is the value of `numberPtr` so far?  Why is it this value?
 
