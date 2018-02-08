@@ -2,7 +2,7 @@
 
 \usepackage{listings}
 \usepackage{fancyhdr}
-\usepackage[margin=.9in]{geometry}
+\usepackage[margin=.8in]{geometry}
 \usepackage{amsmath}
 \usepackage{enumitem}
 
@@ -13,10 +13,10 @@
 % Header / Footer
 % ===========================================================================
 \pagestyle{fancy}
-\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2018}\chead{}\rhead{\scriptsize Weekly Problem Set \#1}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2018}\chead{}\rhead{\scriptsize Weekly Problem Set \#3}
 \lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
 
 % ===========================================================================
 % ===========================================================================
@@ -31,13 +31,45 @@
     \medskip
     {\Large\bf University of Rhode Island}\\
     \bigskip
-    {\Large\bf Weekly Problem Set \#2}
+    {\Large\bf Weekly Problem Set \#3}
 \end{center}
 
 Due Wednesday 2/14 before lab. Please turn in neat, and organized, answers hand-written on standard-sized paper \textbf{without any fringe}. At the top of each sheet you hand in, please write your name, and ID.
 The only library you're allowed to use in your answers is \verb|iostream|.
 
 \begin{enumerate}[leftmargin=*]
+
+\item Assuming \lstinline|y| is equal to 10, what is \lstinline|x| equal to after this code: \verb|int x = *( &y );|. Explain what is happening in this code.
+
+\item What is the minimum number of bits required to store n distinct code values? For example, how many bits would be required to store 8 values. Justify your answer.
+
+\item Simplify the following: 
+\begin{itemize}
+    \item \( \log_2 xy - \log_2 x^2 + 4 \log_2 y \)
+    \item \( \log_2 (8x)^\frac{1}{3} \)
+    \item \( \log_3(9x^4) - \log_3(3x)^2\)
+\end{itemize}
+% https://maths.mq.edu.au/numeracy/web_mums/module2/Worksheet27/module2.pdf
+
+\item Solve for x: \( \log_{2} \frac{x}{2} = 5 \)
+
+\item Evaluate: \( \sum\limits_{x=0}^3 (5 + \sqrt{4^x}) \)
+% https://www.math.ucdavis.edu/~kouba/CalcTwoDIRECTORY/summationdirectory/Summation.html
+
+\item Solve the following: \( \sum\limits_{n=0}^5 (-n) \)
+
+\item Prove that: \( \sum\limits_{i=1}^{x} i = \frac{(x + 1)x}{2} \)
+% https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/Proofs.html#direct-proof
+
+\item Rewrite the following expression into its closed form (i.e. without the sigma): \( \sum_{i=1}^4 (2 + i^2) \).
+
+\item Explain the different ways you can analyze various algorithms (hint: look at the class slides).
+
+\end{enumerate}
+
+The following questions are considered optional:
+
+\begin{enumerate}
 
 \item Explain the difference between the following three declarations of a pointer.  
 \begin{lstlisting}[language=C++]
@@ -46,13 +78,17 @@ The only library you're allowed to use in your answers is \verb|iostream|.
     const int* const ptr;
 \end{lstlisting}
 
-\item Assuming \lstinline|y| is equal to 10, what is \lstinline|x| equal to after this code: \verb|int x = *( &y );|.
+\item Explain the difference between Direct Proof, Proof by Contradiction, and Proof by Mathematical Induction.
+% https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/Proofs.html#direct-proof
 
-\item What is the minimum number of bits required to store n distinct code values? 
-
-\item Simplify the following expressions: 
-\( 2^{\log_{2}n} \),
-
+\item Based on the given data, please clasify each of the following as linear, exponential, logarithmic, or none of the above. If it is none of the above, try to reason what type of curve it may be.
+\begin{itemize}
+    \item $f(0) = 4, f(1) = 6, f(2) = 9$
+    \item $f(0) = 6, f(10) = 8, f(20) = 10$
+    \item $f(0) = 80, f(0.1) = 60, f(0.2) = 45$
+    \item $f(0) = 10, f(1) = 20, f(2) = 35$
+    \item $f(0) = 1, f(3) = 6, f(5) = 120$
+\end{itemize}
 
 \end{enumerate}
 
