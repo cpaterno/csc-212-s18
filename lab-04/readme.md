@@ -68,4 +68,4 @@ The algorithms we are testing the speed of are trying to solve the max subarray 
 
 Like anything in life, there are multiple ways of doing the same thing. Some ways are simple and quick, some are complex and take a long time. Hopefully by the end of this lab you have a better sense of algorithm complexity and why it's important to have quick and simple algorithms, especially as the amount of input increases.
 
-If you want to read more about these specific implementations and how they were derived, you may read [this case study](http://www.ics.uci.edu/~goodrich/teach/cs161/notes/MaxSubarray.pdf) on the complexities of different implementations of Max Subarray Sum.
+If you want to read more about these specific implementations and how they were derived, you may read ![this case study](http://www.ics.uci.edu/~goodrich/teach/cs161/notes/MaxSubarray.pdf) on the complexities of different implementations of Max Subarray Sum.
