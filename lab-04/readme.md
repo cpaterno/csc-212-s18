@@ -21,7 +21,7 @@ A2  0.0000117  0.0001362  0.0017957  0.1353368
 A3  0.0000039  0.0000063  0.0000117  0.0001200
 ```
 
-**Your submissions** to the Google Form will be your main function (along with any other helper function(s) you may define) for the first field, and the output of your code for the second field. If you do not finish, submit the code that you did write along with whatever output you may have, or "No output" if none.
+**Your submissions** to the Google Form will be your `main` function (along with any other helper function(s) you may define) for the first field, and the output of your code for the second field. If you do not finish, submit the code that you did write along with whatever output you may have, or "No output" if none.
 
 ## Compiling
 
