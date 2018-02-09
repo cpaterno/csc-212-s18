@@ -11,7 +11,9 @@ The goal of the lab is to get a hands-on look at algorithm complexity, which wil
 
 ## Compiling
 
-Ensure that your terminal is in the same directory as the .cpp or .cc files and then compile your program using the command: g++ -g NAMEofFILE.cpp -o NAMEofFILE. *Replace NAMEofFILE with the name of the file you are trying to compile* The program should compile without errors.
+Ensure that your terminal is in the same directory as the .cpp or .cc files and then compile your program using the command:           g++ -g -std=c++11 NAMEofFILE.cpp -o NAMEofFILE
+*Replace NAMEofFILE with the name of the file you are trying to compile* Also notice the -std=c++11 flag
+The program should compile without errors.
 
 This program takes no arguments so the command is ./NAMEofFILE
 
