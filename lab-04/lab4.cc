@@ -7,26 +7,11 @@
 
 int check_time(t_p start_time);
 
-int* gen_rand_list(int size) {
-
-    std::random_device sd;
-    std::mt19937 generator(sd());
-    std::uniform_int_distribution<int> distribution(-size,size);
-    int* nlist = new int[size];
-    for (int i = 0; i < size; i++) {
-        nlist[i] = distribution(generator);
-    }
-    return nlist;
-}
-
-void delete_list(int* arr) {
-    delete [] arr;
-}
-
 int max_sub_slow(const int* arr, int len) {
     int sum;
     int max = 0;
 
+    // Used to make sure the algorithm hasn't run for too long
     auto start = std::chrono::steady_clock::now();
 
     for (int i = 0; i < len; i++) {
@@ -36,6 +21,8 @@ int max_sub_slow(const int* arr, int len) {
                 sum += arr[k];
             }
             if (sum > max) max = sum;
+
+            // If the algorithm has run for over a minute, abort and return -1
             if (check_time(start)) return -1;
         }
     }
@@ -43,11 +30,13 @@ int max_sub_slow(const int* arr, int len) {
     return max;
 }
 
+// The faster maximum subarray sum algorithm. Runs in O(n^2) time.
 int max_sub_faster(const int* arr, int len) {
     int sum;
     int max;
     int* pre_sum = new int[len+1];
 
+    // Used to make sure the algorithm hasn't run for too long
     auto start = std::chrono::steady_clock::now();
 
     pre_sum[0] = 0;
@@ -62,13 +51,19 @@ int max_sub_faster(const int* arr, int len) {
             if (sum > max) {
                 max = sum;
             }
+
+            // If the algorithm has run for over a minute, abort and return -1
+            if (check_time(start)) {
+                delete [] pre_sum;
+                return -1;
+            }
         }
-        if (check_time(start)) return -1;
     }
     delete [] pre_sum;
     return max;
 }
 
+// The fastest maximum subarray sum algorithm. Runs in O(n) time.
 int max_sub_fastest(const int* arr, int len) {
     int* pre_max = new int[len+1];
     int max;
@@ -87,13 +82,29 @@ int max_sub_fastest(const int* arr, int len) {
     return max;
 }
 
+// Generate an array of random integers. The range is +/- the size of the array
+int* gen_rand_list(int size) {
+
+    std::random_device sd;
+    std::mt19937 generator(sd());
+    std::uniform_int_distribution<int> distribution(-size,size);
+    int* nlist = new int[size];
+    for (int i = 0; i < size; i++) {
+        nlist[i] = distribution(generator);
+    }
+    return nlist;
+}
+
+// Deallocate an array on the heap. A function alias for the delete keyword
+void delete_list(int* arr) {
+    delete [] arr;
+}
+
 // Auxiliary function to keep the program from running too long
 int check_time(t_p start_time) {
     auto curr_time = std::chrono::steady_clock::now();
     double t = std::chrono::duration<double> (curr_time - start_time).count();
-    int rval;
-    (t > 60) ? (rval = 1) : (rval = 0);
-    return rval;
+    return (t > 60) ? 1 : 0;
 }
 
 int main() {
