@@ -69,3 +69,7 @@ The algorithms we are testing the speed of are trying to solve the max subarray 
 Like anything in life, there are multiple ways of doing the same thing. Some ways are simple and quick, some are complex and take a long time. Hopefully by the end of this lab you have a better sense of algorithm complexity and why it's important to have quick and simple algorithms, especially as the amount of input increases.
 
 If you want to read more about these specific implementations and how they were derived, you may read [this case study](http://www.ics.uci.edu/~goodrich/teach/cs161/notes/MaxSubarray.pdf) on the complexities of different implementations of Max Subarray Sum.
+
+## Optional Exercises
+
+If you have successfully solved the problem above, you're encouraged to experiment with your code and the starter code a bit. You may try modifying the maximum subarray functions to print out what they about to do, or are currently doing, to better understand the implementations and what modifications have been made to increase the time efficiency. You may also try writing some algorithms yourself, benchmarking them and printing the results for different input sizes using the code you already wrote. (These are currently just ideas, and are open to modification).
