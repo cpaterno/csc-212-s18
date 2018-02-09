@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab will be completed in teams of three students. Each team will discuss how to solve the problem the lab presents. If a team feels that they have the correct solution they may check with the TA, and if their solution is correct they may show their result to the rest of the class (Just the result, no code).
+This lab will be completed in teams of three students; you may decide your teams amongst yourselves. Each team will discuss how to solve the problem the lab presents, and work together to implement their solution. If a team feels that they have the correct solution they may check with the TA, and if their solution is correct they may show their result to the rest of the class (Just the result, no code).
 
 The goal of the lab is to get a hands-on look at algorithm complexity, which will be accomplished by benchmarking three different implementations of the Maximum Subarray Sum algorithm for different input sizes, and printing a table of the results to the console.
 
