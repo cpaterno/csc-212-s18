@@ -19,20 +19,22 @@ Make sure your program runs without errors before proceeding.
 
 ## Benchmarking
 
-Measuring the time an algorithm or a section of code takes to run is called benchmarking. This is how you do it in C++:
+Measuring the time an algorithm or a section of code takes to run is called benchmarking. It times the code just like you would do in real life. It looks at the time when the code starts, runs the code, then looks at the time it ends. This is how you do it in C++:
 
 ```C++
 #include <iostream>
 #include <chrono>
 
 int main() {
+    // Get the starting Time
     auto start = std::chrono::steady_clock::now();
     /*
         The part of your code you want to time
     */
+    // Get the ending time
     auto end = std::chrono::steady_clock::now();
     
-    // This finds the time your code took to run, and assigns it to the variable  t  as a double
+    // This finds the time your code took to run by subtracting the end and start times. It assigns it to the variable  t  as a double
     // Now you can use std::cout to print  t  to the console.
     double t = std::chrono::duration<double> (end - start).count();
     return 0;
@@ -40,3 +42,9 @@ int main() {
 ```
 
 ## About Maximum Subarray Sum
+We talked about Max SubArray Sum in the lecture, but here is a visual to jog your memory.
+![image](https://www.geeksforgeeks.org/wp-content/uploads/kadane-Algorithm.png)
+
+The algorithms we are testing the speed of are trying to solve the max subarray problem. It tries to find a section of the array that gives the biggest number if you add up the numbers in that section. The picture above is what the algorithm tries to figure out.
+
+Like anything in life, there are multiple ways of doing the same thing. Some ways are simple and quick, some are complex and take a long time. Hopefully by the end of this lab you have a better sense of algorithm complexity and why it's important to have quick and simple algorithms, especially as the amount of input increases.
