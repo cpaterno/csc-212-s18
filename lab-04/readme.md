@@ -11,7 +11,17 @@ The goal of the lab is to get a hands-on look at algorithm complexity, which wil
 
 ## The Starter Code
 
-The starter code for this lab is available in the link `lab4.cc` above. This code contains five functions which you will use: `max_sub_slow`, `max_sub_faster`, `max_sub_fastest`, `gen_rand_list`, and `delete_list`. The first three need not actually be called directly, as the starter code contains a way to call each function from a function array, but you may use them instead if you wish.
+The starter code for this lab is available in the link `lab4.cc` above. This code contains five functions which you will use: `max_sub_slow`, `max_sub_faster`, `max_sub_fastest`, `gen_rand_list`, and `delete_list`. The first three need not actually be called directly, as the starter code contains a way to call each function from a function array, but you may use them instead if you wish. They each take an integer array and the length of said array as parameters, and return the resulting maximum subarray sum. To generate randomized arrays for the algorithms to work with you can use `gen_rand_list`, which takes the length of the array as a parameter and returns a pointer to a randomized integer array. These arrays are allocated on the heap, so use either `delete_list` or the `delete` keyword to free the memory when you're done with them.
+
+## Requirements
+
+For successful completion of this lab, you must print to the console a table of running times for each of the maximum subarray sum algorithms, given different input sizes. The input sizes you should use for this lab are 10, 100, 1000, and 10000. These should be printed across the top of the table, and the algorithms should be printed along the left side (you may simply use "A1, A2 and A3" in place of "max_sub_slow, max_sub_faster, and max_sub_fastest"). To ensure that you print the columns out evenly, you may use `std::cout.precision(x)` to set the number of digits after the decimal to be printed, and `std::cout << std::fixed` to print the results in regular decimal format instead of scientific. The output to your program should look something like this:
+
+```
+
+```
+
+**Your submissions to the Google Form will be your main function (along with any other helper function(s) you may define) for the first field, and the output of your code for the second field. If you do not finish, submit the code that you did write along with whatever output you may have, or "No output" if none.**
 
 ## Compiling
 
