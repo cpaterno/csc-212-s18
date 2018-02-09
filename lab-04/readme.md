@@ -1,4 +1,4 @@
-# Lab 04 (Rough Draft): 
+# Lab 04: 
 
 Case study on the complexities of different implementations of Max Subarray Sum:
 http://www.ics.uci.edu/~goodrich/teach/cs161/notes/MaxSubarray.pdf
@@ -9,9 +9,13 @@ This lab will be completed in teams of three students. Each team will discuss ho
 
 The goal of the lab is to get a hands-on look at algorithm complexity, which will be accomplished by benchmarking three different implementations of the Maximum Subarray Sum algorithm for different input sizes, and printing a table of the results to the console.
 
+## The Starter Code
+
+The starter code for this lab is available in the link `lab4.cc` above. This code contains five functions which you will use: `max_sub_slow`, `max_sub_faster`, `max_sub_fastest`, `gen_rand_list`, and `delete_list`. The first three need not actually be called directly, as the starter code contains a way to call each function from a function array, but you may use them instead if you wish.
+
 ## Compiling
 
-Ensure that your terminal is in the same directory as the .cpp or .cc files and then compile your program using the command:           g++ -g -std=c++11 NAMEofFILE.cpp -o NAMEofFILE
+Ensure that your terminal is in the same directory as the .cpp or .cc files and then compile your program using the command:           g++ -g -std=c++11 NAMEofFILE.cc -o NAMEofFILE
 *Replace NAMEofFILE with the name of the file you are trying to compile* Also notice the -std=c++11 flag
 The program should compile without errors.
 
@@ -44,6 +48,7 @@ int main() {
 ```
 
 ## About Maximum Subarray Sum
+
 We talked about Max SubArray Sum in the lecture, but here is a visual to jog your memory.
 ![image](https://www.geeksforgeeks.org/wp-content/uploads/kadane-Algorithm.png)
 
