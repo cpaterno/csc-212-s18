@@ -7,6 +7,7 @@
 
 int check_time(t_p start_time);
 
+// The slow maximum subarray sum algorithm. Runs in O(n^3) time.
 int max_sub_slow(const int* arr, int len) {
     int sum;
     int max = 0;
