@@ -70,6 +70,6 @@ Like anything in life, there are multiple ways of doing the same thing. Some way
 
 If you want to read more about these specific implementations and how they were derived, you may read [this case study](http://www.ics.uci.edu/~goodrich/teach/cs161/notes/MaxSubarray.pdf) on the complexities of different implementations of Max Subarray Sum.
 
-## Optional Exercises
+## Optional Exercise
 
-If you have successfully solved the problem above, you're encouraged to experiment with your code and the starter code a bit. You may try modifying the maximum subarray functions to print out what they about to do, or are currently doing, to better understand the implementations and what modifications have been made to increase the time efficiency. You may also try writing some algorithms yourself, benchmarking them and printing the results for different input sizes using the code you already wrote. (These are currently just ideas, and are open to modification).
+While benchmarking an algorithm once can be good to get a rough idea of how quickly the algorithm will run, different input data (and even system anomalies at times) can sometimes affect the time an algorithm takes to complete. Thus, to get a more accurate running time for a given algorithm, one can benchmark the same algorithm multiple times and take the average of these results. For this exercise, modify your `main` function such that the output is now a table of *averages*. You must benchmark each algorithm five times and find the averages for each input size. Generate a new random list each time you benchmark an algorithm on a given input size, rather than benchmarking for the same input each time.
