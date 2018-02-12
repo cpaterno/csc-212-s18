@@ -1,5 +1,8 @@
 # Lab 04: The Great Algorithm Race
 
+### Google Form
+https://goo.gl/forms/G7AVdBrHY4a5AduD3
+
 ## Introduction
 
 Different algorithm implementations often take different lengths of time to complete, even if they solve the same problem. This lab will be completed in teams of two or three students; you may decide your teams amongst yourselves. The teams will compete to complete the task, and the first team to finish understanding and implementing the lab solution wins. (There is no prize but you still get the satisfaction of completing the task before anyone else.) If a team feels that they have the correct solution they may check with the TA. If their solution is correct they may show their result to the rest of the class (just the result, no code), at which point the TA will stop checking solutions (but will still answer questions, of course).
