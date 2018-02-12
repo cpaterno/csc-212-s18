@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab will be completed in teams of two or three students; you may decide your teams amongst yourselves. First team to finish understanding and implementing the lab solution wins (There is no prize but you still get a Win). If a team feels that they have the correct solution they may check with the TA. If their solution is correct they may show their result to the rest of the class (Just the result, no code).
+This lab will be completed in teams of two or three students; you may decide your teams amongst yourselves. The teams will compete to complete the task, and the first team to finish understanding and implementing the lab solution wins. (There is no prize but you still get the satisfaction of completing the task before anyone else.) If a team feels that they have the correct solution they may check with the TA. If their solution is correct they may show their result to the rest of the class (just the result, no code), at which point the TA will stop checking solutions (but will still answer questions, of course).
 
 The goal of the lab is to get a hands-on look at algorithm complexity, which will be accomplished by benchmarking three different implementations of the Maximum Subarray Sum algorithm for different input sizes, and printing a table of the results to the console.
 
@@ -31,7 +31,7 @@ Ensure that your terminal is in the same directory as the .cpp or .cc files and 
 
 *Replace NAMEofFILE with the name of the file you are trying to compile* 
 
-Also notice the -std=c++11 flag, we need that because we are using some things that require using c++11.
+Also notice the -std=c++11 flag. This is needed because this lab's code uses some features that are only available in C++11, such as the `<chrono>` library and the `auto` specifier.
  
 The program should compile without errors.
 
@@ -63,7 +63,7 @@ int main() {
 }
 ```
 
-Note that for this lab's starter code, each implementation of maximum subarray sum will stop running if it runs for longer than one minute, and will return `-1` instead of the actual answer. You can use this to handle algorithms that run for too long, or simply print the time the algorithm ran for anyway. In the case where the algorithm is running for too long, "N/A" can be used as a placeholder since the actual time is not known.
+Note that for this lab's starter code, each implementation of maximum subarray sum will stop running if it runs for longer than one minute, and will return `-1` instead of the actual answer. In the case where the algorithm is running for too long, `N/A` should be used as a placeholder in the output since the algorithm did not actually complete.
 
 ## About Maximum Subarray Sum
 
