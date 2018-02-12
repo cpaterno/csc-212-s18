@@ -25,8 +25,14 @@ A3  0.0000039  0.0000063  0.0000117  0.0001200
 
 ## Compiling
 
-Ensure that your terminal is in the same directory as the .cpp or .cc files and then compile your program using the command:           g++ -g -std=c++11 NAMEofFILE.cc -o NAMEofFILE
-*Replace NAMEofFILE with the name of the file you are trying to compile* Also notice the -std=c++11 flag
+Ensure that your terminal is in the same directory as the .cpp or .cc files and then compile your program using the command:   
+
+        g++ -g -std=c++11 NAMEofFILE.cc -o NAMEofFILE
+
+*Replace NAMEofFILE with the name of the file you are trying to compile* 
+
+Also notice the -std=c++11 flag, we need that because we are using some things that require using c++11.
+ 
 The program should compile without errors.
 
 This program takes no arguments so the command is ./NAMEofFILE
@@ -57,7 +63,7 @@ int main() {
 }
 ```
 
-Note that for this lab's starter code, each implementation of maximum subarray sum will stop running if it runs for longer than one minute, and will return `-1` instead of the actual answer. You can use this to handle algorithms that run for too long, or simply print the time the algorithm ran for anyway.
+Note that for this lab's starter code, each implementation of maximum subarray sum will stop running if it runs for longer than one minute, and will return `-1` instead of the actual answer. You can use this to handle algorithms that run for too long, or simply print the time the algorithm ran for anyway. In the case where the algorithm is running for too long, "N/A" can be used as a placeholder since the actual time is not known.
 
 ## About Maximum Subarray Sum
 
