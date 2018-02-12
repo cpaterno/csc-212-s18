@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab will be completed in teams of three students; you may decide your teams amongst yourselves. Each team will discuss how to solve the problem the lab presents, and work together to implement their solution. If a team feels that they have the correct solution they may check with the TA, and if their solution is correct they may show their result to the rest of the class (Just the result, no code).
+This lab will be completed in teams of two or three students; you may decide your teams amongst yourselves. First team to finish understanding and implementing the lab solution wins (There is no prize but you still get a Win). If a team feels that they have the correct solution they may check with the TA. If their solution is correct they may show their result to the rest of the class (Just the result, no code).
 
 The goal of the lab is to get a hands-on look at algorithm complexity, which will be accomplished by benchmarking three different implementations of the Maximum Subarray Sum algorithm for different input sizes, and printing a table of the results to the console.
 
@@ -16,7 +16,7 @@ For successful completion of this lab, you must print to the console a table of 
 
 ```
     10         100        1000       10000      
-A1  0.0000284  0.0037321  0.5383260  60.000017
+A1  0.0000284  0.0037321  0.5383260  N/A
 A2  0.0000117  0.0001362  0.0017957  0.1353368
 A3  0.0000039  0.0000063  0.0000117  0.0001200
 ```
