@@ -5,9 +5,21 @@ https://goo.gl/forms/G7AVdBrHY4a5AduD3
 
 ## Introduction
 
-Different algorithm implementations often take different lengths of time to complete, even if they solve the same problem. This lab will be completed in teams of two or three students; you may decide your teams amongst yourselves. The teams will compete to complete the task, and the first team to finish understanding and implementing the lab solution wins. (There is no prize but you still get the satisfaction of completing the task before anyone else.) If a team feels that they have the correct solution they may check with the TA. If their solution is correct they may show their result to the rest of the class (just the result, no code), at which point the TA will stop checking solutions (but will still answer questions, of course).
+Different algorithm implementations often take different lengths of time to complete, even if they solve the same problem. This lab will be completed in teams of two or three students; you may decide your teams amongst yourselves. The teams will compete to complete the task, and the first team to understand and implement the lab solution wins - the satisfaction of completing the task before anyone else. If a team feels that they have the correct solution, they may check with the TA. If their solution is correct they may show their result to the rest of the class (just the result, no code), at which point the TA will stop checking solutions (but will still answer questions, of course).
 
-The goal of the lab is to get a hands-on look at algorithm complexity, which will be accomplished by benchmarking three different implementations of the Maximum Subarray Sum algorithm for different input sizes, and printing a table of the results to the console.
+The goal of the lab is to get a hands-on look at algorithm complexity by benchmarking three different implementations of the Maximum Subarray Sum algorithm for different input sizes; and, printing a table of the results to the console.
+
+
+## About Maximum Subarray Sum
+
+We talked about Max SubArray Sum in the lecture, but here is a visual to jog your memory.
+![image](https://www.geeksforgeeks.org/wp-content/uploads/kadane-Algorithm.png)
+
+The algorithms we are testing the speed of are trying to solve the max subarray problem. It tries to find a section of the array that gives the biggest number if you add up the numbers in that section. The picture above is what the algorithm tries to figure out.
+
+Like anything in life, there are multiple ways of doing the same thing. Some ways are simple and quick, some are complex and take a long time. Hopefully by the end of this lab you have a better sense of algorithm complexity and why it's important to have quick and simple algorithms, especially as the amount of input increases.
+
+If you want to read more about these specific implementations and how they were derived, you may read [this case study](http://www.ics.uci.edu/~goodrich/teach/cs161/notes/MaxSubarray.pdf) on the complexities of different implementations of Max Subarray Sum.
 
 ## The Starter Code
 
@@ -15,7 +27,7 @@ The starter code for this lab is available in the link `lab4.cc` above. This cod
 
 ## Requirements
 
-For successful completion of this lab, you must print to the console a table of running times for each of the maximum subarray sum algorithms, given different input sizes. The input sizes you should use for this lab are 10, 100, 1000, and 10000. These should be printed across the top of the table, and the algorithms should be printed along the left side (you may simply use "A1, A2 and A3" in place of "max_sub_slow, max_sub_faster, and max_sub_fastest"). To ensure that you print the columns out evenly, you may use `std::cout.precision(x)` to set the number of digits after the decimal to be printed, and `std::cout << std::fixed` to print the results in regular decimal format instead of scientific. The output to your program should look something like this:
+For successful completion of this lab, you must print to the console a table of running times for each of the maximum subarray sum algorithms, given different input sizes. The input sizes you should use for this lab are 10, 100, 1000, and 10000. These should be printed across the top of the table, and the algorithms should be printed along the left side (you may simply use "A1, A2 and A3" in place of "max_sub_slow, max_sub_faster, and max_sub_fastest" respectively). To ensure that you print the columns out evenly, you may use `std::cout.precision(x)` to set the number of digits after the decimal to be printed, and `std::cout << std::fixed` to print the results in regular decimal format instead of scientific. The output to your program should look something like this:
 
 ```
     10         100        1000       10000      
@@ -40,7 +52,7 @@ The program should compile without errors.
 
 This program takes no arguments so the command is ./NAMEofFILE
 
-Make sure your program runs without errors before proceeding.
+> Make sure your program runs without errors before proceeding.
 
 ## Benchmarking
 
@@ -68,17 +80,6 @@ int main() {
 
 Note that for this lab's starter code, each implementation of maximum subarray sum will stop running if it runs for longer than one minute, and will return `-1` instead of the actual answer. In the case where the algorithm is running for too long, `N/A` should be used as a placeholder in the output since the algorithm did not actually complete.
 
-## About Maximum Subarray Sum
-
-We talked about Max SubArray Sum in the lecture, but here is a visual to jog your memory.
-![image](https://www.geeksforgeeks.org/wp-content/uploads/kadane-Algorithm.png)
-
-The algorithms we are testing the speed of are trying to solve the max subarray problem. It tries to find a section of the array that gives the biggest number if you add up the numbers in that section. The picture above is what the algorithm tries to figure out.
-
-Like anything in life, there are multiple ways of doing the same thing. Some ways are simple and quick, some are complex and take a long time. Hopefully by the end of this lab you have a better sense of algorithm complexity and why it's important to have quick and simple algorithms, especially as the amount of input increases.
-
-If you want to read more about these specific implementations and how they were derived, you may read [this case study](http://www.ics.uci.edu/~goodrich/teach/cs161/notes/MaxSubarray.pdf) on the complexities of different implementations of Max Subarray Sum.
-
 ## Optional Exercise
 
-While benchmarking an algorithm once can be good to get a rough idea of how quickly the algorithm will run, different input data (and even system anomalies at times) can sometimes affect the time an algorithm takes to complete. Thus, to get a more accurate running time for a given algorithm, one can benchmark the same algorithm multiple times and take the average of these results. For this exercise, modify your `main` function such that each algorithm is benchmarked five times for each input size, and output a table of *averages running times* instead of one time for each algorithm-input pair. Be sure to generate a new random list each time you benchmark an algorithm on a given input size, rather than benchmarking for the same input each time.
+While benchmarking an algorithm once can be good to get a rough idea of how quickly the algorithm will run, different input data, current processes, and even system anomalies at times, can sometimes affect the time an algorithm takes to complete. Thus, to get a more accurate running time for a given algorithm, one can benchmark the same algorithm multiple times and take the average of these results. For this exercise, modify your `main` function such that each algorithm is benchmarked five times for each input size, and output a table of *average running times* instead of one time for each algorithm-input pair. Be sure to generate a new random list each time you benchmark an algorithm on a given input size, rather than benchmarking for the same input each time.
