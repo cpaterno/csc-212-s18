@@ -114,9 +114,9 @@ int main() {
      *
      * To call a function from this array, use the following line:
      *
-     *      fns[i](a, b, c);
+     *      fns[i](a, b);
      *
-     * Where i is the index of the function to be used, and a, b, and c are the parameters
+     * Where i is the index of the function to be used, and a, b are the parameters
      *    i = 0 : max_sub_slow
      *    i = 1 : max_sub_faster
      *    i = 2 : max_sub_fastest
