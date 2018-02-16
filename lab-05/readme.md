@@ -1,4 +1,4 @@
-# Lab 05: Sorting in Linear Time
+# Lab 05: Basic Sorting Algorithms with Different Input Types
 ```
 What does a sorting algorithm say when it's broken?
 
