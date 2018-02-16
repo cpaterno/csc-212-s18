@@ -17,16 +17,22 @@ Things to note about this lab:
 
 A given sorting algorithm may vary in efficiency depending on the type of input. For example, some algorithms sort an already sorted list very quickly, taking advantage of the fact that it is already sorted, while others may take just as long as any other input type. In fact, you will find that all sorts of algorithms have these types of behavior, not just sorting algorithms. This is why we talk about "best case" and "worst case" time complexities. Thus, for this lab, you will run your program on the following types of inputs:
 
-+Random Unsorted Lists: Use `gen_list_unsorted` to generate your lists
-+Already Sorted Lists: Use `gen_list_sorted`
-+Reverse Sorted Lists: Use `gen_list_reversed`
-+Partially Sorted Lists: Use `gen_list_partial_sort`
-+Unsorted Lists with Few Unique Elements: Use `gen_list_few_unique`
++ Random Unsorted Lists: Use `gen_list_unsorted` to generate your lists
++ Already Sorted Lists: Use `gen_list_sorted`
++ Reverse Sorted Lists: Use `gen_list_reversed`
++ Partially Sorted Lists: Use `gen_list_partial_sort`
++ Unsorted Lists with Few Unique Elements: Use `gen_list_few_unique`
 
-After each time you run your program on one of the above input types, make note of how each algorithm performs with that input. 
+After each time you run your program on one of the above input types, be sure to make note of how each algorithm performs with that input. You will need this information to answer the lab questions.
 
 ## Questions
 
-1. 
+> **Question 1:** On which type(s) of input did insertion sort perform best? On which type(s) did it perform worst?
 
-## Optional Exercise
+> **Question 2:** What was the overall difference between insertion sort's best-case input and its worst-case input? (No need for numbers on this question, just describe the difference the two input types made).
+
+> **Question 3:** On which type(s) of input did selection sort perform best? On which type(s) did it perform worst?
+
+> **Question 4:** What was the overall difference between selection sort's best-case input and its worst-case input?
+
+> **Question 5:** 
