@@ -25,7 +25,7 @@ A given sorting algorithm may vary in efficiency depending on the type of input.
 
 After each time you run your program on one of the above input types, be sure to make note of how each algorithm performs with that input. You will need this information to answer the lab questions.
 
-## Questions
+## Questions/Submission
 
 > **Question 1:** On which type(s) of input did insertion sort perform best? On which type(s) did it perform worst?
 
@@ -35,4 +35,6 @@ After each time you run your program on one of the above input types, be sure to
 
 > **Question 4:** What was the overall difference between selection sort's best-case input and its worst-case input?
 
-> **Question 5:** 
+> **Question 5:** Would insertion or selection sort ever be good sorting algorithms to use in a more general program? Explain your answer.
+
+Once you have finished these questions, copy and paste your code for insertion sort into Question 6 field, your code for insertion sort into the Question 7 field, and your output after running your program with either the reverse sorted lists or the partially sorted lists.
