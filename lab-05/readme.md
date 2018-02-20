@@ -15,7 +15,9 @@ Things to note about this lab:
 
 ## Inputs
 
-A given sorting algorithm may vary in efficiency depending on the type of input. For example, some algorithms sort an already sorted list very quickly, taking advantage of the fact that it is already sorted, while others may take just as long as any other input type. In fact, you will find that all sorts of algorithms have these types of behavior, not just sorting algorithms. This is why we talk about "best case" and "worst case" time complexities. Thus, for this lab, you will run your program on the following types of inputs:
+The performance of an algorithm can depend greatly on the type of input it recieves. In fact, most professional sorting algorithms are *hybrid* alrgorithms, which use different routines depending on the size of the input. As you've seen, even algorithms that grow in complexity faster than others can be more effective on small input sizes. Along with input size, as a programmer, you should also consider what state the input will be in on arrival; i.e. is there a chance it is already sorted? Partially sorted?
+
+Generally, these different scenarios will be referred to as **best case**, **average case**, and **worst case**. To explore this topic further, today you will examine what happens given a variety of inputs:
 
 + Random Unsorted Lists: Use `gen_list_unsorted` to generate your lists
 + Already Sorted Lists: Use `gen_list_sorted`
