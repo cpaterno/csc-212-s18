@@ -7,12 +7,11 @@ Out of order!
 https://goo.gl/forms/aKxVflmWNVAGt2MY2
 ## Introduction
 
-This lab will be a continuation of the previous lab, but without teams, where you will implement two different sorting algorithms: insertion sort and selection sort. These sorting algorithms, along with `std::sort` from the `<algorithms>` C++ library, will replace  `max_sub_slow`, `max_sub_faster`, and `max_sub_fastest` in your `main()` function from last week's lab.
 
 Things to note about this lab:
 1. Be sure to call each of your sorting algorithms on **the same array** for each of the different input sizes.
 2. `std::sort` will sort your array **in place** so you must be sure not to attempt sort an already sorted array.
-3. This lab has its own starter code (`lab5.cc`), so you should begin with the starter code and copy **the contents** of your `main` function from the previous lab into this lab's `main` function.
+3. This lab has its own starter code (`lab5.cc`)
 
 ## Inputs
 
