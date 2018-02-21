@@ -4,6 +4,7 @@ What does a sorting algorithm say when it's broken?
 
 Out of order!
 ```
+https://goo.gl/forms/aKxVflmWNVAGt2MY2
 ## Introduction
 
 This lab will be a continuation of the previous lab, but without teams, where you will implement two different sorting algorithms: insertion sort and selection sort. These sorting algorithms, along with `std::sort` from the `<algorithms>` C++ library, will replace  `max_sub_slow`, `max_sub_faster`, and `max_sub_fastest` in your `main()` function from last week's lab.
