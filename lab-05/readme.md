@@ -40,4 +40,4 @@ After each time you run your program on one of the above input types, be sure to
 
 > **Question 5:** Would insertion or selection sort ever be good sorting algorithms to use in a more general program? Explain your answer.
 
-Once you have finished these questions, copy and paste your code for insertion sort into Question 6 field, your code for insertion sort into the Question 7 field, and your output after running your program with either the reverse sorted lists or the partially sorted lists.
+Once you have finished these questions, copy and paste your code for insertion sort into Question 6 field, your code for selection sort into the Question 7 field, and your output after running your program with either the reverse sorted lists or the partially sorted lists.
