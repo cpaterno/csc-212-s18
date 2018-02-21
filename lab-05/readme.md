@@ -11,7 +11,7 @@ This lab will be a continuation of the previous lab, but without teams, where yo
 Things to note about this lab:
 1. Be sure to call each of your sorting algorithms on **the same array** for each of the different input sizes.
 2. `std::sort` will sort your array **in place** so you must be sure not to attempt sort an already sorted array.
-3. This lab has its own starter code, so you should begin with the starter code and copy **the contents** of your `main` function from the previous lab into this lab's `main` function.
+3. This lab has its own starter code (`lab5.cc`), so you should begin with the starter code and copy **the contents** of your `main` function from the previous lab into this lab's `main` function. If you did not get a functioning output for lab 4 you may use `lab4solution.cc` as a basis for your main function.
 
 ## Inputs
 
