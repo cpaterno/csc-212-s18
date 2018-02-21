@@ -110,8 +110,102 @@ int* copy_array(int* arr, int len) {
 
 
 int main() {
+    
+    int* lists[4]; // Will store a randomly generated list for each input size.
+    double times[3][4]; // Will store the resulting times after benchmarking.
 
-    /* Paste your code from lab 4 here */
+    int input_sizes[4] = {50, 50, 50, 50};
+    char input_size_s[4][8] = {"Random Unsorted", "Already Sorted", "Reverse Sorted", "Partially Sorted"}; // For printing. Could use itoa instead.
+
+    //Insertion
+    for (int j = 0; j < 4; j++) {
+        auto start = std::chrono::steady_clock::now();
+        int r = fns[j](lists[i], input_sizes[i]);
+        auto end = std::chrono::steady_clock::now();
+        double t = std::chrono::duration<double> (end-start).count();
+        times[j][i] = t;
+    }
+    //Selection
+    for (int j = 0; j < 4; j++) {
+        auto start = std::chrono::steady_clock::now();
+        int r = fns[j](lists[i], input_sizes[i]);
+        auto end = std::chrono::steady_clock::now();
+        double t = std::chrono::duration<double> (end-start).count();
+        times[j][i] = t;
+    }
+    //cpp_sort
+    for (int j = 0; j < 4; j++) {
+        auto start = std::chrono::steady_clock::now();
+        int r = fns[j](lists[i], input_sizes[i]);
+        auto end = std::chrono::steady_clock::now();
+        double t = std::chrono::duration<double> (end-start).count();
+        times[j][i] = t;
+    }
+
+    // Printing the input sizes with formatting.
+    std::cout << "    ";
+    int total_width = 3; // This counter keeps track of the total width of the table
+    for (int i = 0; i < 4; i++) {
+        int width = 0;
+        // These two loops ensure the length of each column is 10 characters,
+        // first printing the input size, then whitespace.
+        while (input_size_s[i][width] != '\0') {
+            std::cout << input_size_s[i][width];
+            width++;
+            total_width++;
+        }
+        while (width < 10) {
+            std::cout << ' ';
+            width++;
+            total_width++;
+        }
+        std::cout << ' ';
+        total_width++;
+    }
+    std::cout << std::endl;
+
+    // Printing the rest with formatting.
+    for (int i = 0; i < 7; i++) {
+        if (i % 2 == 0) {
+            // Prints bars and underscores on every other line as separators.
+            // This level of detail is not necessary in the solutions.
+            std::cout << "   ";
+            for (int j = 3; j < total_width; j++) {
+                if (j % 11 == 3) {
+                    std::cout << '|';
+                } else {
+                    std::cout << '_';
+                }
+            }
+            std::cout << '|' << std::endl;
+        } else {
+            // Prints the rows with actual table content otherwise
+            std::cout << 'A' << (i+1)/2 << ' ';
+            for (int j = 3; j < total_width; j++) {
+                // Print a separator between each column
+                if (j % 11 == 3) {
+                    std::cout << '|';
+                } else {
+                    double t = times[(i-1)/2][(j-4)/11];
+                    // One way to handle algorithms that run too long
+                    if (t >= 60) {
+                        std::cout << "N/A       ";
+                    } else {
+                        // floor(log10(t)) is number of digits of t, which is used to calculate the precision
+                        (log10(t) >= 1) ? std::cout.precision(7 - floor(log10(t))) : std::cout.precision(7);
+                        std::cout << std::fixed << times[(i-1)/2][(j-4)/11] << ' ';
+                    }
+                    j += 9;
+                }
+            }
+            std::cout << '|' << std::endl;
+        }
+    }
+
+    // Deallocate memory from gen_rand_list
+    for (int i = 0; i < 4; i++) {
+        delete_list(lists[i]);
+    }
 
     return 0;
 }
