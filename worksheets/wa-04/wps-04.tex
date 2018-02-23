@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\linespread{1.3}
+\setlength{\parindent}{0pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2018}\chead{}\rhead{\scriptsize Weekly Problem Set \#4}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf Spring 2018}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#4}
+\end{center}
+
+Due Wednesday 2/21 before lab. Please turn in neat, and organized, answers hand-written on standard-sized paper \textbf{without any fringe}. At the top of each sheet you hand in, please write your name, and ID.
+The only library you're allowed to use in your answers is \verb|iostream|.
+
+\begin{enumerate}[leftmargin=*]
+
+    % R-1.7
+    \item Rank the following functions by their asymptotic growth rate in ascending order.  In your solution, group those functions that are big-Theta of one another (all $\log$ functions are base 2):
+    \begin{equation*}
+        \begin{array}{ccccc}
+            6 \cdot n\log n & 2^{100} & \log \log n & \log^2 n & 2^{\log n} \\
+            2^{2^n} & \lceil\sqrt{n}\rceil & n^{0.01} & 1/n & 4n^{3/2} \\
+            4^n & n^3 & n^2\log n & 4^{\log n} & \sqrt{\log n} \\
+        \end{array}
+    \end{equation*}
+
+    % R-1.3
+    \item Algorithm \verb|algo1| uses $10n\log n$ operations, while algorithm \verb|algo2| uses $n^2$ operations.  What is the value of $n_0$, such that \verb|algo1| is better than \verb|algo2| for $n\ge n_0$.
+
+    % R-1.12 R-1.14 R-1.15
+    \item For each of the following, give both a big-Oh characterization in terms of $n$, and an exact characterization (count additions and multiplications):
+        \begin{enumerate}
+        \item
+        \begin{verbatim}
+        EX: For the following, the big-Oh characterization is: O(n), 
+        the exact characterization is n.
+        s = 1
+        for i = 1 to n do
+            s = s * i
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        s = 1
+        for i = 1 to 4n do
+            s = s * i
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        s = 1
+        for i = 1 to n*n*n do
+            s = s * i
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        s = 0
+        for i = 1 to 4n do
+            for j = 1 to i do
+                s = s + i
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        s = 0
+        for i = 1 to n*n do
+            for j = 1 to i do
+                s = s + i
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        s = 1
+        for i = 1 to n do
+            for j = 1 to n do
+                for k = 1 to n do
+                    s = s * i
+        \end{verbatim}
+    \end{enumerate}
+
+    % C-1.8
+    \item Suppose you run two algorithms, \verb|P| and \verb|Q|, on many randomly generated data sets.  \verb|P| is an $O(n \log n)$-time algorithm and \verb|Q| is an $O(n^2)$-time algorithm.  After your experiments you find that if $n<100$, \verb|Q| actually runs faster, and only when $n\ge 100$, \verb|P| is faster.  Explain why this scenario is possible, including numerical examples.
+
+\end{enumerate}
+
+The following is considered optional:
+\begin{enumerate}
+    
+    \item Given an array \verb|A|, of $n$ integers, describe a method to find the longest subarray of \verb|A| such that all the numbers in that subarray are in sorted order.  What is the running time of your algorithm?
+
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
+    
