@@ -14,8 +14,8 @@ At first, this may seem like an infinite loop of sorts, but if the function is i
 ![image](https://i.imgur.com/Z5eeHrE.png)
 
 
-### Visual showing how a factorial recursive function works
-![image](https://blog.penjee.com/wp-content/uploads/2015/04/top-5-programming-animated-gifs_recursion-animted-gif.gif)
+### Visual showing how a factorial recursive function works. Example is factiorial(5)
+![image](https://i.imgur.com/HAgjJlu.gif)
 
 
 ## 1. Sum of Numbers
