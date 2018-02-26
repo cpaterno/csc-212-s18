@@ -1,8 +1,14 @@
-# Lab 06: Lab + Recursion(3) = Lab + (Lab + Recursion(2))
+# Lab 06: Lab + Recursion(6) = Lab + (Lab + Recursion(5))
 
 Today you will be implementing a few recursive algorithms. The neat thing about recursion is that you can solve problems with a relatively small amount of well thought out code. 
 
-The google form for submitting can be found at [here.](https://goo.gl/forms/8ouzJARdNmOrgV1K3) The instructors will open the form at the start of the lab session. 
+The google form for submitting can be found [here.](https://goo.gl/forms/8ouzJARdNmOrgV1K3) The instructors will open the form at the start of the lab session.
+
+## A Quick Review of Recursion
+
+In its simplest form, recursion is just the act of calling a function within its own function body, but such a simple idea can lead to some very elegant and important algorithms. When a recursive function is first called (by a function other than itself) it begins to execute its statements just like any other function. However, when the program reaches the line in which the function calls itself, a new "instance" of the function is created, with whatever new parameters were passed in. This new instance will likely reach a point where it calls itself again, creating yet another new instance...
+
+At first, this may seem like an infinite loop of sorts, but if the function is implemented correctly, the input size should get smaller and smaller on each call. This allows for what we call a base case, which is when the recursive function receives an input so small, that it handles the input non-recursively and then returns to whatever instance of the function last called it.
 
 ## 1. Sum of Numbers
 
