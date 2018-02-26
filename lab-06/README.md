@@ -10,6 +10,8 @@ In its simplest form, recursion is just the act of calling a function within its
 
 At first, this may seem like an infinite loop of sorts, but if the function is implemented correctly, the input size should get smaller and smaller on each call. This allows for what we call a base case, which is when the recursive function receives an input so small, that it handles the input non-recursively and then returns to whatever instance of the function last called it.
 
+![image](https://i.imgur.com/Z5eeHrE.png)
+
 ## 1. Sum of Numbers
 
 For the first problem, you will implement the sum of numbers up until _n_. The header for this function will be
