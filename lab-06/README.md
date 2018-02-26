@@ -10,7 +10,13 @@ In its simplest form, recursion is just the act of calling a function within its
 
 At first, this may seem like an infinite loop of sorts, but if the function is implemented correctly, the input size should get smaller and smaller on each call. This allows for what we call a base case, which is when the recursive function receives an input so small, that it handles the input non-recursively and then returns to whatever instance of the function last called it.
 
+### Visual for how to think about recursive function calls
 ![image](https://i.imgur.com/Z5eeHrE.png)
+
+
+### Visual showing how a factorial recursive function works
+![image](https://blog.penjee.com/wp-content/uploads/2015/04/top-5-programming-animated-gifs_recursion-animted-gif.gif)
+
 
 ## 1. Sum of Numbers
 
