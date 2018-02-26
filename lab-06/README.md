@@ -20,6 +20,9 @@ At first, this may seem like an infinite loop of sorts, but if the function is i
 ### Fibonocci Sequence Visualized
 ![image](https://i.imgur.com/rbAZFhN.gif)
 
+### Recursivly finding the length of a list
+![image](https://i.imgur.com/ByMc0mX.gif)
+
 
 ## 1. Sum of Numbers
 
