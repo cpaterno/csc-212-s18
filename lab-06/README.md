@@ -17,6 +17,9 @@ At first, this may seem like an infinite loop of sorts, but if the function is i
 ### Visual showing how a factorial recursive function works. Example is factiorial(5)
 ![image](https://i.imgur.com/HAgjJlu.gif)
 
+### Fibonocci Sequence Visualized
+![image](https://i.imgur.com/rbAZFhN.gif)
+
 
 ## 1. Sum of Numbers
 
