@@ -74,6 +74,8 @@ GCD for any a, b:
         a is the GCD of a and b
     otherwise apply GCD(a-b, b)
 ```
+Here is the wikipedia on GCD in a recursive context. Use it as a resource if needed https://en.wikipedia.org/wiki/Recursion_(computer_science)#Greatest_common_divisor
+
 
 From this you can see that recursion is fundamental to the problem, as the GCD algorithm we have just defined invokes itself for certain inputs.  Your job is to implement the GCD algorithm and time your function as you did in the previous question.
 
