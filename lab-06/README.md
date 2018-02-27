@@ -106,7 +106,19 @@ You may print all the numbers on one line separated by spaces, or each number on
 
 ## 4. The Fibonacci Series
 
-The Fibonacci series is a special series of numbers that has actually appeared numerous times in art and nature, in addition to various areas in mathematics. The series is constructed by taking two initial numbers f<sub>0</sub> = 0 and f<sub>1</sub> = 1, and obtaining each f<sub>n</sub> by adding together f<sub>n-1</sub> and f<sub>n-2</sub>.
+The Fibonacci series is a special series of numbers that has actually appeared numerous times in art and nature, in addition to various areas in mathematics. The series is constructed by taking two initial numbers f<sub>0</sub> = 0 and f<sub>1</sub> = 1, and obtaining each f<sub>n</sub> by adding together f<sub>n-1</sub> and f<sub>n-2</sub>. Implement a function that finds and returns the _nth_ Fibonacci number, using the following signature:
+
+```C++
+unsigned long int fibonacci(unsigned int n);
+```
+
+For reference, the first 10 digits of fibonacci are
+
+    0, 1, 1, 2, 3, 5, 8, 13, 21, and 34
+    
+so `fibonacci(10)` would return 34.
+
+**Hint**: Your implementation of fibonacci should use _two_ recursive calls.
  
 ## 5. Number of Digits
 Test Data : 
