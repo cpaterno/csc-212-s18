@@ -82,32 +82,33 @@ From this you can see that recursion is fundamental to the problem, as the GCD a
 >You will **report** the actual running time of calling your function with the following pairs of values: _(100,612), (1098,8721), (10872,17238), (1000000000,100000000), (184729384, 2273652)_.  Include your intuition behind the running time of this function (constant? linear? logarithmic? quadratic? ...).
 
 
-## 3. Recursive Fractals
+## 3. Recursive Problems
 
-For this problem, you will be playing with fractals.  The term fractal was coined by Benoit Mandelbrot in "The Fractal Geometry of Nature."  He defines a fractal as "a rough or fragmented geometric shape that can be split into parts, each of which is (at least approximately) a reduced-size copy of the whole."  Although you can later read on more complicated [patterns](http://natureofcode.com/book/chapter-8-fractals/), today you will write a program to generate the drawing below:
 
-<img src="./big.2.png" width="600">
+##### Write a program in C to print first 50 natural numbers using recursion.
+Expected Output :
+ The natural numbers are : 1  2  3
+  4  5  6  7  8  9  10  11  12  13
+  14  15  16  17  18  19  20  21  
+22  23  24  25  26  27  28  29  30
+  31  32  33  34  35  36  37  38  
+39  40  41  42  43  44  45  46  47
+  48  49  50 
 
-Your program will take a positive integer _d_ as a **command line argument** and output to the `stdout` the line segments that compose your fractal (one per line).  Each segment should be expressed as four values, _x1, y1, x2, y2_ that represent the segment connecting _x1,y1_ to _x2,y2_.  You can consider that your fractal will be drawn on a canvas of height=500 and width=500.
+##### Write a program in C to Print Fibonacci Series using recursion.
+Test Data : 
+Input number of terms for the Series (< 20) : 10
+Expected Output :
 
-The positive integer _d_ indicates the depth of the drawing, in other words, the depth of the recursion.   Listen to the instructor's explanation before getting started.
+ Input number of terms for the Series (< 20) : 10                                
+ The Series are :                                                                
+ 1  1  2  3  5  8  13  21  34  55  
+ 
+##### 5. Write a program in C to count the digits of a given number using recursion.
+Test Data : 
+Input a number : 50 
+Expected Output :
 
-For example, if your program is called with _d=0_, your output should be empty.  If the program is passed _d=1_, your output should have 4 line segments (the order of the segments does not matter, see example below).  if your program is passed _d=2_ your output should contain 20 segments, and so on.
+The number of digits in the number is :  2
 
-```bash
-$ ./prog 1
-125 125 375 125
-375 125 375 375
-375 375 125 375
-125 375 125 125
-```
-
-You can actually visualize your fractal by using the `python` script provided.  All you need (after your program is compiled) is run the following line:
-
-```bash
-$ ./prog 4 | python create_fractal.py > fractal.html
-```
-
-The command above is running your program with depth 4 and piping the output of your program to the python script.  After the python script is completed, its output is redirected to a file named `fractal.html`.   All you have to do at this point is open `fractal.html` inside your browser.  If you are using CS50 IDE, then you can right-click on `fractal.html` and choose `Preview`.
-
->You will **report** the source code of your program.
+Paste your code into the google form.
