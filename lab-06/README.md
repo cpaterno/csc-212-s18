@@ -118,13 +118,18 @@ For reference, the first 10 digits of fibonacci are
     
 so `fibonacci(10)` would return 34.
 
-**Hint**: Your implementation of fibonacci should use _two_ recursive calls.
+**Hint**: Your implementation of fibonacci should use _two_ recursive calls. Be careful with the size of your inputs when testing this function, as it runs in _O_(2<sup>n</sup>) time.
  
 ## 5. Number of Digits
-Test Data : 
-Input a number : 50 
-Expected Output :
 
-The number of digits in the number is :  2
+When working with and processing large numbers, it is at times useful to be able to determine how many digits long the number is. With access to a graphing calculator, (or a math library), a quick way to compute this would be to take the floor of log<sub>10</sub>(n) and add 1. For example, log<sub>10</sub>(382) is roughly 2.582, the floor of which is 2, and adding 1 then yields 3 which is the length of n. This is a handy trick, but if there is no access to a log function then this problem may alternatively be solved recursively.
 
-Paste your code into the google form.
+Write a recursive algorithm that takes an integer n and returns its length, using the following function signature:
+
+```C++
+unsigned int num_len(unsigned long int num);
+```
+
+## Submission
+
+When you have finished implementing the algorithms above, copy and paste each of your implementations into the associated field in the Google Forms document.
