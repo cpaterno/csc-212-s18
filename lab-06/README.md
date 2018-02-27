@@ -85,20 +85,26 @@ From this you can see that recursion is fundamental to the problem, as the GCD a
 >You will **report** the actual running time of calling your function with the following pairs of values: _(100,612), (1098,8721), (10872,17238), (1000000000,100000000), (184729384, 2273652)_.  Include your intuition behind the running time of this function (constant? linear? logarithmic? quadratic? ...).
 
 
-## 3. Recursive Problems
+## 3. The Natural Numbers
+
+The set of all integers greater than 0 (i.e., {1,2,3,4,5,...}) is commonly referred to the set of natural numbers. Write a recursive algorithm that takes a positive integer input _n_ and prints out all of the natural numbers from 1 to n. The function signature for this problem should be as follows:
+
+```C++
+void print_nums(unsigned int n);
+```
+
+You may print all the numbers on one line separated by spaces, or each number on its own line, but these are not very elegant for large values of _n_. For brownie points, start printing your output on a new line after every 10 numbers. Your expected output will then look similar to this:
+
+```
+1 2 3 4 5 6 7 8 9 10 
+11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 
+31 32 33 34 35 36 37 38 39 40 
+41 42 43 44 45 
+```
 
 
-##### Write a program in C to print first 50 natural numbers using recursion.
-Expected Output :
- The natural numbers are : 1  2  3
-  4  5  6  7  8  9  10  11  12  13
-  14  15  16  17  18  19  20  21  
-22  23  24  25  26  27  28  29  30
-  31  32  33  34  35  36  37  38  
-39  40  41  42  43  44  45  46  47
-  48  49  50 
-
-##### Write a program in C to Print Fibonacci Series using recursion.
+## 4. The Fibonacci Series
 Test Data : 
 Input number of terms for the Series (< 20) : 10
 Expected Output :
@@ -107,7 +113,7 @@ Expected Output :
  The Series are :                                                                
  1  1  2  3  5  8  13  21  34  55  
  
-##### 5. Write a program in C to count the digits of a given number using recursion.
+## 5. Number of Digits
 Test Data : 
 Input a number : 50 
 Expected Output :
