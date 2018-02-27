@@ -105,13 +105,8 @@ You may print all the numbers on one line separated by spaces, or each number on
 
 
 ## 4. The Fibonacci Series
-Test Data : 
-Input number of terms for the Series (< 20) : 10
-Expected Output :
 
- Input number of terms for the Series (< 20) : 10                                
- The Series are :                                                                
- 1  1  2  3  5  8  13  21  34  55  
+The Fibonacci series is a special series of numbers that has actually appeared numerous times in art and nature, in addition to various areas in mathematics. The series is constructed by taking two initial numbers f<sub>0</sub> = 0 and f<sub>1</sub> = 1, and obtaining each f<sub>n</sub> by adding together f<sub>n-1</sub> and f<sub>n-2</sub>.
  
 ## 5. Number of Digits
 Test Data : 
