@@ -60,7 +60,7 @@ Then compile your program using the command below:
 $ g++ -std=c++11 -g -Wall sum.cc -o sum
 ```
 
->You will **report** the actual running time of calling your function with the following values: 1000, 10000, 100000, 1000000, 1000000000.  Include your intuition behind the running time of this function (constant? linear? logarithmic? quadratic? ...).
+>You will **report** the actual running time of calling your function with the following values: 1000, 10000, 100000, 1000000.  Include your intuition behind the running time of this function (constant? linear? logarithmic? quadratic? ...).
 
 
 ## 2. Greatest Common Divisor
