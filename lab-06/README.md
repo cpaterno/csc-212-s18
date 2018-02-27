@@ -8,7 +8,10 @@ The google form for submitting can be found [here.](https://goo.gl/forms/8ouzJAR
 
 In its simplest form, recursion is just the act of calling a function within its own function body, but such a simple idea can lead to some very elegant and important algorithms. When a recursive function is first called (by a function other than itself) it begins to execute its statements just like any other function. However, when the program reaches the line in which the function calls itself, a new "instance" of the function is created, with whatever new parameters were passed in. This new instance will likely reach a point where it calls itself again, creating yet another new instance...
 
-At first, this may seem like an infinite loop of sorts, but if the function is implemented correctly, the input size should get smaller and smaller on each call. This allows for what we call a base case, which is when the recursive function receives an input so small, that it handles the input non-recursively and then returns to whatever instance of the function last called it.
+At first, this may seem like an infinite loop of sorts, but if the function is implemented correctly, the input size should get smaller and smaller on each call. This allows for what we call a base case, which is when the recursive function receives an input so small, that it handles the input non-recursively and then returns to whatever instance of the function last called it. From there each previous function will return (perhaps after doing some processing) until the original call returns and the recursive function has completed. However, if the function is not implemented with a base case, or continually recurses without reaching one, the program will crash with a stack overflow error.
+
+Below are some visual aids to help in understanding recursion.
+
 
 ### Visual for how to think about recursive function calls
 ![image](https://i.imgur.com/Z5eeHrE.png)
