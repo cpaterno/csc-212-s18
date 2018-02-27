@@ -146,9 +146,6 @@ unsigned int num_len(unsigned long int num);
 
 There is included code called insertion_sort_recursion.cc. Take and open that code and read it. There is an example array in the main that the program will test on. Trace the code by hand starting at main. Keep track of the function calls in order of their call and then paste the functions that were called with the proper params in the question 6 box form answer.
 
-```C++
-unsigned int num_len(unsigned long int num);
-```
 
 ## Submission
 
