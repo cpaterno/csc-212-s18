@@ -17,22 +17,22 @@ Below are some visual aids to help in understanding recursion.
 ![image](https://i.imgur.com/Z5eeHrE.png)
 
 
-### Visual showing how a factorial recursive function works. Example is factiorial(5)
+### Visual showing how a factorial recursive function works. Example is factorial(5)
 
-Notice how when n is set to 5 and the code is executing, the function has the form of 
+Notice how when n is set to 5 and the code is executing, the function has the form of:
 1. Base case - ( if n == 1 ) return 1;
 2. A recursive call - return n * factorial(n-1);
 
 ![image](https://i.imgur.com/HAgjJlu.gif)
 
-### Fibonocci Sequence Visualized
+### Fibonacci Sequence Visualized
 
 Sometimes there can be multiple base cases.
 In this example, there is a basecase for 0 and for 1
 
 ![image](https://i.imgur.com/rbAZFhN.gif)
 
-### Recursivly finding the length of a list
+### Recursively finding the length of a list
 
 All recursive functions need a base case otherwise there is no ending point.
 
