@@ -2,7 +2,7 @@
 
 Today you will be implementing a few recursive algorithms. The neat thing about recursion is that you can solve problems with a relatively small amount of well thought out code. 
 
-The google form for submitting can be found [here.](https://goo.gl/forms/8ouzJARdNmOrgV1K3) The instructors will open the form at the start of the lab session.
+The google form for submitting can be found [here.](https://goo.gl/forms/uo3x0XqgIpMjphGC2) The instructors will open the form at the start of the lab session.
 
 ## A Quick Review of Recursion
 
@@ -150,4 +150,4 @@ There is included code called factorial_trace.cc. Take and open that code and re
 
 ## Submission
 
-When you have finished implementing the algorithms above, copy and paste each of your implementations into the associated field in the Google Forms document.
+When you have finished implementing the algorithms above, copy and paste each of your implementations into the associated field in the Google Forms document. https://goo.gl/forms/RdxnMJFQ0NUIAHKE2
