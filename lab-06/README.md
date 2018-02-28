@@ -6,9 +6,9 @@ The google form for submitting can be found [here.](https://goo.gl/forms/8ouzJAR
 
 ## A Quick Review of Recursion
 
-In its simplest form, recursion is just the act of calling a function within its own function body, but such a simple idea can lead to some very elegant and important algorithms. When a recursive function is first called (by a function other than itself) it begins to execute its statements just like any other function. However, when the program reaches the line in which the function calls itself, a new "instance" of the function is created, with whatever new parameters were passed in. This new instance will likely reach a point where it calls itself again, creating yet another new instance...
+In its simplest form, recursion is just the act of a function calling itself within its own body. Recursion essentially breaks the problem apart into smaller, more easily solvable, pieces; which can lead to some very elegant and important algorithms. When a recursive function is called by a function other than itself it begins execution, just like any other function. However, when the program reaches the line in which the function calls itself a new "instance" of the function is created, hopefully with a slightly different set of parameters (otherwise it may be looping forever!). This new instance will likely reach a point where it calls itself again, creating yet another new instance with, again, slightly different parameters; this process repeats until the *base case* is reached. 
 
-At first, this may seem like an infinite loop of sorts, but if the function is implemented correctly, the input size should get smaller and smaller on each call. This allows for what we call a base case, which is when the recursive function receives an input so small, that it handles the input non-recursively and then returns to whatever instance of the function last called it. From there each previous function will return (perhaps after doing some processing) until the original call returns and the recursive function has completed. However, if the function is not implemented with a base case, or continually recurses without reaching one, the program will crash with a stack overflow error.
+At first, this may seem like an infinite loop of sorts, but if the function is implemented correctly, the input size should get reduced on each call, as the function works towards solving the problem. Eventually the function will reduce it's parameters enough to handles the input non-recursively, and then return to whatever instance of the function last called it. From there each previous function will return (perhaps after doing some processing) until the original call returns and the recursive function has completed. Unfortunately, if the function is implemented without a base case, or continually recurses without reaching one, the program will crash with a stack overflow error.
 
 Below are some visual aids to help in understanding recursion.
 
@@ -44,7 +44,7 @@ All recursive functions need a base case otherwise there is no ending point.
 For the first problem, you will implement the sum of numbers up until _n_. The header for this function will be
 
 ```c++
-unsigned long int sum(unsigned int n)
+unsigned long int sum(unsigned int n);
 ```
 
 If the input is `10`, your function should calculate `10+9+8+7+6+5+4+3+2+1`, which should equal `55`.  This must be done recursively (no loops).
@@ -67,12 +67,13 @@ int main() {
 }
 ```
 
-Then compile your program using the command below:
+Then compile and run your program using the command below:
 ```bash
-$ g++ -std=c++11 -g -Wall sum.cc -o sum
+$ g++ -std=c++11 -g -Wall sum.cc -o sum && ./sum
 ```
+> The **&&** here symbolizes "do what's on the left of me, then if that's successful, do what's on the right" -- Learning bash can make development a much easier process! 
 
->You will **report** the actual running time of calling your function with the following values: 1000, 10000, 100000, 1000000.  Include your intuition behind the running time of this function (constant? linear? logarithmic? quadratic? ...).
+> You will **report** the actual running time of calling your function with the following values: 1000, 10000, 100000, 1000000.  Include your intuition behind the running time of this function (constant? linear? logarithmic? quadratic? ...).
 
 
 ## 2. Greatest Common Divisor
@@ -94,7 +95,7 @@ Here is the wikipedia on GCD in a recursive context. Use it as a resource if nee
 
 From this you can see that recursion is fundamental to the problem, as the GCD algorithm we have just defined invokes itself for certain inputs.  Your job is to implement the GCD algorithm and time your function as you did in the previous question.
 
->You will **report** the actual running time of calling your function with the following pairs of values: _(100,612), (1098,8721), (10872,17238), (1000000000,100000000), (184729384, 2273652)_.  Include your intuition behind the running time of this function (constant? linear? logarithmic? quadratic? ...).
+>You will **report** the actual running time of calling your function with the following pairs of values: (100,612), (1098,8721), (10872,17238), (1000000000,100000000), (184729384, 2273652).  Include your intuition behind the running time of this function (constant? linear? logarithmic? quadratic? ...).
 
 
 ## 3. The Natural Numbers
