@@ -129,7 +129,7 @@ For reference, the first 10 digits of fibonacci are
 
     0, 1, 1, 2, 3, 5, 8, 13, 21, and 34
     
-so `fibonacci(10)` would return 34.
+so `fibonacci(10)` would return 55.
 
 **Hint**: Your implementation of fibonacci should use _two_ recursive calls. Be careful with the size of your inputs when testing this function, as it runs in _O_(2<sup>n</sup>) time.
  
