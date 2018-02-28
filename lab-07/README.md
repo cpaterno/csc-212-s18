@@ -24,7 +24,7 @@ Where:
 
 Here is an example of an array `A`:
 
-![Example Pic](/lab-04/array.png?raw=true "Example Array") 
+![Example Pic](/lab-07/array.png?raw=true "Example Array") 
 
 Loose pseudocode for the algorithm is as follows:
 
