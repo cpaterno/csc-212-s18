@@ -4,7 +4,7 @@ Mergesort is a divide and conquer algorithm that was invented by John von Neuman
 
 To begin, download the starter code, which includes the test cases, and the main.cpp file.
 
-The google form for submitting can be found at [here.](https://docs.google.com/forms/d/e/1FAIpQLScxtJN89fotmwUNoY2j59MUob5jw68Ja2ADU9yGayt1JhsXtA/viewform?usp=sf_link) The instructors will inform you when the link is active.
+The google form for submitting can be found at [here.](https://goo.gl/forms/698FDcXRPttM5q6b2) The instructors will inform you when the link is active.
 
 ## 1. Implementing Merge
 
@@ -115,7 +115,7 @@ Once you have implemented and tested the 2nd improvement, answer the following q
 
 ## 6. What to Submit
 
-The google form for submitting can be found at [here.](https://docs.google.com/forms/d/e/1FAIpQLScxtJN89fotmwUNoY2j59MUob5jw68Ja2ADU9yGayt1JhsXtA/viewform?usp=sf_link) The instructors will inform you when the link is active.
+The google form for submitting can be found at [here.](https://goo.gl/forms/698FDcXRPttM5q6b2) The instructors will inform you when the link is active.
 
 You will need to sumbit the source code for your Merge function. After that, there is two questions to answer:
 
