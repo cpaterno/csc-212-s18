@@ -129,5 +129,15 @@ void testMergeSort() {
         }
         cases++;
     }
+// Generate a random, unsorted list
+int* gen_list_unsorted(int size) {
 
+    std::random_device sd;
+    std::mt19937 generator(sd());
+    std::uniform_int_distribution<int> distribution(-size,size);
+    int* nlist = new int[size];
+    for (int i = 0; i < size; i++) {
+        nlist[i] = distribution(generator);
+    }
+    return nlist;
 }
