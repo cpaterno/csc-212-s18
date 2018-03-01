@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\linespread{1.2}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{15pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2018}\chead{}\rhead{\scriptsize Weekly Problem Set \#6}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf Spring 2018}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#6}
+\end{center}
+
+Due Thursday 3/8 before class. Please turn in neat, and organized, answers hand-written on standard-sized paper \textbf{without any fringe}. At the top of each sheet you hand in, please write your name, and ID.
+The only library you're allowed to use in your answers is \verb|iostream|.
+
+\section{Recursion}
+Solve the following using only recursion.
+\begin{enumerate}
+    \item Reverse the elements of an array in place. Matching the following function signature: 
+    
+        \verb|void reverse_array(int* arr, int n);|
+
+    \item Find and return the maximum of a given array. Matching the following function signature: 
+    
+        \verb|int max_array(int* arr, int n);|
+
+    \item Write a function to print triangles to \verb|std::cout| that takes three positive integers: $a$, $b$, $c$ as input. The function should print the \verb|+| character $a$ times, then $a+c$ times, then $a+c+c$ times, and so on. This pattern should repeat until the line is $b$ characters long. At that point, the pattern is repeated backwards. For example calling \verb|draw_triangle(4, 7, 1)| will output: (where the dollar symbol is the bash command prompt)
+    \begin{verbatim}
+        ++++
+        +++++
+        ++++++
+        +++++++
+        +++++++
+        ++++++
+        +++++
+        ++++
+    \end{verbatim} 
+
+    \item Recursively multiply two numbers together, \emph{without using the * operator}. Matching the following function signature:
+
+        \verb|int multiply(int a, int b);|
+
+    \item Suffix summation is the sum from $n$ to $n-s$. Matching the following function signature:
+
+        \verb|int suffix_sum(int n, int s);| 
+
+    For example, the suffix sum of $n=5, s=2$ is $(5+4+3) = 12$
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
+    
