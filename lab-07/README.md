@@ -3,7 +3,7 @@
 Mergesort is a divide and conquer algorithm that was invented by John von Neumann in 1945 [[*ref*](https://en.wikipedia.org/wiki/Merge_sort)]. It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves [[*ref*](http://www.geeksforgeeks.org/merge-sort/)]. You may want to see a [visualization of MergeSort](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html) to help understand the algorithm.
 
 Here is the visualization from wikipedia which does a good job of showing the basic Merge Sort process:
-[!image](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+![image](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
 
 To begin, download the starter code, which includes the test cases, and the main.cpp file.
 
