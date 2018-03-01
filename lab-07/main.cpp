@@ -29,6 +29,12 @@ void MergeSort(int* A, int n) {
     */
 }
 
+void ImprovedMergeSort(int* A, int n) {
+    /*
+        Implement the ImprovedMergeSort function here
+    */
+}
+
 void testMerge() {
     //Test the merge function
     std::ifstream mergeIn("mergeTest.in");
