@@ -100,9 +100,18 @@ You will either see an error, along with a test case, or nothing at all. If ther
 
 Improvements. We can cut the running time of mergesort substantially with some carefully considered modifications to the implementation.
 
-* *Use insertion sort for small subarrays. We can improve most recursive algorithms by handling small cases differently. Switching to insertion sort for small subarrays will improve the running time of a typical mergesort implementation by 10 to 15 percent.*
+* Use insertion sort for small subarrays. We can improve most recursive algorithms by handling small cases differently. Switching to insertion sort for small subarrays will improve the running time of a typical mergesort implementation by 10 to 15 percent.
 
-* *Test whether array is already in order. We can reduce the running time to be linear for arrays that are already in order by adding a test to skip call to merge() if a[mid] is less than or equal to a[mid+1]. With this change, we still do all the recursive calls, but the running time for any sorted subarray is linear.*
+Once you implement the first improvement, try compiling and running the function with some small test cases to ensure that it works. Also make sure you answer the following question on the google form.
+
+*Question: Why is insertion sort better than mergesort for small subarrays*
+
+* Test whether array is already in order. We can reduce the running time to be linear for arrays that are already in order by adding a test to skip call to merge() if a[mid] is less than or equal to a[mid+1]. With this change, we still do all the recursive calls, but the running time for any sorted subarray is linear.
+
+Once you have implemented and tested the 2nd improvement, answer the following question in the google form.
+
+*Question: How does the change affect the running time and in what case does the change make the biggest improvement?*
+
 
 ## 6. What to Submit
 
