@@ -39,11 +39,7 @@ Loose pseudocode for the algorithm is as follows:
 
 ## 2. Testing out Merge
 
-In order to test out your Merge function using the provided main.cc above, you must have these files from the lab repository,
-
-> `mergeTest.in`
-> 
-> `mergeTest.out`
+In order to test out your Merge function using the provided main.cc above, you must use a certain command line structure/args.
 
 What you will do is uncomment the line that calls `testMerge();`. In the given `main.cpp` file, this is line 15. Then you will compile using,
 
@@ -51,10 +47,10 @@ What you will do is uncomment the line that calls `testMerge();`. In the given `
 $ g++ -std=c++11 -g main.cpp -o merge
 ```
 
-To run it, use either `debug50 merge` or,
+To run it use the following where the first arg is the function you want to test and the second arg is the size of the array you would like to test it with.
 
 ```bash
-$ ./merge
+$ ./merge <MERGE, MERGESORT, IMPROVED> N
 ```
 
 You will either see an error, along with a test case, or nothing at all. If there is nothing, your code successfully ran.
@@ -79,11 +75,7 @@ The goal is to sort A in non-decreasing order. For more information on merge sor
 
 ## 4. Testing MergeSort
 
-In order to test out your MergeSort function using the provided main.cc above, you must have these files from the lab repository,
-
-> `sortTest.in`
-> 
-> `sortTest.out`
+In order to test out your MergeSort function using the provided main.cc above, you must compile the file and then make sure you use the proper command line args when running it.
 
 What you will do is uncomment the line that calls `testMergeSort();`. In the given `main.cpp`, this is line 16. You can recomment `testMerge();`, if you wish, but assuming you got it correct, it shouldn't matter. Then you will compile using,
 
@@ -91,10 +83,10 @@ What you will do is uncomment the line that calls `testMergeSort();`. In the giv
 $ g++ -std=c++11 -g main.cpp -o mergesort
 ```
 
-To run it, use either `debug50 mergesort` or,
+To run it use the following where the first arg is the function you want to test and the second arg is the size of the array you would like to test it with.
 
 ```bash
-$ ./mergesort
+$ ./merge <MERGE, MERGESORT, IMPROVED> N
 ```
 
 You will either see an error, along with a test case, or nothing at all. If there is nothing, your code successfully ran.
