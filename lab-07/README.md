@@ -39,26 +39,22 @@ Loose pseudocode for the algorithm is as follows:
 
 ## 2. Testing out Merge
 
-In order to test out your Merge function using the provided main.cc above, you must use a certain command line structure/args.
-
-What you will do is uncomment the line that calls `testMerge();`. In the given `main.cpp` file, this is line 15. Then you will compile using,
+Once you feel that you're ready to test your `merge` function, recompile your code using the statement below.
 
 ```bash
-$ g++ -std=c++11 -g main.cpp -o merge
+$ g++ -std=c++11 -g lab7.cc -o lab7
 ```
 
-To run it use the following where the first arg is the function you want to test and the second arg is the size of the array you would like to test it with.
+You may then use the `lab7` file to test your `merge` function by running the line below, with `INPUT_SIZE` replaced with a positive integer. If your function works correctly, the program will print out a success message for each of three trials, along with an overall success message. Otherwise, it will print at least one trial failure message, along with an overall failure message.
 
 ```bash
-$ ./merge <MERGE, MERGESORT, IMPROVED> N
+$ ./lab7 merge INPUT_SIZE
 ```
 
-You will either see an error, along with a test case, or nothing at all. If there is nothing, your code successfully ran.
 
+## 3. Implementing Mergesort
 
-## 3. Implementing MergeSort
-
-Now that you have merge implemented, it should be fairly easy to implement the full MergeSort. **You must have a correct implementation of `merge()` in order to complete MergeSort**
+Now that you have merge implemented, it should be fairly easy to implement the full MergeSort. **You must have a correct implementation of `merge()` in order to complete Mergesort**
 
 The function header is as follows:
 
@@ -73,25 +69,22 @@ Where:
 
 The goal is to sort A in non-decreasing order. For more information on merge sort, refer to the [lecture slides](http://homepage.cs.uri.edu/~malvarez/teaching/212-f17/files/lecture-10-mergesort.key.pdf). This algorithm is recursive, so your function should be recursive.
 
-## 4. Testing MergeSort
+## 4. Testing Mergesort
 
-In order to test out your MergeSort function using the provided main.cc above, you must compile the file and then make sure you use the proper command line args when running it.
-
-What you will do is uncomment the line that calls `testMergeSort();`. In the given `main.cpp`, this is line 16. You can recomment `testMerge();`, if you wish, but assuming you got it correct, it shouldn't matter. Then you will compile using,
+Once you feel that you're ready to test your `mergesort` function, recompile your code again using the statement below.
 
 ```bash
-$ g++ -std=c++11 -g main.cpp -o mergesort
+$ g++ -std=c++11 -g lab7.cc -o lab7
 ```
 
-To run it use the following where the first arg is the function you want to test and the second arg is the size of the array you would like to test it with.
+Just as with the `merge` function, you may use the `lab7` file to test your `mergesort` function by running the line below, with `INPUT_SIZE` replaced with a positive integer. Again, if your function works correctly, the program will print out a success message for each of three trials, along with an overall success message. Otherwise, it will print at least one trial failure message, along with an overall failure message.
 
 ```bash
-$ ./merge <MERGE, MERGESORT, IMPROVED> N
+$ ./lab7 mergesort INPUT_SIZE
 ```
 
-You will either see an error, along with a test case, or nothing at all. If there is nothing, your code successfully ran.
 
-## 5. Improving MergeSort
+## 5. Improving Mergesort
 
 We can cut the running time of mergesort substantially with some carefully considered modifications to the implementation. Make a copy of your `MergeSort` function and name it `MergeSortPlus`, then implement the improvements below in your `MergeSortPlus` function.
 
@@ -107,8 +100,20 @@ Once you have implemented and tested the 2nd improvement, answer the following q
 
 > **Question 2:** How does the change affect the running time and in what case does the change make the biggest improvement?
 
+You may test your `mergesort_plus` function just as you tested your other two implementations, except with the argument `ms_plus` instead of `merge` or `mergesort`. It will run the same way as before, providing success and/or failure messages.
 
-## 6. What to Submit
+
+## 6. Standard vs Improved Mergesort
+
+Now that you have implemented mergesort with and without the improvements, it is time to test their performance against one another. Without needing to recompile, you may run the line below to benchmark `mergesort` and `mergesort_plus`:
+
+```bash
+$ ./lab7 ms_vs_msp INPUT_SIZE
+```
+
+The program will output the average amount of time each of the two algorithms took to run on three different random arrays of size INPUT_SIZE. You should run the program with `ms_vs_msp` for various different input sizes, large and small, to see how the two versions of the algorithm compare to one another.
+
+## 7. What to Submit
 
 The google form for submitting can be found at [here.](https://goo.gl/forms/698FDcXRPttM5q6b2) The instructors will inform you when the link is active.
 
