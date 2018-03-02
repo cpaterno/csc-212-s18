@@ -64,7 +64,7 @@ You will either see an error, along with a test case, or nothing at all. If ther
 
 Now that you have merge implemented, it should be fairly easy to implement the full MergeSort. **You must have a correct implementation of `merge()` in order to complete MergeSort**
 
-The fucntion header is as follows:
+The function header is as follows:
 
 ```c++
 void MergeSort(int* A, int n);
@@ -101,19 +101,19 @@ You will either see an error, along with a test case, or nothing at all. If ther
 
 ## 5. Improving MergeSort
 
-Improvements. We can cut the running time of mergesort substantially with some carefully considered modifications to the implementation.
+We can cut the running time of mergesort substantially with some carefully considered modifications to the implementation. Make a copy of your `MergeSort` function and name it `MergeSortPlus`, then implement the improvements below in your `MergeSortPlus` function.
 
-* Use insertion sort for small subarrays. We can improve most recursive algorithms by handling small cases differently. Switching to insertion sort for small subarrays will improve the running time of a typical mergesort implementation by 10 to 15 percent.
+* Use insertion sort for small subarrays. We can improve most recursive algorithms by handling small cases differently. Switching to insertion sort for small subarrays will improve the running time of a typical mergesort implementation by 10 to 15 percent. Input sizes between 7 and 10 (inclusive) are good choices for switching over to insertion sort.
 
-Once you implement the first improvement, try compiling and running the function with some small test cases to ensure that it works. Also make sure you answer the following question on the google form.
+Once you implement the first improvement, try compiling and running the function with test cases of various sizes, small and large, to verify that the algorithm still runs successfully. Also make sure you answer the following question on the google form.
 
-> **Question 1:** Why is insertion sort better than mergesort for small subarrays
+> **Question 1:** Why is insertion sort better than mergesort for small subarrays?
 
-* Test whether array is already in order. We can reduce the running time to be linear for arrays that are already in order by adding a test to skip call to merge() if a[mid] is less than or equal to a[mid+1]. With this change, we still do all the recursive calls, but the running time for any sorted subarray is linear.
+* Test whether array is already in order. We can reduce the running time to be linear for arrays that are already in order by adding a test to skip a call to `merge()` if `a[mid]` is less than or equal to `a[mid+1]`. With this change, we still do all the recursive calls, but the running time for any sorted subarray is linear.
 
 Once you have implemented and tested the 2nd improvement, answer the following question in the google form.
 
-> **Question 2:** How does the change affect the running time and in what case does the change make the biggest improvement?*
+> **Question 2:** How does the change affect the running time and in what case does the change make the biggest improvement?
 
 
 ## 6. What to Submit
