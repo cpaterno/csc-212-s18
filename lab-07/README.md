@@ -111,7 +111,9 @@ Now that you have implemented mergesort with and without the improvements, it is
 $ ./lab7 ms_vs_msp INPUT_SIZE
 ```
 
-The program will output the average amount of time each of the two algorithms took to run on three different random arrays of size INPUT_SIZE. You should run the program with `ms_vs_msp` for various different input sizes, large and small, to see how the two versions of the algorithm compare to one another.
+The program will output the average amount of time each of the two algorithms took to run on three different random arrays of size INPUT_SIZE. If either `merge`, `mergesort` or `mergesort_plus` did not pass its tests for various input sizes, the result of running this line will not be an accurate run time representation.
+
+> **Question 3:** Run your program with `ms_vs_msp` on input sizes of 10, 100, 1000, 10000, 1000000 and 10000000. Which algorithm performed better, and how much would you say the difference in performance was (in words, not numbers)?
 
 ## 7. What to Submit
 
@@ -119,6 +121,6 @@ The google form for submitting can be found at [here.](https://goo.gl/forms/698F
 
 You will need to sumbit the source code for your Merge function. After that, there is two questions to answer:
 
-> **Question 3:** What is the running time for MergeSort? Can you verify the slides' answer with real running times from the lab?
+> **Question 4:** What is the running time for MergeSort? Can you verify the slides' answer with real running times from the lab?
 
-> **Question 4:** What class of algorithm is MergeSort (look at the slides)? Why is it that type of algorithm?
+> **Question 5:** What class of algorithm is MergeSort (look at the slides)? Why is it that type of algorithm?
