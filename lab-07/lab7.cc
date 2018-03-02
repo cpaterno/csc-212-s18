@@ -124,14 +124,16 @@ bool test_mergesort_plus(int n, int t) {
 
 void race_merge_sorts(int n) {
 
-    int* A = gen_list_unsorted(n);
+    int* A = new int[n];
     int* B = new int[n];
-    std::memcpy(B, A, sizeof(int)*n);
 
     double avg_time_ms = 0;
     double avg_time_msp = 0;
 
     for (int i = 0; i < 3; i++) {
+        A = gen_list_unsorted(n);
+        std::memcpy(B, A, sizeof(int)*n);
+
         auto start = std::chrono::steady_clock::now();
         mergesort(A, n);
         auto end = std::chrono::steady_clock::now();
