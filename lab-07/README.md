@@ -22,6 +22,9 @@ void merge(int* A, int n, int mid);
 Where:
 
 * `A` is an array of integers, of length `n`, where `A` from `0` to `mid-1` is sorted in non-decreasing order, and `A` from `mid` to `n-1` is also sorted in non-decreasing order. The whole array is not necessarily sorted in non-decreasing order.
+
+> In other words, `A` represents two sorted lists which are concatenated at `mid`
+
 * `n` is the length of array `A`
 * `mid`, while not necessarily the midpoint, it is the point in `A` where the two sorted sections meet
 
@@ -67,7 +70,7 @@ Where:
 * `A` is an array of potentially unsorted integers
 * `n` is the length of array `A`
 
-The goal is to sort A in non-decreasing order. For more information on merge sort, refer to the [lecture slides](http://homepage.cs.uri.edu/~malvarez/teaching/212-f17/files/lecture-10-mergesort.key.pdf). This algorithm is recursive, so your function should be recursive.
+The goal is to sort A in non-decreasing order. For more information on merge sort, refer to the [lecture slides](http://homepage.cs.uri.edu/~malvarez/teaching/212-f17/files/lecture-10-mergesort.key.pdf). This algorithm is recursive, so your function should also be recursive.
 
 ## 4. Testing Mergesort
 
