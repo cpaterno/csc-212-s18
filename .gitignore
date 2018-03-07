@@ -7,3 +7,4 @@
 
 # C++ Output Files
 *.o
+*.out
