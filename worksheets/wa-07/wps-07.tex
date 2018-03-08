@@ -5,6 +5,7 @@
 \usepackage[margin=.8in]{geometry}
 \usepackage{amsmath}
 \usepackage{enumitem}
+\usepackage{hyperref}
 
 \linespread{1.2}
 \setlength{\parindent}{0pt}
@@ -39,7 +40,7 @@ Due Thursday 3/8 before class. Please turn in neat, and organized, answers hand-
 The only library you're allowed to use in your answers is \verb|iostream|.
 
 \begin{enumerate}
-    \item Write a recursive function that performs binary search on an array of positive integers. Your function must match the prototype: \verb|int bin_search(const int target, const int* arr, int n);|. If there is no match you should return -1.
+    \item Write a recursive function that performs binary search on an array of positive integers. Your function must match the prototype: \verb|int bin_search(const int target, const int* arr, int n);|. If you find a match, return that value, otherwise return -1.
 
     \item List each recursive call to your function given the following starting point: 
     
@@ -52,9 +53,9 @@ The only library you're allowed to use in your answers is \verb|iostream|.
 
     \item Without looking at your previously written code, write a recursive mergesort function.
 
-    \item Why is mergesort preferrable to insertion sort on large datasets?
+    \item Why is mergesort preferable to insertion sort on large datasets?
 
-    \item Why is insertion sort preferrable on smaller datasets?
+    \item Why is insertion sort preferable on smaller datasets?
 
     \item Is mergesort stable? Why?
 
@@ -63,7 +64,7 @@ The only library you're allowed to use in your answers is \verb|iostream|.
 The following is considered optional.
 
 \begin{enumerate}
-    \item Describe the mechanism behind binary interpolation search, and modify your search to use the approximation technique described.
+    \item Describe the mechanism behind binary interpolation search, and modify your search to use the approximation technique described. \href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{A link about interpolation search}
 \end{enumerate}
 
 \label{r:lastpage}
