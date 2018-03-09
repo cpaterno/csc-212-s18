@@ -45,19 +45,21 @@ In addition to having the ability to change size, Dynamic Arrays also tend to pr
 + `insert(int elem, int idx)`: Inserts `elem` into the Dynamic Array at index `idx`.
 + `erase(int idx)`: Removes the element at the index `idx` from the Dynamic Array
 
+**Note:** You need to check for valid input in the functions `at()`, `set()`, `pop_back()`, `insert()` and `erase()`. You should use `assert()` from the library `<cassert>` and `index_in_bounds()` as needed. 
+
 ## Instructions
 
 Download the 3 files: dll.h, dll.cc, and main.cc
 
 To compile your program, run the following command in your bash terminal:
 ```
-g++ -std=c++11 dll.cc main.cc -o lab6
+g++ -std=c++11 dll.cc main.cc -o lab8
 ```
 To run your program, run the following command
 ```
-./lab6
+./lab8
 ```
-You will be writing the unimplemented functions in the SLL class. You can run the main method in main.cc to test the functions as you implement them.
+You will be writing the unimplemented functions in the `DArray` class. You can run the main method in `main.cc` to test the functions as you implement them.
 
 The functions you will have to implement are:
 + append(int data)
