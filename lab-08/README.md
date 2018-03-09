@@ -45,7 +45,7 @@ In addition to having the ability to change size, Dynamic Arrays also tend to pr
 + `insert(int elem, int idx)`: Inserts `elem` into the Dynamic Array at index `idx`.
 + `erase(int idx)`: Removes the element at the index `idx` from the Dynamic Array
 
-**Note:** You need to check for valid input in the functions `at()`, `set()`, `pop_back()`, `insert()` and `erase()`. You should use `assert()` from the library `<cassert>` and `index_in_bounds()` as needed. 
+**Note:** You need to check for valid input in the functions `front()`, `back()`, `at()`, `set()`, `pop_back()`, `insert()` and `erase()`. You should use `assert()` from the library `<cassert>` and `index_in_bounds()` as needed. 
 
 ## Instructions
 
@@ -55,8 +55,10 @@ To compile your program, run the following command in your bash terminal:
 ```
 g++ -std=c++11 darray.cc main.cc -o lab8
 ```
-To run your program, run the following command
+To test your code, run the following command
 ```
 ./lab8
 ```
+The above line will test all but your validation checking. To test your validation checking, use the bash script `vtest.sh`. **(Explain this in more detail in next commit)**
+
 You will be writing the unimplemented functions in the `DArray` class. You can run the main method in `main.cc` to test the functions as you implement them.
