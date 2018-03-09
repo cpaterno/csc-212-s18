@@ -4,15 +4,17 @@ class DArray {
         int length;
         int* content;
         void grow();
+        void shrink();
         bool index_in_bounds(int);
 
     public:
         DArray();
+        DArray(int);
         ~DArray();
 
         int size();
         int capacity();
-        int& at(int);
+        int at(int);
         int front();
         int back();
         void set(int, int);
