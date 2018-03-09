@@ -53,21 +53,10 @@ Download the 3 files: dll.h, dll.cc, and main.cc
 
 To compile your program, run the following command in your bash terminal:
 ```
-g++ -std=c++11 dll.cc main.cc -o lab8
+g++ -std=c++11 darray.cc main.cc -o lab8
 ```
 To run your program, run the following command
 ```
 ./lab8
 ```
 You will be writing the unimplemented functions in the `DArray` class. You can run the main method in `main.cc` to test the functions as you implement them.
-
-The functions you will have to implement are:
-+ append(int data)
-+ prepend(int data)
-+ insertAt(int index, int data)
-+ removeAt(int index)
-+ deleteAll()
-+ Deconstructor
-
-Descriptions of what each function should do can be found in the comments in the source code. 
-Once you are done implementating the missing functions and have shown your working program to a TA, you have completed the lab.
