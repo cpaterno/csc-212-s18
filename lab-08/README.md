@@ -59,6 +59,12 @@ To test your code, run the following command
 ```
 ./lab8
 ```
-The above line will test all but your validation checking. To test your validation checking, use the bash script `vtest.sh`. **(Explain this in more detail in next commit)**
+The above line will test all but your validation checking. To test your validation checking, use the bash script `vtest.sh`. 
+To use vtest.sh, you first need to give yourself the proper permissions. chmod is used to edit the permissions in linux. If you tried to run vtest.sh without using chmod, you will not have the permissions.
+```
+chmod 777 vtest.sh
+```
+To learn more about chmod, [read this page](https://linode.com/docs/tools-reference/tools/modify-file-permissions-with-chmod/) or google chmod.
+
 
 You will be writing the unimplemented functions in the `DArray` class. You can run the main method in `main.cc` to test the functions as you implement them.
