@@ -64,7 +64,23 @@ To use vtest.sh, you first need to give yourself the proper permissions. chmod i
 ```
 chmod 777 vtest.sh
 ```
+chmod 777 gives all perms to everyone so you should be able to execute the script after that.
+
 To learn more about chmod, [read this page](https://linode.com/docs/tools-reference/tools/modify-file-permissions-with-chmod/) or google chmod.
 
 
-You will be writing the unimplemented functions in the `DArray` class. You can run the main method in `main.cc` to test the functions as you implement them.
+You will be writing the unimplemented functions in the `DArray` class. You can compile and run the main method in `main.cc` to test the functions as you implement them.
+
+## Using vtest
+
+If you open vtest, you will notice that is a script that compiles main.cc and then runs the outputed program with arguments. The argmuents are a counter that iterates up to 11. In main.cc, there is a switch case statement that will test different implemented features of your dynamic arrays depending on the argument.
+
+Learning how to use scripts will make your life a lot easier in the future since they allow easy and simple automation.
+
+Because the vtest scipt compiles and runs the code with the 11 different arguments, to test the lab, you should make changes to the main.cc and then just run vtest.
+
+To run vtest, simply run it like any other runnable file.
+```
+./vtest.sh
+```
+If you have a permissions issue, make sure you followed the steps above involing chmod to give yourself permissions.
