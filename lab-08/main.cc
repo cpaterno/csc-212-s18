@@ -19,14 +19,19 @@ int main(int argc, char** argv) {
         assert(d2.capacity() == 15);
         assert(d1.size() == 0 && d2.size() == 0);
 
-        /* Testing Modifiers */
+        /* Testing Modifiers and Accessors */
         for (int i = 1; i < 51; i++) {
             d1.push_back(i);
             d2.insert(i*i - 1, 0);
         }
+        d1.set(100,0);
         assert(d1.pop_back() == 50);
         assert(d2.at(0) == 2499);
         assert(d1.size() == 49);
+        assert(d1.at(0) == 100);
+        assert(d1.pop_back() == 49);
+        assert(d1.back() == 48);
+        assert(d1.front() == 100);
 
     } else {
 
