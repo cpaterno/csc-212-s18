@@ -73,7 +73,7 @@ You will be writing the unimplemented functions in the `DArray` class. You can c
 
 ## Using vtest
 
-If you open vtest, you will notice that is a script that compiles main.cc and then runs the outputed program with arguments. The argmuents are a counter that iterates up to 11. In main.cc, there is a switch case statement that will test different implemented features of your dynamic arrays depending on the argument.
+If you open vtest, you will notice that is a script that compiles main.cc and then runs the outputted program with arguments. The argmuents are a counter that iterates up to 11. In main.cc, there is a switch case statement that will test different implemented features of your dynamic arrays depending on the argument.
 
 Learning how to use scripts will make your life a lot easier in the future since they allow easy and simple automation.
 
