@@ -43,36 +43,47 @@ int main(int argc, char** argv) {
         switch(atoi(argv[1])) {
             case 1:
                 d1.at(-1);
+                std::cout << "Method at() failed to validate" << std::endl;
                 break;
             case 2:
                 d1.at(5);
+                std::cout << "Method at() failed to validate" << std::endl;
                 break;
             case 3:
                 d2.front();
+                std::cout << "Method front() failed to validate" << std::endl;
                 break;
             case 4:
                 d2.back();
+                std::cout << "Method back() failed to validate" << std::endl;
                 break;
             case 5:
                 d1.erase(-1);
+                std::cout << "Method erase() failed to validate" << std::endl;
                 break;
             case 6:
                 d1.erase(5);
+                std::cout << "Method erase() failed to validate" << std::endl;
                 break;
             case 7:
                 d1.set(0, -1);
+                std::cout << "Method set() failed to validate" << std::endl;
                 break;
             case 8:
                 d1.set(0, 5);
+                std::cout << "Method set() failed to validate" << std::endl;
                 break;
             case 9:
                 d2.pop_back();
+                std::cout << "Method pop_back() failed to validate" << std::endl;
                 break;
             case 10:
                 d1.insert(0, -1);
+                std::cout << "Method insert() failed to validate" << std::endl;
                 break;
             case 11:
-                d1.insert(0, 5);
+                d1.insert(0, 6);
+                std::cout << "Method insert() failed to validate" << std::endl;
                 break;
         }
     }
