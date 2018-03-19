@@ -1,4 +1,5 @@
 #include "darray.h"
+#include <cassert>
 
 /* NOTE: The comments in this file are temporary
  *       and will be deleted before the lab goes
@@ -33,11 +34,7 @@ void DArray::shrink() {
 
 }
 
-bool DArray::index_in_bounds(int idx) {
-
-}
-
-/* Simple Accessor Methods */
+/* Accessor Methods */
 int DArray::size() {
 
 }
@@ -62,7 +59,12 @@ bool DArray::empty() {
 
 }
 
-/* More Complex Methods */
+/* Modifier Methods */
+
+void DArray::clear() {
+
+}
+
 void DArray::set(int elem, int idx) {
 
 }
