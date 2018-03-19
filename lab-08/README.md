@@ -3,7 +3,7 @@
 ### Description
 
 This week in class you learned about memory allocation and linked lists. In today's lab you will be implementing a **Dynamic Array**.
-The starter code for this lab can be found above (You need the 3 files: **darray.h, darray.cc, and main.cc**). You may work in groups of 2 to 3. 
+The starter code for this lab can be found above (You need the 4 files: **darray.h, darray.cc, main.cc and vtest.sh**). You should work in groups of 2 to 3. 
 
 
 ### Dynamic Arrays
@@ -15,7 +15,7 @@ int array_a[6]; // This array on the stack can hold 6 ints
 int array_b = new int[6]; // This array on the heap can also hold 6 ints
 ```
 
-However, in some languages, such as JavaScript, arrays can change size whenever needed. These kinds of arrays are called **Dynamic Arrays**, and in many situations Dynamic Arrays are much easier to work with. Generally Dynamic Arrays accomplish their resizing behavior by having a capacity variable that represents *the number of elements it is able to store* in its internal array. When an element is being added to a Dynamic Array that can hold no more elements, the capacity is doubled, a new array is created with the new capacity, and all of the elements are copied from the old array to the new array. This new array then becomes the one used by the Dynamic Array.
+However, in some languages, such as JavaScript, arrays can change size whenever needed. These types of arrays are called **Dynamic Arrays**, and in many situations Dynamic Arrays are much easier to work with. Generally Dynamic Arrays accomplish their resizing behavior by having a capacity variable that represents *the number of elements it is able to store* in its internal array. When an element is being added to a Dynamic Array that can hold no more elements, the capacity is doubled, a new array is created with the new capacity, and all of the elements are copied from the old array to the new array. This new array then becomes the one used by the Dynamic Array.
 
 In addition to having the ability to change size, Dynamic Arrays also tend to provide many methods for accessing and modifying their content, providing further ease of use. In today's lab you will need to implement the following methods for your own Dynamic Array class. The class structure is already provided in `darray.h`.
 
@@ -29,7 +29,6 @@ In addition to having the ability to change size, Dynamic Arrays also tend to pr
 
 + `grow()`: A helper method that doubles the size of the internal array when an element is being added to a Dynamic Array that can hold no more elements.
 + `shrink()`: A helper method that does the opposite of grow, reducing the size when the DArray is half full or less.
-+ `index_in_bounds(int idx)`: A helper method to test if 0 <= idx < length.
 
 #### Accessors:
 
@@ -44,8 +43,9 @@ In addition to having the ability to change size, Dynamic Arrays also tend to pr
 + `pop_back()`: Removes the element at the end of the Dynamic Array and returns it.
 + `insert(int elem, int idx)`: Inserts `elem` into the Dynamic Array at index `idx`.
 + `erase(int idx)`: Removes the element at the index `idx` from the Dynamic Array
++ `clear()`: Resets the length and capacity to their default values.
 
-**Note:** You need to check for valid input in the functions `front()`, `back()`, `at()`, `set()`, `pop_back()`, `insert()` and `erase()`. You should use `assert()` from the library `<cassert>` and `index_in_bounds()` as needed. 
+**Note:** You need to check for valid input in the functions `front()`, `back()`, `at()`, `set()`, `pop_back()`, `insert()` and `erase()`. You should use `assert()` from the library `<cassert>` to abort the program when invalid input occurs. 
 
 ## Instructions
 
@@ -60,16 +60,16 @@ To test your code, run the following command
 ./lab8
 ```
 The above line will test all but your validation checking. To test your validation checking, use the bash script `vtest.sh`. 
-To use vtest.sh, you first need to give yourself the proper permissions. chmod is used to edit the permissions in linux. If you tried to run vtest.sh without using chmod, you will not have the permissions.
+In order to run `vtest.sh`, you first need to give yourself permission to execute the file. The `chmod` command is used to edit a user's permissions in linux. If you try to run `vtest.sh` without using `chmod`, you will receive a permission denied error.
 ```
 chmod 777 vtest.sh
 ```
-chmod 777 gives all perms to everyone so you should be able to execute the script after that.
+The command `chmod 777` gives all permissions to everyone for the given file, so you should now be able to execute the script.
 
 To learn more about chmod, [read this page](https://linode.com/docs/tools-reference/tools/modify-file-permissions-with-chmod/) or google chmod.
 
-
 You will be writing the unimplemented functions in the `DArray` class. You can compile and run the main method in `main.cc` to test the functions as you implement them.
+
 
 ## Using vtest
 
