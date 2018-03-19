@@ -5,7 +5,6 @@ class DArray {
         int* content;
         void grow();
         void shrink();
-        bool index_in_bounds(int);
 
     public:
         DArray();
@@ -17,10 +16,11 @@ class DArray {
         int at(int);
         int front();
         int back();
+        bool empty();
+        void clear();
         void set(int, int);
         void push_back(int);
         int pop_back();
         void insert(int, int);
         void erase(int);
-        bool empty();
 };
