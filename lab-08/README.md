@@ -5,6 +5,8 @@
 This week in class you learned about memory allocation and linked lists. In today's lab you will be implementing a **Dynamic Array**.
 The starter code for this lab can be found above (You need the 4 files: **darray.h, darray.cc, main.cc and vtest.sh**). You should work in groups of 2 to 3. 
 
+[This is the link to the google form.](https://goo.gl/forms/k05AjaXSxXm71FIX2) You will paste the code for the methods you will implement in the lab in the corresponding sections.
+
 
 ### Dynamic Arrays
 
@@ -87,4 +89,6 @@ If you have a permissions issue, make sure you followed the steps above involvin
 
 
 ## Submission
+
+Please use [this form](https://goo.gl/forms/k05AjaXSxXm71FIX2) to submit the code for the dynamic arrays. There is an entry for each method. If you did not complete a method, please populate the field with "DNF". The form will open at the start of the lab and close at 3pm. Please make your submission by then and late submissions are not accepted.
 
