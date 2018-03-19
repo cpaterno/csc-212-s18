@@ -83,6 +83,8 @@ To run vtest, simply run it like any other runnable file.
 ```
 If you have a permissions issue, make sure you followed the steps above involving `chmod` to give yourself permissions.
 
+**How to read the output of vtest:** When vtest runs, it should output a number and then a message, for the numbers 1 through 11. If the output message starts with `lab8: ` and ends with `failed.` then the method **correctly validates** its input. However, if the message instead is of the form `Method X() failed to validate` where X() is one of DArray's methods, then the method **fails to validate** its input, and must be modified to do so.
+
 
 ## Submission
 
