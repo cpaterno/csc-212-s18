@@ -73,14 +73,16 @@ You will be writing the unimplemented functions in the `DArray` class. You can c
 
 ## Using vtest
 
-If you open vtest, you will notice that is a script that compiles main.cc and then runs the outputted program with arguments. The argmuents are a counter that iterates up to 11. In main.cc, there is a switch case statement that will test different implemented features of your dynamic arrays depending on the argument.
+If you open vtest, you will notice that is a script that compiles `main.cc` and then runs the outputted program with arguments. The argmuents are a counter that iterates up to 11. In `main.cc`, there is a switch case statement that will test different implemented features of your dynamic arrays depending on the argument.
 
-Learning how to use scripts will make your life a lot easier in the future since they allow easy and simple automation.
-
-Because the vtest scipt compiles and runs the code with the 11 different arguments, to test the lab, you should make changes to the main.cc and then just run vtest.
+The reason we use `vtest.sh` for validation testing, as opposed to testing everything in one run of the compiled program, is because when a false value is passed into `assert()` the report is printed and the program immediately aborts. Since there are multiple different situations that can cause a false assertion, the program must be repeatedly run to test that each possible failing case does in fact fail. This approach would be tedious, so it is preferable to automate these commands using a Bash script. Thus, learning how to use Bash scripts can make your life a lot easier in the future since they allow easy automation and chaining of Linux commands.
 
 To run vtest, simply run it like any other runnable file.
 ```
 ./vtest.sh
 ```
-If you have a permissions issue, make sure you followed the steps above involing chmod to give yourself permissions.
+If you have a permissions issue, make sure you followed the steps above involving `chmod` to give yourself permissions.
+
+
+## Submission
+
