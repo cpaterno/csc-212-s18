@@ -1,4 +1,4 @@
-# Lab 07: Implementing Dynamic Arrays in C++
+# Lab 08: Implementing Dynamic Arrays in C++
 
 ### Description
 
