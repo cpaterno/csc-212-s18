@@ -41,11 +41,11 @@ In addition to having the ability to change size, Dynamic Arrays also tend to pr
 #### Modifiers:
 
 + `set(int elem, int idx)`: Sets the value of the Dynamic Array at the index `idx` to the value `elem`.
-+ `push_back(int elem)`: Inserts `elem` at the end of the Dynamic Array.
++ `push_back(int elem)`: Appends `elem` at the end of the Dynamic Array.
 + `pop_back()`: Removes the element at the end of the Dynamic Array and returns it.
 + `insert(int elem, int idx)`: Inserts `elem` into the Dynamic Array at index `idx`.
-+ `erase(int idx)`: Removes the element at the index `idx` from the Dynamic Array
-+ `clear()`: Resets the length and capacity to their default values.
++ `erase(int idx)`: Removes the element at the index `idx` from the Dynamic Array, *shifting* elements as necessary to avoid holes in the array.
++ `clear()`: Clears the array, *and* resets the length and capacity to their default values.
 
 **Note:** You need to check for valid input in the functions `front()`, `back()`, `at()`, `set()`, `pop_back()`, `insert()` and `erase()`. You should use `assert()` from the library `<cassert>` to abort the program when invalid input occurs. 
 
