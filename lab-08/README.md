@@ -64,9 +64,9 @@ To test your code, run the following command
 The above line will test all but your validation checking. To test your validation checking, use the bash script `vtest.sh`. 
 In order to run `vtest.sh`, you first need to give yourself permission to execute the file. The `chmod` command is used to edit a user's permissions in linux. If you try to run `vtest.sh` without using `chmod`, you will receive a permission denied error.
 ```
-chmod 777 vtest.sh
+chmod u+x vtest.sh
 ```
-The command `chmod 777` gives all permissions to everyone for the given file, so you should now be able to execute the script.
+The command `chmod u+x` gives execution permissions to your user, so you should now be able to execute the script.
 
 To learn more about chmod, [read this page](https://linode.com/docs/tools-reference/tools/modify-file-permissions-with-chmod/) or google chmod.
 
