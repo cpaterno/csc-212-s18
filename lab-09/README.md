@@ -2,6 +2,8 @@
 
 In this lab, your job is to implementations your own singly linked list.  The goal of this lab is to give you a deeper understanding of the Linked List data structure that you have been learning about.
 
+[image](https://en.wikipedia.org/wiki/Linked_list#/media/File:Singly-linked-list.svg)
+
 ## 1. Implementing `LinkedList`
 
 The first section of this lab requires you to implement your own custom linked list class.  In "linkedlist.h" you will see the class definitions for `Node` and `LinkedList`.  You should inspect but not modify this file.  Write all your code in "linkedlist.cc".  Note that methods for the class `Node` are already implemented and will be used by `LinkedList`.
