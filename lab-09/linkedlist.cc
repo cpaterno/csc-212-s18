@@ -110,7 +110,7 @@ unsigned int LinkedList::getSize()
 /*
 * Clears all data from the list
 */
-void clear()
+void LinkedList::clear()
 {
 	//TODO
 }
