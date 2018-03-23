@@ -2,7 +2,7 @@
 
 In this lab, your job is to implementations your own singly linked list.  The goal of this lab is to give you a deeper understanding of the Linked List data structure that you have been learning about.
 
-![image](https://en.wikipedia.org/wiki/Linked_list#/media/File:Singly-linked-list.svg)
+![image](http://www.java2novice.com/images/linked_list.png)
 
 ## 1. Implementing `LinkedList`
 
