@@ -1,8 +1,8 @@
 # Lab 09: Singling Out Linked Lists
 
-In this lab, your job is to implementations your own singly linked list.  The goal of this lab is to give you a deeper understanding of the Linked List data structure that you have been learning about.
+In this lab, your job is to implement your own singly linked list.  The goal of this lab is to give you a deeper understanding of the linked list data structure that you have been learning about.
 
-Linked List. Contains Data and a pointer to the next node.
+Linked list. Contains data and a pointer to the next node.
 
 ![image](http://www.java2novice.com/images/linked_list.png)
 
@@ -10,16 +10,16 @@ Pictoral representation of adding a node to a linked list.
 
 ![image](http://www.java2novice.com/images/sll_insert_after.png)
 
-Pictoral representation of removing a node from a linked list. Notice how the pointer just skips the removed node.
+Pictoral representation of removing a node from a linked list. Notice how the pointer just skips over the removed node.
 
 ![image](http://www.java2novice.com/images/sll_delete_after.png)
 
 ## 1. Implementing `LinkedList`
 
-The first section of this lab requires you to implement your own custom linked list class.  In "linkedlist.h" you will see the class definitions for `Node` and `LinkedList`.  You should inspect but not modify this file.  Write all your code in "linkedlist.cc".  Note that methods for the class `Node` are already implemented and will be used by `LinkedList`.
+The first section of this lab requires you to implement your own custom linked list class.  In `linkedlist.h` you will see the class definitions for `Node` and `LinkedList`.  You should inspect but not modify this file.  Write all your code in `linkedlist.cc`.  Note that methods for the class `Node` are already implemented and will be used by `LinkedList`.
 
 ### 1.1 Constructor and destructor
-For the constructor `LinkedList()` your code should create an empty list and set private variables accordingly.  `head` and `tail` should be set to `NULL` and `n_elem` should be set to 0.
+For the constructor `LinkedList()` your code should create an empty list and set private variables accordingly.  The `head` and `tail` properties should be set to `NULL` and `n_elem` should be set to 0.
 
 The destructor `~LinkedList()` is a little bit more complicated.  For this method, you must traverse the list and delete each `Node`, so that you don't cause a memory leak.
 
