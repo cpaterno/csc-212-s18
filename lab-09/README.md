@@ -18,6 +18,48 @@ Pictoral representation of removing a node from a linked list. Notice how the po
 
 The first section of this lab requires you to implement your own custom linked list class.  In `linkedlist.h` you will see the class definitions for `Node` and `LinkedList`.  You should inspect but not modify this file.  Write all your code in `linkedlist.cc`.  Note that methods for the class `Node` are already implemented and will be used by `LinkedList`.
 
+The class definitions for `Node` and `LinkedList` are shown below:
+
+```C++
+class Node {
+
+	private:
+		Node* next;
+		int data;
+
+	public:
+		Node(int d);
+		~Node();
+
+	friend class LinkedList;
+
+};
+
+class LinkedList {
+
+	private:
+		Node* head;
+		Node* tail;
+		unsigned int n_elem;
+
+	public:
+		LinkedList();
+		~LinkedList();
+
+		void insertAt(unsigned int index, int d);
+		int removeAt(unsigned int index);
+
+		bool find(int d);
+		void append(int d);
+		void prepend(int d);
+		int removeLast();
+		int removeFirst();
+		unsigned int getSize();
+		void clear();
+
+};
+```
+
 ### 1.1 Constructor and destructor
 For the constructor `LinkedList()` your code should create an empty list and set private variables accordingly.  The `head` and `tail` properties should be set to `NULL` and `n_elem` should be set to 0.
 
