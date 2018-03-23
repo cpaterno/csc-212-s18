@@ -2,7 +2,14 @@
 
 In this lab, your job is to implementations your own singly linked list.  The goal of this lab is to give you a deeper understanding of the Linked List data structure that you have been learning about.
 
+Linked List. Contains Data and a pointer to the next node.
 ![image](http://www.java2novice.com/images/linked_list.png)
+
+Pictoral representation of adding a node to a linked list.
+![image](http://www.java2novice.com/images/sll_insert_after.png)
+
+Pictoral representation of removing a node from a linked list. Notice how the pointer just skips the removed node.
+![image](http://www.java2novice.com/images/sll_delete_after.png)
 
 ## 1. Implementing `LinkedList`
 
