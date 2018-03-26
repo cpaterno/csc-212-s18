@@ -8,3 +8,10 @@
 # C++ Output Files
 *.o
 *.out
+*.exe
+
+# CMake
+cmake-build-debug/
+
+# CLion
+.idea/
