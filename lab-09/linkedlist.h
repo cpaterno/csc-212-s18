@@ -40,6 +40,7 @@ class LinkedList {
 		int removeFirst();
 		unsigned int getSize();
 		void clear();
+		void print();
 
 };
 #endif
