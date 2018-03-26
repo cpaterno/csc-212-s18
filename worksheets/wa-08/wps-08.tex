@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\linespread{1.2}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{15pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2018}\chead{}\rhead{\scriptsize Weekly Problem Set \#8}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf Spring 2018}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#8}
+\end{center}
+
+Due Thursday 3/29 before class. Please turn in neat, and organized, answers hand-written on standard-sized paper \textbf{without any fringe}. At the top of each sheet you hand in, please write your name, and ID.
+The only library you're allowed to use in your answers is \verb|iostream|.
+
+\section{Recurrences}
+\begin{enumerate}
+    \item Find a closed-form equivalent of the following recurrences:
+    \begin{enumerate} 
+        % http://jeffe.cs.illinois.edu/teaching/algorithms/notes/99-recurrences.pdf (2.1)
+        \item The Towers of Hanoi:
+        $$T(0) = 0; T(n) = 2T(n-1) + 1$$
+    
+        % http://jeffe.cs.illinois.edu/teaching/algorithms/notes/99-recurrences.pdf (2.3)
+        \item The Merge Sort:
+        $$T(1) = 1; T(n) = 2T(\frac{n}{2}) + n$$
+    
+        % https://docs.google.com/document/d/1Z2jiWIVzD9tF6SI6Oxez9M6DYd57HuOYNzvFSCSbufk/edit# (Recurrences > 1 > c)
+        \item Generic:
+        $$T(0) = 1; T(n) = T(n - 1) + 2^n$$
+    
+        % https://docs.google.com/document/d/1Z2jiWIVzD9tF6SI6Oxez9M6DYd57HuOYNzvFSCSbufk/edit# (Recurrences > 1 > e)
+        \item Generic:
+        $$T(1) = 1; T(n) = T(\frac{n}{3}) + 1$$
+        
+    \end{enumerate}
+
+\end{enumerate}
+\section{Merge Sort} 
+\begin{enumerate}
+
+    \item Determine the running-time of merge sort for a) sorted input; b) reverse-ordered input; c) random input; d) all identical input. Justify your answers.
+
+\end{enumerate}
+
+The following is considered optional.
+
+\begin{enumerate}
+    
+    \item Research and implement Tim Sort. \href{https://en.wikipedia.org/wiki/Timsort}{A link about Tim Sort}
+
+    % https://www2.cs.arizona.edu/classes/cs345/summer14/files/reccurence_practice.pdf
+    \item Find a closed-form equivalent of the following recurrence:
+    $$f(1) = 3; f(n) = f(\frac{n}{2}) + 1$$
+
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
+    
