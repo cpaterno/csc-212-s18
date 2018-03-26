@@ -110,8 +110,17 @@ This method should remove all nodes from the list, so that the list becomes empt
 
 This method needs to search the list for `data` and returns `true` if `data` is in the list, and `false` otherwise.
 
+*Note: Students to not need to validate their methods*
 
-## 2. Questions
+## Useful hints/tips/edge cases
+
+There are a few common mistakes that can be made when implementing this lab. Make sure that you have cases for the head and tail nodes in the linked list. The head and tail will need to be handeled in some of the methods to make sure that the structure of the linked list stays correct, so always think about how they will be affected by your code.
+
+Also, if you noticed that you are going to have to write similar code or do a process over again in the methods, note that you can use functions and other methods to condense and promote abstraction in your code.
+
+Also make note of situations when the list is empty, and make sure that your code can handle an empty situation.
+
+## 3. Questions
 
 1.  What is the running time(in big O notation) of your LinkedList::append()?
 2.  What is the running time(in big O notation) of your LinkedList::prepend()?
