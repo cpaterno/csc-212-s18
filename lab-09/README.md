@@ -61,6 +61,7 @@ class LinkedList {
 		int removeFirst();
 		unsigned int getSize();
 		void clear();
+		void print();
 
 };
 ```
@@ -109,6 +110,10 @@ This method should remove all nodes from the list, so that the list becomes empt
 ### 1.10 `bool find(int d)`
 
 This method needs to search the list for `data` and returns `true` if `data` is in the list, and `false` otherwise.
+
+### 1.11 `void print()`
+
+This method is provided for you, and may be used to debug your code. It prints all the elements of the linked list and their indices in order, provided the linked list is connected properly. The form of the output is `index:value`, and the final two lines print the values in head and tail if they are not `NULL`. If the linked list is not connected properly, this function will likely have unexpected behavior, and may run into an error or an infinite loop.
 
 *Note: Students to not need to validate their methods*
 
