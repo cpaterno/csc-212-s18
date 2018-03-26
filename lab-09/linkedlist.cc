@@ -114,3 +114,21 @@ void LinkedList::clear()
 {
 	//TODO
 }
+
+/*
+* Prints the contents of the linked list in index:data format,
+* along with the head and tail with their respective data
+*
+* Note: if the pointers from one node to another are not properly
+* handled this method may fail or have unexpected results.
+*/
+void LinkedList::print() {
+	Node* n = head;
+	int i = 0;
+	while (n != NULL) {
+		std::cout << i++ << ':' << n->data << std::endl;
+		n = n->next;
+	}
+	if (head != NULL) std::cout << "Head:" << head->data << std::endl;
+	if (tail != NULL) std::cout << "Tail:" << tail->data << std::endl;
+}
