@@ -66,7 +66,7 @@ class LinkedList {
 };
 ```
 
-### 1.1 Constructor and destructor
+### 1.1 Constructor and Destructor
 For the constructor `LinkedList()` your code should create an empty list and set private variables accordingly.  The `head` and `tail` properties should be set to `NULL` and `n_elem` should be set to 0.
 
 The destructor `~LinkedList()` is a little bit more complicated.  For this method, you must traverse the list and delete each `Node`, so that you don't cause a memory leak.
@@ -117,13 +117,13 @@ This method is provided for you, and may be used to debug your code. It prints a
 
 *Note: Students to not need to validate their methods*
 
-## Useful hints/tips/edge cases
+## Useful Hints/Tips/Edge Cases
 
-There are a few common mistakes that can be made when implementing this lab. Make sure that you have cases for the head and tail nodes in the linked list. The head and tail will need to be handeled in some of the methods to make sure that the structure of the linked list stays correct, so always think about how they will be affected by your code.
++ There are a few common mistakes that can be made when implementing this lab. Make sure that you have cases for the head and tail nodes in the linked list. The head and tail will need to be handeled in some of the methods to make sure that the structure of the linked list stays correct, so always think about how they will be affected by your code.
 
-Also, if you noticed that you are going to have to write similar code or do a process over again in the methods, note that you can use functions and other methods to condense and promote abstraction in your code.
++ It may be useful to call some of the methods within some of the other methods in order to write less code and simplify some of your implementations.
 
-Also make note of situations when the list is empty, and make sure that your code can handle an empty situation.
++ Make note of situations in which the list is empty, and make sure that your code can handle an empty situation if the method permits it (e.g., you can add to an empty linked list, but not remove from one).
 
 ## 3. Questions
 
