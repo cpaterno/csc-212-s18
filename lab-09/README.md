@@ -2,6 +2,10 @@
 
 In this lab, your job is to implement your own singly linked list.  The goal of this lab is to give you a deeper understanding of the linked list data structure that you have been learning about.
 
+[Here is the google form.](https://goo.gl/forms/LWGwepMPYCwimVOw1)
+
+### Visual Aids
+
 Linked list. Contains data and a pointer to the next node.
 
 ![image](http://www.java2novice.com/images/linked_list.png)
@@ -13,6 +17,7 @@ Pictoral representation of adding a node to a linked list.
 Pictoral representation of removing a node from a linked list. Notice how the pointer just skips over the removed node.
 
 ![image](http://www.java2novice.com/images/sll_delete_after.png)
+
 
 ## 1. Implementing `LinkedList`
 
