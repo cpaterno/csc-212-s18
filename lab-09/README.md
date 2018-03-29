@@ -61,11 +61,12 @@ class LinkedList {
 		int removeFirst();
 		unsigned int getSize();
 		void clear();
+		void print();
 
 };
 ```
 
-### 1.1 Constructor and destructor
+### 1.1 Constructor and Destructor
 For the constructor `LinkedList()` your code should create an empty list and set private variables accordingly.  The `head` and `tail` properties should be set to `NULL` and `n_elem` should be set to 0.
 
 The destructor `~LinkedList()` is a little bit more complicated.  For this method, you must traverse the list and delete each `Node`, so that you don't cause a memory leak.
@@ -110,8 +111,21 @@ This method should remove all nodes from the list, so that the list becomes empt
 
 This method needs to search the list for `data` and returns `true` if `data` is in the list, and `false` otherwise.
 
+### 1.11 `void print()`
 
-## 2. Questions
+This method is provided for you, and may be used to debug your code. It prints all the elements of the linked list and their indices in order, provided the linked list is connected properly. The form of the output is `index:value`, and the final two lines print the values in head and tail if they are not `NULL`. If the linked list is not connected properly, this function will likely have unexpected behavior, and may run into an error or an infinite loop.
+
+*Note: Students to not need to validate their methods*
+
+## Useful Hints/Tips/Edge Cases
+
++ There are a few common mistakes that can be made when implementing this lab. Make sure that you have cases for the head and tail nodes in the linked list. The head and tail will need to be handeled in some of the methods to make sure that the structure of the linked list stays correct, so always think about how they will be affected by your code.
+
++ It may be useful to call some of the methods within some of the other methods in order to write less code and simplify some of your implementations.
+
++ Make note of situations in which the list is empty, and make sure that your code can handle an empty situation if the method permits it (e.g., you can add to an empty linked list, but not remove from one).
+
+## 3. Questions
 
 1.  What is the running time(in big O notation) of your LinkedList::append()?
 2.  What is the running time(in big O notation) of your LinkedList::prepend()?
