@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\linespread{1.1}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{20pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2018}\chead{}\rhead{\scriptsize Weekly Problem Set \#9}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.25pt}
+\renewcommand{\footrulewidth}{0.25pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf Spring 2018}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#9}
+\end{center}
+
+Due Thursday 4/5 before class. Please turn in neat, and organized, answers hand-written on standard-sized paper \textbf{without any fringe}. At the top of each sheet you hand in, please write your name, and ID.
+The only library you're allowed to use in your answers is \verb|iostream|.
+
+\section{Quick Sort}
+\begin{enumerate}
+    \item Implement Quick Sort.
+
+    \item Describe how quick sort performs when all the elements of the list are:  a) The same. (EX: [1, 1, 1, 1, 1]) b) Sorted order. c) Reverse order. d) Random order.
+\end{enumerate}
+
+\section{Linked Lists} 
+\begin{enumerate}
+    \item Using this weeks' lab as a basis, create a new method \verb|void reverse()| that reverses the linked list.
+
+    \item For each of the following please provide the time complexity for a Singly Linked List (SLL), as well as a Doubly Linked List (DLL). 
+    
+    \begin{tabular}{l | c | c | c}
+                 &     & SLL          &  \\ 
+        Function & SLL & without Tail & DLL \\ \hline
+        \verb|int size();| & & & \\ \hline
+        \verb|int capacity();| & & & \\ \hline
+        \verb|int at(int);| & & & \\ \hline
+        \verb|int front();| & & & \\ \hline
+        \verb|int back();| & & & \\ \hline
+        \verb|bool empty();| & & & \\ \hline
+        \verb|void clear();| & & & \\ \hline
+        \verb|void set(int, int);| & & & \\ \hline
+        \verb|void push_back(int);| & & & \\ \hline
+        \verb|int pop_back();| & & & \\ \hline
+        \verb|void insert(int, int);| & & & \\ \hline
+        \verb|void erase(int);| & & & \\ \hline
+        \verb|void reverse(int);| & & & \\ \hline
+    \end{tabular}
+
+    \item Implement both \verb|insert_at(int index)| as well as \verb|remove_at(int index)| for Doubly Linked Lists.
+\end{enumerate}
+
+The following problems are considered optional:
+
+\begin{enumerate}
+    \item Compare your partition scheme to the Lomuto Partition Scheme. Why does the partition scheme of quick sort matter? Can any partition scheme reduce time complexity below the worst case of $O(n^2)$?
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
+    
