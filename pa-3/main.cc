@@ -39,27 +39,27 @@ int main(int argc, char *argv[]) {
         std::stringstream tokens(command);
         // gets the first word from `tokens`
         tokens >> word;
-        if (word.compare("n")) {
+        if (! word.compare("n")) {
             // TODO: move `current` to next
         }
-        if (word.compare("p")) {
+        if (! word.compare("p")) {
             // TODO: move `current` to previous
         }
-        if (word.compare("f")) {
+        if (! word.compare("f")) {
             // TODO: move `current` to first
         }
-        if (word.compare("l")) {
+        if (! word.compare("l")) {
             // TODO: move `current` to last
         }
         if (std::all_of(word.begin(), word.end(), ::isdigit)) {
             int skip = std::stoi(word);
             // TODO: move `current` to `skip` positions ahead (circularly)
         }
-        if (word.compare("s")) {
+        if (! word.compare("s")) {
             tokens >> word;
             // TODO: move `current` to the next occurrence of `word`
         }
-        if (word.compare("q")) {
+        if (! word.compare("q")) {
             break;
         }
     }
