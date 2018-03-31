@@ -2,46 +2,46 @@
 #include <iostream>
 
 CDLLNode::CDLLNode(const char *ti, const char *tw) {
-	time = ti;
-	tweet = tw;
-	next = NULL;
-	prev = NULL;
+    time = ti;
+    tweet = tw;
+    next = NULL;
+    prev = NULL;
 }
 
 CDLLNode::~CDLLNode() {
-	// no dynamic memory allocation, nothing to destroy
+    // no dynamic memory allocation, nothing to destroy
 }
 
 CDLL::CDLL() {
-	// TODO: Initialize private data members
+    // TODO: Initialize private data members
 }
 
 CDLL::~CDLL() {
-	// TODO: Needs to delete ALL elements from the list
+    // TODO: Needs to delete ALL elements from the list
 }
 
 void CDLL::prepend(const char *time, const char *tweet) {
-	// TODO: Inserts a node at front
+    // TODO: Inserts a node at front
 }
 
 void CDLL::append(const char * time, const char * tweet) {
-	// TODO: Inserts a node at end
+    // TODO: Inserts a node at end
 }
 
 void CDLL::go_next() {
-	// TODO
+    // TODO
 }
 
 void CDLL::go_prev() {
-	// TODO
+    // TODO
 }
 
 void CDLL::go_last() {
-	// TODO
+    // TODO
 }
 
 void CDLL::skip(unsigned int n) {
-	// TODO
+    // TODO
 }
 
 void CDLL::print_current() {

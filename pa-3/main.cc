@@ -4,30 +4,30 @@
 #include <iostream>
 
 void read_file(const char *fname, CDLL *list) {
-	std::ifstream myfile(fname);
-	if (myfile) {
+    std::ifstream myfile(fname);
+    if (myfile) {
         std::string line;
         std::string tweet_id, tweet_time, tweet_text;
         // for each line in file
-		while (getline(myfile,line)) {
+        while (getline(myfile,line)) {
             // splits the line by the delimiter '|'
-			std::istringstream mystream(line);
+            std::istringstream mystream(line);
             std::getline(mystream, tweet_id, '|');
             std::getline(mystream, tweet_time, '|');
             std::getline(mystream, tweet_text, '|');
             // -------------------------------------------
-			// TODO - insert tweet into your CDLL
+            // TODO - insert tweet into your CDLL
             // -------------------------------------------
-		}
+        }
         myfile.close();
-	}
+    }
 }
 
 int main(int argc, char *argv[]) {
     // creates an empty linked list
-	CDLL list;
+    CDLL list;
     // reads the contents of input file and insert tweets into list
-	read_file(argv[1], &list);
+    read_file(argv[1], &list);
     // main loop: waits for user interaction
     std::string command, word;
     while (true) {
