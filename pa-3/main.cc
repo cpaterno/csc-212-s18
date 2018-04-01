@@ -31,6 +31,8 @@ int main(int argc, char *argv[]) {
     read_file(argv[1], &list);
     // main loop: waits for user interaction
     std::string command, word;
+    // set current to the first element in the list
+    list.go_first();
     while (true) {
         // prints the `current` tweet
         list.print_current();
