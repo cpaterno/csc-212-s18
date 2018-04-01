@@ -1,51 +1,57 @@
-#include "cdll.h"
-#include <iostream>
+#ifndef __CDLL_H__
+#define __CDLL_H__
 
-CDLLNode::CDLLNode(const char *ti, const char *tw) {
-    time = ti;
-    tweet = tw;
-    next = NULL;
-    prev = NULL;
-}
+#ifndef NULL
+#define NULL 0x00
+#endif
 
-CDLLNode::~CDLLNode() {
-    // no dynamic memory allocation, nothing to destroy
-}
+#include <string>
 
-CDLL::CDLL() {
-    // TODO: Initialize private data members
-}
+class CDLLNode {
+    private:
+        // these will contain the timestamp and content of the tweet as strings
+        std::string time;
+        std::string tweet;
 
-CDLL::~CDLL() {
-    // TODO: Needs to delete ALL elements from the list
-}
+        // these are pointers to the next and previous nodes in the CDLL
+        CDLLNode * next;
+        CDLLNode * prev;
 
-void CDLL::prepend(const char *time, const char *tweet) {
-    // TODO: Inserts a node at front
-}
+    public:
+        CDLLNode(const char * ti, const char * tw);
+        ~CDLLNode();
 
-void CDLL::append(const char * time, const char * tweet) {
-    // TODO: Inserts a node at end
-}
+    friend class CDLL;
+};
 
-void CDLL::go_next() {
-    // TODO
-}
+class CDLL {
+    private:
+        // pointer to the head/starting node in the CDLL
+        CDLLNode * head;
+        // this is a pointer to the 'current' node
+        // allows methods to know the status of the 'current node'
+        CDLLNode * current;
 
-void CDLL::go_prev() {
-    // TODO
-}
+    public:
+        CDLL();   // default constructor
+        ~CDLL();  // default destructor (you are expected to destroy the linked list here)
 
-void CDLL::go_last() {
-    // TODO
-}
+        // makes an insertion at the front of the list
+        void prepend(const char * time, const char * tweet);
+        // makes an insertion at the end of the list
+        void append(const char * time, const char * tweet);
+        // moves 'current' to the next node
+        void go_next();
+        // moves 'current' to the previous node
+        void go_prev();
+        // moves 'current' to the head/first node
+        void go_first();
+        // moves 'current' to the last node
+        void go_last();
+        // moves 'current' n elements ahead (circularly)
+        void skip(unsigned int n);
+        // prints the 'current' tweet
+        void print_current();
+};
 
-void CDLL::skip(unsigned int n) {
-    // TODO
-}
-
-void CDLL::print_current() {
-    if (current) {
-        std::cout << current->time << "    " << current->tweet << std::endl;
-    }
-}
+#endif
