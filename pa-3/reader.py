@@ -9,7 +9,7 @@ tweets = tweets[::-1]
 n_tweets = len(tweets)
 current = 0
 while True:
-    print tweets[current][1][:19], tweets[current][2]
+    print tweets[current][1][:19] + '    ' + tweets[current][2]
     command = sys.stdin.readline().strip()
     if command == 'n':
         current = (current + 1) % n_tweets
