@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <algorithm>
 
 void read_file(const char *fname, CDLL *list) {
     std::ifstream myfile(fname);
