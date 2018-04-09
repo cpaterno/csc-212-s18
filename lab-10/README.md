@@ -4,16 +4,24 @@ This week's lab will be a bit different than usual. Instead of covering a partic
 
 ## Format
 
+**First and foremost, what does competitive programming mean?**
 
+Generally speaking, comptetitive programming involves finding a programmatic solution to a problem given some constraints. These constraints typically consist of a set amount of time during which to code solutions, at the very least, but may also include restrictions on amount of allowed CPU time and memory usage. A code submission is accepted if it implements the solution to the given problem *to specification* (more on this shortly), and it meets all of the given constraints.
 
-## Problem 0: 
+**What are the specifications?**
 
-## Problem 1: 
+In any competitive programming problem, it is not enough to simply write an algorithm that solves the problem, but it must also be able to read the data in from stdin and write the resulting solution to stdout. Luckily for you, these steps will already have been done for you in the starter code given above, whereas in an actual programming competition this will not be provided.
 
-## Problem 2: 
+**So what do we have to do?**
 
-## Problem 3: 
+## Additional Description/Clarification 
 
-## Problem 4: 
+### Problem 1: 
 
-## Bonus Problem
+### Problem 2: 
+
+### Problem 3: 
+
+### Problem 4: 
+
+### Bonus Problem
