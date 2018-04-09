@@ -14,11 +14,11 @@ while True:
     if command == 'n':
         current = (current + 1) % n_tweets
     if command == 'p':
-        current = current - 1 if (current > 0) else n_tweets - 1 
+        current = current - 1 if (current > 0) else n_tweets - 1
     if command == 'f':
         current = 0
     if command == 'l':
-        current = n_tweets - 1 
+        current = n_tweets - 1
     if command.isdigit():
         current = (current + int(command)) % n_tweets
     if command[0] == 's':
@@ -29,4 +29,3 @@ while True:
                 break
     if (command == 'q'):
         break
-    

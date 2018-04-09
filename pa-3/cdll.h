@@ -50,8 +50,12 @@ class CDLL {
         void go_last();
         // moves 'current' n elements ahead (circularly)
         void skip(unsigned int n);
+        // moves 'current' to the next occurrence of word
+        void search(const char *word);
         // prints the 'current' tweet
         void print_current();
+        // prints the times for all tweets
+        void print_all();
 };
 
 #endif

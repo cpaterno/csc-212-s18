@@ -1,5 +1,6 @@
 #include "cdll.h"
 #include <iostream>
+#include <algorithm>
 
 CDLLNode::CDLLNode(const char *ti, const char *tw) {
     time = ti;
@@ -13,8 +14,7 @@ CDLLNode::~CDLLNode() {
 }
 
 CDLL::CDLL() {
-    head = NULL;
-    current = NULL;
+    // TODO: Initialize private data members
 }
 
 CDLL::~CDLL() {
@@ -49,8 +49,27 @@ void CDLL::skip(unsigned int n) {
     // TODO
 }
 
+void CDLL::search(const char *word) {
+    // TODO
+}
+
 void CDLL::print_current() {
     if (current) {
-        std::cout << current->time << "    " << current->tweet << std::endl;
+        std::cout << current->time.substr(0,19) << "    " << current->tweet << std::endl;
     }
+}
+
+void CDLL::print_all() {
+    if (head) {
+        CDLLNode *p = head;
+        while (1) {
+            std::cout << p->time << " ";
+            if (p->next == head) {
+                break;
+            } else {
+                p = p->next;
+            }
+        }
+    }
+    std::cout << std::endl;
 }

@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
             // TODO: move `current` to last
         }
         if (std::all_of(word.begin(), word.end(), ::isdigit)) {
-            int skip = std::stoi(word);
+            unsigned int skip = (unsigned int) std::stoi(word);
             // TODO: move `current` to `skip` positions ahead (circularly)
         }
         if (! word.compare("s")) {
