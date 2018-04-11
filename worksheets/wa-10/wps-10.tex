@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\linespread{1}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{20pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2018}\chead{}\rhead{\scriptsize Weekly Problem Set \#10}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.25pt}
+\renewcommand{\footrulewidth}{0.25pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf Spring 2018}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#10}
+\end{center}
+
+Due Thursday 4/12 before class. Please turn in neat, and organized, answers hand-written on standard-sized paper \textbf{without any fringe}. At the top of each sheet you hand in, please write your name, and ID.
+The only library you're allowed to use in your answers is \verb|iostream|.
+
+\section{K-ary Trees}
+\begin{enumerate}
+    \item Draw a k-ary tree, where \verb|k=4|, after the insertion of the following elements in order: 
+    
+    \verb|[5, 4, 6, 8, 2, 9, 10, 1]|
+    
+    \item Looking at the tree you have drawn, how many leaves and nodes are present? 
+    
+    \item Examine your tree and find both the root and the node with the value 4. For both nodes, list the following attributes: depth, height of subtrees, number of siblings, number of children. 
+    
+    \item Insert 6 more random elements into your tree and relist any of the above attributes that have changed.
+    
+    \item Would the structure of the k-ary tree you've drawn change at all if the elements were inserted in sorted order? Explain why or why not.
+\end{enumerate}
+
+\section{Binary Search Trees}
+\begin{enumerate}
+    \item Draw a binary tree after the insertion of the following elements in order: 
+    
+    \verb|[60, 40, 35, 75, 90, 1, 20, 100, 25, 70]|
+    
+    \item Draw a binary tree after the insertion of the following elements in order: 
+    
+    \verb|[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]|
+    
+    \item Explain what differs in the above two trees. Specifically, address how many leaf nodes there are, the depth of the right, and leftmost nodes, and the height of both the left and right subtrees from the root node.
+    
+    \item If a Binary Tree is complete, does that necessarily mean it is also full? Justify your answer with drawings of trees.
+\end{enumerate}
+
+\section{Stacks and Queues}
+\begin{enumerate}
+    \item Continuing from your previous \verb|LinkedList| solution, what changes would be required to convert this list into a generic queue? What about a stack?
+    \item Is a linked list the best underlying structure to implement a queue with? Justify your answer. 
+    \item Implement both a queue, and a stack. Provide only the essential methods for both (Constructor, Destructor, Push, Pop, Peek), and use whatever underlying structure you would prefer.
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
+    
