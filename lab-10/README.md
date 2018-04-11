@@ -32,16 +32,38 @@ Once you are satisfied with your solution, you may either upload your **whole fi
 
 ## Additional Description/Clarification 
 
-### Problem 0. Stuck in a Time Loop:
+*Note: You should read the description for each problem on Kattis before reading the supplementary information here.*
 
-This problem should require no additional clarification.
+### Problem 0: Stuck in a Time Loop
 
-### Problem 1. Odd Gnome: 
+This problem is simple enough that your solution may be implemented right in the `main()` function. The input number N is already read in, so you must simply print the output specified on the Kattis page.
 
-### Problem 2. Tarifa: 
+### Problem 1: Odd Gnome
 
-### Problem 3. 2048: 
+```C++
+int* odd_gnome(int num_groups, int* gs_in_each, int** groups);
+```
 
-### Problem 4. Mancala: 
+In this function, `num_groups` is the number of groups of gnomes (i.e., the number of trials), `gs_in_each` is an array of length `num_groups` that contains the number of gnomes in each group of gnomes, and `groups` is an array of int arrays. Each array in `groups` consists of all the gnomes for a single group of gnomes, with length given at the associated index of `gs_in_each`. The function returns an array consisting of the location of the king gnome in each group of gnomes (here counting starts at 1).
 
-### Bonus Problem Islands in the Data Stream
+### Problem 2: Tarifa
+
+```C++
+int tarifa(int X, int N, int* P);
+```
+
+Here, the variable names are relatively straigtforward, as `X` and `N` correspond directly to the X and N in the problem description, and `P` is the array of all P<sub>i</sub>, as also described in the problem description. The function will return the amount of megabytes available at month N + 1 of using the data plan.
+
+### Problem 3: 2048
+
+```C++
+
+```
+
+### Problem 4: Mancala
+
+
+
+### Bonus Problem: Islands in the Data Stream
+
+
