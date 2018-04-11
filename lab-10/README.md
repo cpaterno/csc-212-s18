@@ -6,6 +6,10 @@ This week's lab will be a bit different than usual. Instead of covering a partic
 
 ## Kattis
 
+In order to use Kattis, you must sign up for an account. You can create an account by clicking the "Log in" button in the top right corner of the page. There will be an option to sign up for an account. You may use whichever username you like, but we strongly suggeset that you use your first and last names. Once you've signed up for Kattis, you may join the lab's programming competition [here](https://uri.kattis.com).
+
+The competitions will be open at the start of the lab session and will last exactly two hours. During this time you should do your best to implement a solution to as many problems as you can (most likely in order, as the problems get progressively harder).
+
 ## Format
 
 **First and foremost, what does competitive programming mean?**
