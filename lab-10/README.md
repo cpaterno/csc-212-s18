@@ -2,6 +2,8 @@
 
 This week's lab will be a bit different than usual. Instead of covering a particular programming topic, we will hold a mini programming competition on Kattis. At the start of the first lab section, the link to the Kattis competition will be added to this lab, to prevent any students from getting a head-start. Some additional information about problems that may be vague will be detailed below.
 
+[There still is a google form for the lab.](https://goo.gl/forms/xFww0uoxlLswh4Kp1)
+
 ## Kattis
 
 ## Format
@@ -21,6 +23,8 @@ In each starter code file there is an empty function named after the problem wit
 **How do we submit?**
 
 Once you are satisfied with your solution, you may either upload your **whole file** to Kattis, or copy and paste **all of the code** in the problem file into Kattis by clicking "switch to editor." 
+
+[Also, do not forget to do the google form](https://goo.gl/forms/xFww0uoxlLswh4Kp1)
 
 ## Additional Description/Clarification 
 
