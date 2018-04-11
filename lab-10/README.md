@@ -28,16 +28,16 @@ Once you are satisfied with your solution, you may either upload your **whole fi
 
 ## Additional Description/Clarification 
 
-### Problem 0:
+### Problem 0. Stuck in a Time Loop:
 
 This problem should require no additional clarification.
 
-### Problem 1: 
+### Problem 1. Odd Gnome: 
 
-### Problem 2: 
+### Problem 2. Tarifa: 
 
-### Problem 3: 
+### Problem 3. 2048: 
 
-### Problem 4: 
+### Problem 4. Mancala: 
 
-### Bonus Problem
+### Bonus Problem Islands in the Data Stream
