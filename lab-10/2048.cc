@@ -1,11 +1,5 @@
 #include <iostream>
 
-int** _2048(int** board, int move) {
-    /*
-     *  Your solution here
-     */
-}
-
 int main() {
 
     // read input
@@ -18,7 +12,6 @@ int main() {
     int move;
     std::cin >> move;
 
-    
     // TODO your solution goes here
     int moved_board[4][4];
     // TODO
