@@ -50,29 +50,24 @@ The only library you're allowed to use in your answers is \verb|iostream|.
     
     \item Write a function to delete binary trees. Be sure to remove nodes in the proper order, so that none get orphaned.
 
-    \item Write a recursive function that, given a binary tree, returns a tree of the same shape, where every node's value has been set to it's own depth in the tree. You should use two parameters in your call: a pointer to a node, and current depth. 
+    \item Write a recursive function that, given a binary tree, updates every node's value to it's own depth in the tree. You should use two parameters in your call: a pointer to a node, and current depth. 
 
     \item Briefly explain the difference between in-order, post-order, and pre-order traversals.
-\end{enumerate}
 
-\section{2-3 Trees}
-\begin{enumerate}
-    \item Draw a 2-3 tree after the following operations steps:
+    \item Implement a binary search tree with all of the following methods: constructor, destructor, insert, search, remove.
+
+    \item Let $T$ be a full k-ary tree, where $k=2$ (a.k.a. {\it binary tree}), with $n$ nodes.  Let $h$ denote the height of $T$.
     \begin{enumerate}
-        \item Insert: [10, 5, 12, 8, 19, 6, 2, 11, 15, 9, 7]
-        \item Remove: [7, 12, 8, 10, 9]
+        \item What is the minimum number of leaves for $T$?  Justify your answer.
+        \item What is the maximum number of leaves for $T$?  Justify your answer.
+        \item What is the minimum number of internal nodes for $T$?  Justify your answer.
+        \item What is the maximum number of internal nodes for $T$?  Justify your answer.
     \end{enumerate}
 
-    \item Write a search algorithm for a 2-3 tree.
+    \item Give a $O(n)$ time algorithm for computing the \verb|depth| of all the nodes of a tree, where $n$ is the number of nodes.
 
-    \item Explain the tradeoffs between binary search trees, and 2-3 trees. Justify your answer, citing specific examples where you would use either type of tree.
+    \item Show that the maximum number of nodes in a binary tree of height $h$ is $2^{h+1}-1$.
 \end{enumerate}
-
-\section{Optional Problems}
-\begin{enumerate}
-    \item Implement a binary search tree with all of the following methods: constructor, destructor, insert, search, remove.
-\end{enumerate}
-
 
 \label{r:lastpage}
 
