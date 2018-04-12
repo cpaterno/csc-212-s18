@@ -2,9 +2,15 @@
 
 This week's lab will be a bit different than usual. Instead of covering a particular programming topic, we will hold a mini programming competition on Kattis. At the start of the first lab section, the link to the Kattis competition will be added to this lab, to prevent any students from getting a head-start. Some additional information about problems that may be vague will be detailed below.
 
+[There still is a google form for the lab.](https://goo.gl/forms/xFww0uoxlLswh4Kp1)
+
 ## Kattis
 
-## Format
+In order to use Kattis, you must sign up for an account. You can create an account by clicking the "Log in" button in the top right corner of the page. There will be an option to sign up for an account. You may use whichever username you like, but we strongly suggeset that you use your first and last names. Once you've signed up for Kattis, you may join the lab's programming competition [here](https://open.kattis.com/contests/ysto7k).
+
+The competitions will be open at the start of the lab session and will last exactly two hours. During this time you should do your best to implement a solution to as many problems as you can (most likely in order, as the problems get progressively harder).
+
+## The Format
 
 **First and foremost, what does competitive programming mean?**
 
@@ -22,18 +28,8 @@ In each starter code file there is an empty function named after the problem wit
 
 Once you are satisfied with your solution, you may either upload your **whole file** to Kattis, or copy and paste **all of the code** in the problem file into Kattis by clicking "switch to editor." 
 
-## Additional Description/Clarification 
+[Also, do not forget to do the google form](https://goo.gl/forms/xFww0uoxlLswh4Kp1)
 
-### Problem 0:
+## Submission
 
-This problem should require no additional clarification.
-
-### Problem 1: 
-
-### Problem 2: 
-
-### Problem 3: 
-
-### Problem 4: 
-
-### Bonus Problem
+Although you will mainly be working with Kattis for this assignment, you will be required to fill out the Google Doc linked at the start of the lab, just as with any other lab. For this lab you will need to include your Kattis username, along with your implementations (or partial implementations) of each of the problems given above. If you do not get the chance to attempt a problem, you may put just the empty function definition into the problem's associated field.
