@@ -1,4 +1,4 @@
-# Lab 09: Indexing Texts with BSTs
+# Lab 11: Indexing Texts with BSTs
 
 Today we will be reading books. More specifically, we will be taking large text files, seperating them into words, and then indexing them using a Binary Search Tree. You can use the BST implementation you had from the last lab in this lab.
 
