@@ -50,7 +50,7 @@ The only library you're allowed to use in your answers is \verb|iostream|.
     
     \item Write a function to delete binary trees. Be sure to remove nodes in the proper order, so that none get orphaned.
 
-    \item Write a recursive function that, given a binary tree, updates every node's value to it's own depth in the tree. You should use two parameters in your call: a pointer to a node, and current depth. 
+    \item Assume nodes in a BST contain 4 data members: {\it data, depth, left, right}.  Write a recursive function that, given a pointer to the root of a BST, will update every node's {\it depth} to it's own depth in the tree. 
 
     \item Briefly explain the difference between in-order, post-order, and pre-order traversals.
 
@@ -64,7 +64,7 @@ The only library you're allowed to use in your answers is \verb|iostream|.
         \item What is the maximum number of internal nodes for $T$?  Justify your answer.
     \end{enumerate}
 
-    \item Give a $O(n)$ time algorithm for computing the \verb|depth| of all the nodes of a tree, where $n$ is the number of nodes.
+    \item Give a $O(n)$ time algorithm for computing the \verb|depth| of the tree, where $n$ is the number of nodes.
 
     \item Show that the maximum number of nodes in a binary tree of height $h$ is $2^{h+1}-1$.
 \end{enumerate}
