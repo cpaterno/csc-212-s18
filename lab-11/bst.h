@@ -32,19 +32,21 @@ class BSTree
         BSTNode *root;
 
 		/* Helper Methods */
-        bool search(BSTNode *p, std::string d);
-        void insert(BSTNode *p, std::string d);
-        void destroy(BSTNode *p);
-        int BST_Height(BSTNode*);
+        bool search(BSTNode*, std::string);
+        void insert(BSTNode*, std::string);
+        void remove(BSTNode*, std::string);
+        void destroy(BSTNode*);
+        unsigned int treeHeight(BSTNode*);
 
     public:
         BSTree();
         ~BSTree();
 
 		/* Public Methods */
-        void insert(std::string d);
-        bool search(std::string d);
-        int BST_Height();
+        void insert(std::string);
+        void remove(std::string);
+        bool search(std::string);
+        unsigned int treeHeight();
 };
 
 #endif
