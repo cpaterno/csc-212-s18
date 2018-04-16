@@ -1,8 +1,33 @@
 # Lab 11: Indexing Texts with BSTs
 
-Today we will be reading books. More specifically, we will be taking large text files, seperating them into words, and then indexing them using a Binary Search Tree. You can use the BST implementation you had from the last lab in this lab.
+Today we will be reading books. More specifically, we will be taking large text files, seperating them into words, and then indexing them using a Binary Search Tree. However, before doing any of that, we must actually implement a Binary Search Tree.
 
-## 1. Getting the Books
+## 1. Tree Functions
+
+You may have noticed by now that we are working with strings in this lab. The tree nodes hold strings, and tree methods will have to interact with strings. In addition to this, each BST node, also has an `int count` which is the frequency of that word. In order to compare strings, you can use the regular [comparison operators](http://en.cppreference.com/w/cpp/string/basic_string/operator_cmp) as the string class has overloads for these operators.
+
+Here are the functions you will be required to implement
+
+<!-- TODO: constructor & destructor -->
+
+<!-- TODO: search() -->
+
+```c++
+void insert(string s);
+```
+This function will insert the word into the binary search tree. If this word is already in the 
+tree, the counter for the node will be incremented.
+
+<!-- TODO: remove() -->
+
+<!-- TODO: destroy() -->
+
+```c++
+unsigned int treeHeight();
+```
+This function will return the height of the tree.
+
+## 2. Getting the Books
 
 In your lab folder you will find a script called `getbook.sh`. This is a small bash script that will download three books as `.txt` files, into your lab-09 directory. You can run the script like this, assuming you are in the lab directory:
 
@@ -15,13 +40,13 @@ These books are downloaded from Project Gutenberg's book reposistory. The titles
 * [Pride and Prejudice by Jane Austen (709k)](http://www.gutenberg.org/ebooks/1342)
 * [War and Peace by graf Leo Tolstoy (3280k)](http://www.gutenberg.org/ebooks/2600)
 
-## 2. Writing your Code
+## 3. Writing your Code
 
 Before we can start indexing words, we will have to preprocess them before inserting them into our BST. In `main.cc` we already have a loop setup with the proper way to read from the standard input.
 
 You will have to fill in both the `removePunctuation` function, and the `toLower` function.
 
-### 2.1 Pesky Punctuation
+### 3.1 Pesky Punctuation
 ```c++
 void removePunctuation(string *s);
 ```
@@ -33,7 +58,7 @@ This will take in a string and remove any character that is not A-Z, a-z, or 0-9
 s->assign(new_str);
 ```
 
-### 2.2 Unruly Uppercase
+### 3.2 Unruly Uppercase
 
 ```c++
 void toLower(string *s);
@@ -46,7 +71,7 @@ To compile use:
 $ g++ -std=c++11 -g main.cc bst.cc -o reader
 ```
 
-### 2.3 Running Code
+### 3.3 Running Code
 
 To run it, use either 
 
@@ -62,23 +87,6 @@ $ ./reader < alice.txt
 
 Your asserts should pass the section for 'parsing functions'
 but will most likely not work well.
-
-## 3. Tree Functions
-
-You may have noticed by now that we are working with strings in this lab. The tree nodes hold strings, and tree methods will have to interact with strings. In addition to this, each BST node, also has an `int count` which is the frequency of that word. In order to compare strings, you can use the regular [comparison operators](http://en.cppreference.com/w/cpp/string/basic_string/operator_cmp) as the string class has overloads for these operators.
-
-Here are the functions you will be required to implement
-
-```c++
-void insert(string s);
-```
-This function will insert the word into the binary search tree. If this word is already in the 
-tree, the counter for the node will be incremented.
-
-```c++
-unsigned int treeHeight();
-```
-This function will return the height of the tree.
 
 ## 4. Statistics of the Tree
 
