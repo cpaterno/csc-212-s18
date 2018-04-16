@@ -120,7 +120,7 @@ In addition to the above, you will have implement your own public methods, and p
 
 The google form for submitting can be found at [here.](https://docs.google.com/forms/d/e/1FAIpQLScKmAYjsGLEKsNXbOhjc-wszyEKUJP5uJyD4N848tJP9FRM-g/viewform?usp=sf_link) The instructors will inform you when the link is active.
 
-You will need to submit the source code for your bst.cc. After that, there are three questions to answer:
+You will need to submit the source code for your bst.cc. After that, there are four questions to answer:
 
 * *What is the height of all three trees?*
 * *How many words are there in Alice's Adventures in Wonderland? (Including the copyright information at the beginning of the file)*
