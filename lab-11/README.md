@@ -1,8 +1,49 @@
 # Lab 11: Indexing Texts with BSTs
 
-Today we will be reading books. More specifically, we will be taking large text files, seperating them into words, and then indexing them using a Binary Search Tree. You can use the BST implementation you had from the last lab in this lab.
+Today we will be reading books. More specifically, we will be taking large text files, seperating them into words, and then indexing them using a **binary search tree**. However, before doing any of that, we must actually implement a binary search tree. You may use any code you've written involving BSTs as a basis for this lab.
 
-## 1. Getting the Books
+## 1. Tree Functions
+
+For the first part of this lab, you will be implementing a binary search tree given the header file `bst.h` given above. You may have noticed by now that, unlike our previous BSTs, we are working with strings as keys in this lab. The tree nodes hold strings, and tree methods will have to interact with strings. In addition to this, each BST node also has an `int count`, which is the frequency (or number of occurrences) of that word. In order to compare strings, you can use the regular [comparison operators](http://en.cppreference.com/w/cpp/string/basic_string/operator_cmp) as the string class has overloads for these operators.
+
+Here are the functions you will be required to implement
+
+```c++
+BSTree();
+~BSTree();
+```
+Your typical BST constructor and destructor, `BSTree()` must initialize all of the tree's variables and `~BSTree()` must delete all of the tree's nodes (you may use `destroy()`, as specified below).
+
+For the following four methods (`search()`, `insert()`, `remove()`, and `treeHeight()`) you should use the associated private helper function, which additionally takes a `BSTNode*` as a parameter, to accomplish the algorithm recursively.
+
+```c++
+bool search(std::string);
+```
+This function will search the BST for the given string, returning `true` if the string is found, and `false` otherwise.
+
+```c++
+void insert(std::string);
+```
+This function will insert the word into the BST. If this word is already in the tree, the counter for the node will be incremented.
+
+```c++
+void remove(std::string);
+```
+This function will search for the given string in the BST. If it finds the string, it will decrement the node's counter if it is greater than 1, or delete the node entirely (making any necessary changes to keep the tree a BST).
+
+```c++
+unsigned int treeHeight();
+```
+This function will return the height of the tree.
+
+```c++
+void destroy(BSTNode*);
+```
+This function will delete the entire tree in which the given `BSTNode` is the root. This may be just a subtree, or the entire BST.
+
+Once you have implemented and tested each of these methods, you may continue on to the rest of the lab.
+
+## 2. Getting the Books
 
 In your lab folder you will find a script called `getbook.sh`. This is a small bash script that will download three books as `.txt` files, into your lab-09 directory. You can run the script like this, assuming you are in the lab directory:
 
@@ -15,13 +56,13 @@ These books are downloaded from Project Gutenberg's book reposistory. The titles
 * [Pride and Prejudice by Jane Austen (709k)](http://www.gutenberg.org/ebooks/1342)
 * [War and Peace by graf Leo Tolstoy (3280k)](http://www.gutenberg.org/ebooks/2600)
 
-## 2. Writing your Code
+## 3. Writing your Code
 
 Before we can start indexing words, we will have to preprocess them before inserting them into our BST. In `main.cc` we already have a loop setup with the proper way to read from the standard input.
 
 You will have to fill in both the `removePunctuation` function, and the `toLower` function.
 
-### 2.1 Pesky Punctuation
+### 3.1 Pesky Punctuation
 ```c++
 void removePunctuation(string *s);
 ```
@@ -33,7 +74,7 @@ This will take in a string and remove any character that is not A-Z, a-z, or 0-9
 s->assign(new_str);
 ```
 
-### 2.2 Unruly Uppercase
+### 3.2 Unruly Uppercase
 
 ```c++
 void toLower(string *s);
@@ -46,7 +87,7 @@ To compile use:
 $ g++ -std=c++11 -g main.cc bst.cc -o reader
 ```
 
-### 2.3 Running Code
+### 3.3 Running Code
 
 To run it, use either 
 
@@ -62,23 +103,6 @@ $ ./reader < alice.txt
 
 Your asserts should pass the section for 'parsing functions'
 but will most likely not work well.
-
-## 3. Tree Functions
-
-You may have noticed by now that we are working with strings in this lab. The tree nodes hold strings, and tree methods will have to interact with strings. In addition to this, each BST node, also has an `int count` which is the frequency of that word. In order to compare strings, you can use the regular [comparison operators](http://en.cppreference.com/w/cpp/string/basic_string/operator_cmp) as the string class has overloads for these operators.
-
-Here are the functions you will be required to implement
-
-```c++
-void insert(string s);
-```
-This function will insert the word into the binary search tree. If this word is already in the 
-tree, the counter for the node will be incremented.
-
-```c++
-unsigned int treeHeight();
-```
-This function will return the height of the tree.
 
 ## 4. Statistics of the Tree
 
@@ -96,7 +120,7 @@ In addition to the above, you will have implement your own public methods, and p
 
 The google form for submitting can be found at [here.](https://docs.google.com/forms/d/e/1FAIpQLScKmAYjsGLEKsNXbOhjc-wszyEKUJP5uJyD4N848tJP9FRM-g/viewform?usp=sf_link) The instructors will inform you when the link is active.
 
-You will need to submit the source code for your bst.cc. After that, there are three questions to answer:
+You will need to submit the source code for your bst.cc. After that, there are four questions to answer:
 
 * *What is the height of all three trees?*
 * *How many words are there in Alice's Adventures in Wonderland? (Including the copyright information at the beginning of the file)*
