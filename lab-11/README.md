@@ -1,31 +1,47 @@
 # Lab 11: Indexing Texts with BSTs
 
-Today we will be reading books. More specifically, we will be taking large text files, seperating them into words, and then indexing them using a Binary Search Tree. However, before doing any of that, we must actually implement a Binary Search Tree.
+Today we will be reading books. More specifically, we will be taking large text files, seperating them into words, and then indexing them using a **binary search tree**. However, before doing any of that, we must actually implement a binary search tree. You may use any code you've written involving BSTs as a basis for this lab.
 
 ## 1. Tree Functions
 
-You may have noticed by now that we are working with strings in this lab. The tree nodes hold strings, and tree methods will have to interact with strings. In addition to this, each BST node, also has an `int count` which is the frequency of that word. In order to compare strings, you can use the regular [comparison operators](http://en.cppreference.com/w/cpp/string/basic_string/operator_cmp) as the string class has overloads for these operators.
+For the first part of this lab, you will be implementing a binary search tree given the header file `bst.h` given above. You may have noticed by now that, unlike our previous BSTs, we are working with strings as keys in this lab. The tree nodes hold strings, and tree methods will have to interact with strings. In addition to this, each BST node also has an `int count`, which is the frequency (or number of occurrences) of that word. In order to compare strings, you can use the regular [comparison operators](http://en.cppreference.com/w/cpp/string/basic_string/operator_cmp) as the string class has overloads for these operators.
 
 Here are the functions you will be required to implement
 
-<!-- TODO: constructor & destructor -->
+```c++
+BSTree();
+~BSTree();
+```
+Your typical BST constructor and destructor, `BSTree()` must initialize all of the tree's variables and `~BSTree()` must delete all of the tree's nodes (you may use `destroy()`, as specified below).
 
-<!-- TODO: search() -->
+For the following four methods (`search()`, `insert()`, `remove()`, and `treeHeight()`) you should use the associated private helper function, which additionally takes a `BSTNode*` as a parameter, to accomplish the algorithm recursively.
 
 ```c++
-void insert(string s);
+bool search(std::string);
 ```
-This function will insert the word into the binary search tree. If this word is already in the 
-tree, the counter for the node will be incremented.
+This function will search the BST for the given string, returning `true` if the string is found, and `false` otherwise.
 
-<!-- TODO: remove() -->
+```c++
+void insert(std::string);
+```
+This function will insert the word into the BST. If this word is already in the tree, the counter for the node will be incremented.
 
-<!-- TODO: destroy() -->
+```c++
+void remove(std::string);
+```
+This function will search for the given string in the BST. If it finds the string, it will decrement the node's counter if it is greater than 1, or delete the node entirely (making any necessary changes to keep the tree a BST).
 
 ```c++
 unsigned int treeHeight();
 ```
 This function will return the height of the tree.
+
+```c++
+void destroy(BSTNode*);
+```
+This function will delete the entire tree in which the given `BSTNode` is the root. This may be just a subtree, or the entire BST.
+
+Once you have implemented and tested each of these methods, you may continue on to the rest of the lab.
 
 ## 2. Getting the Books
 
