@@ -49,7 +49,8 @@ int main() {
 	bstTest.insert("xyz");
 	bstTest.insert("abd");
 	bstTest.insert("wxy");
-	bstTest.insert("abe");
+	bstTest.insert("aaa");
+	bstTest.insert("aaz");
 	//Remove Testing
 	bstTest.remove("abc");
 	bstTest.remove("xyz");
