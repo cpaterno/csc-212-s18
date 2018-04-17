@@ -32,11 +32,11 @@ class BSTree
         BSTNode *root;
 
 		/* Helper Methods */
-        bool search(BSTNode*, std::string);
-        void insert(BSTNode*, std::string);
-        void remove(BSTNode*, std::string);
-        void destroy(BSTNode*);
-        unsigned int treeHeight(BSTNode*);
+        bool search(std::string data, BSTNode* node);
+        void insert(std::string data, BSTNode* node);
+        void remove(std::string data, BSTNode* node);
+        //void destroy(BSTNode* node);
+        unsigned int treeHeight(BSTNode* node);
 	void printPreorder(BSTNode* node);
 	void printInorder(BSTNode* node);
 	void printPostorder(BSTNode* node);
@@ -46,14 +46,17 @@ class BSTree
         ~BSTree();
 
 		/* Public Methods */
-        void insert(std::string);
-        void remove(std::string);
-        bool search(std::string);
+        void insert(std::string data);
+        void remove(std::string data);
+        bool search(std::string data);
         unsigned int treeHeight();
-	//Traversals
-	void printPreorder();
-	void printInorder();
-	void printPostorder();
+        void clear(BSTNode* node);
+        BSTNode* min(BSTNode* node);
+	    //Traversals
+    	void printPreorder();
+    	void printInorder();
+    	void printPostorder();
+
 };
 
 #endif
