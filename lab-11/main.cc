@@ -41,9 +41,9 @@ int main() {
 	toLower(&str);
 	assert(str == "abc123");
 
-	//Test Both BSTree functions insert and BST_Height
+	//Test Both BSTree functions insert and treeHeight
 	BSTree bstTest;
-	assert(bstTest.BST_Height() == 0);
+	assert(bstTest.treeHeight() == 0);
 	//Insert Testing
 	bstTest.insert("abc");
 	bstTest.insert("xyz");
@@ -52,19 +52,19 @@ int main() {
 	bstTest.insert("aam");
 	bstTest.insert("aaz");
 	bstTest.insert("aaa");
-	
-	string preOrder[] = {"abc", "aam", "aaa", "aaz", "xyz", "abd", "wxy"};
+
+	std::string preOrder[] = {"abc", "aam", "aaa", "aaz", "xyz", "abd", "wxy"};
 	//pre-order: abc, aam, aaa, aaz, xyz, abd, wxy
-	bstTest.printPreOrder();
-	
-	string inOrder[] = {"aaa", "aam", "aaz", "abc", "xyz", "abd", "wxy"};
+	bstTest.printPreorder();
+
+	std::string inOrder[] = {"aaa", "aam", "aaz", "abc", "xyz", "abd", "wxy"};
 	//in-order: aaa, aam, aaz, abc, xyz, abd, wxy
-	bstTest.printInOrder();
-	
-	string postOrder[] = {"aaa", "aaz", "aam", "wxy", "abd", "xyz", "abc"};
+	bstTest.printInorder();
+
+	std::string postOrder[] = {"aaa", "aaz", "aam", "wxy", "abd", "xyz", "abc"};
 	//post-order: aaa, aaz, aam, wxy, abd, xyz, abc
-	bstTest.printPostOrder();
-	
+	bstTest.printPostorder();
+
 	//Remove Testing
 	//leaf
 	bstTest.remove("wxy");
@@ -74,7 +74,7 @@ int main() {
 	bstTest.remove("aam");
 	//root node
 	bstTest.remove("abc");
-	assert(bstTest.BST_Height() == 1);
+	assert(bstTest.treeHeight() == 1);
 
 
 	BSTree bst;
