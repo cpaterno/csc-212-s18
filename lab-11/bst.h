@@ -15,12 +15,12 @@ class BSTNode
 {
     private:
         std::string data;
-		int count;
+        int count;
         BSTNode *left;
         BSTNode *right;
 
     public:
-        BSTNode(std::string d) { data = d; left = right = NULL; }
+        BSTNode(std::string d) { data = d; count = 1; left = right = NULL; }
         ~BSTNode() { }
 
     friend class BSTree;
@@ -31,31 +31,29 @@ class BSTree
     private:
         BSTNode *root;
 
-		/* Helper Methods */
-        bool search(std::string data, BSTNode* node);
+        /* Helper Methods */
+        int search(std::string data, BSTNode* node);
         void insert(std::string data, BSTNode* node);
         void remove(std::string data, BSTNode* node);
-        //void destroy(BSTNode* node);
-        unsigned int treeHeight(BSTNode* node);
-	void printPreorder(BSTNode* node);
-	void printInorder(BSTNode* node);
-	void printPostorder(BSTNode* node);
+        void clear(BSTNode* node);
+        int treeHeight(BSTNode* node);
+        /* Test Methods */
+    	void genPreorderArray(BSTNode* node, std::string* arr, int* idx);
+    	void genInorderArray(BSTNode* node, std::string* arr, int* idx);
 
     public:
         BSTree();
         ~BSTree();
 
-		/* Public Methods */
+        /* Public Methods */
         void insert(std::string data);
         void remove(std::string data);
-        bool search(std::string data);
-        unsigned int treeHeight();
-        void clear(BSTNode* node);
-        BSTNode* min(BSTNode* node);
-	    //Traversals
-    	void printPreorder();
-    	void printInorder();
-    	void printPostorder();
+        int search(std::string data);
+        int treeHeight();
+        void clear();
+        /* Test Methods */
+    	void genPreorderArray(std::string* arr);
+    	void genInorderArray(std::string* arr);
 
 };
 
