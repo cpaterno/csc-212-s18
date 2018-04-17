@@ -1,8 +1,4 @@
-//
-// Created by tom on 4/16/18.
-//
-
-#include "BST.h"
+#include "bst.h"
 
 BSTree::BSTree() {
 //
