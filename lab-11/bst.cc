@@ -1,4 +1,5 @@
 #include "bst.h"
+#include <iostream>
 
 BSTree::BSTree() {
 //
@@ -12,32 +13,40 @@ void BSTree::clear(BSTNode *node) {
 //
 }
 
-void BSTree::insert(int data) {
+void BSTree::insert(std::string data) {
 //
 }
 
-BSTNode *BSTree::rinsert(int data, BSTNode *node) {
+void BSTree::insert(std::string data, BSTNode *node) {
 //
 }
 
-bool BSTree::search(int data) {
+bool BSTree::search(std::string data) {
 //
 }
 
-bool BSTree::rsearch(int data, BSTNode *node) {
+bool BSTree::search(std::string data, BSTNode *node) {
 //
 }
 
-void BSTree::remove(int data) {
+void BSTree::remove(std::string data) {
 //
 }
 
-BSTNode* BSTree::min(BSTNode* p) {
+BSTNode* BSTree::min(BSTNode* node) {
 //
 }
 
-BSTNode * BSTree::rremove(int data, BSTNode *p) {
+void BSTree::remove(std::string data, BSTNode *node) {
 //
+}
+
+unsigned int BSTree::treeHeight(BSTNode *node) {
+//
+}
+
+unsigned int BSTree::treeHeight() {
+    return treeHeight(root);
 }
 
 void BSTree::printPreorder(){
@@ -61,29 +70,28 @@ void BSTree::printPostorder(BSTNode* node)
 
      std::cout << node->data << " ";
 }
- 
+
 void BSTree::printInorder(BSTNode* node)
 {
      if (node == NULL)
           return;
 
      printInorder(node->left);
- 
-     std::cout << node->data << " ";  
- 
+
+     std::cout << node->data << " ";
+
      printInorder(node->right);
 }
- 
+
 
 void BSTree::printPreorder(BSTNode* node)
 {
      if (node == NULL)
           return;
- 
-     std::cout << node->data << " ";  
- 
-     printPreorder(node->left);  
- 
-     printPreorder(node->right);
-}    
 
+     std::cout << node->data << " ";
+
+     printPreorder(node->left);
+
+     printPreorder(node->right);
+}
