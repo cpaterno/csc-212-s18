@@ -52,9 +52,15 @@ int main() {
 	bstTest.insert("aam");
 	bstTest.insert("aaz");
 	bstTest.insert("aaa");
+	
 	//pre-order: abc, aam, aaa, aaz, xyz, abd, wxy
+	bstTest.printPreOrder();
+	
 	//in-order: aaa, aam, aaz, abc, xyz, abd, wxy
+	bstTest.printInOrder();
+	
 	//post-order: aaa, aaz, aam, wxy, abd, xyz, abc
+	bstTest.printPostOrder();
 	
 	//Remove Testing
 	//leaf
