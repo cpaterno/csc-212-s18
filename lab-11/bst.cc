@@ -44,6 +44,16 @@ BSTNode * BSTree::rremove(int data, BSTNode *p) {
 //
 }
 
+void BSTree::printPreorder(){
+    printPreorder(root);
+}
+void BSTree::printInorder(){
+    printInorder(root);
+}
+void BSTree::printPostorder(){
+    printPostorder(root);
+}
+
 void BSTree::printPostorder(BSTNode* node)
 {
      if (node == NULL)
