@@ -9,6 +9,10 @@ BSTree::~BSTree() {
 //
 }
 
+void BSTree::clear() {
+//
+}
+
 void BSTree::clear(BSTNode *node) {
 //
 }
@@ -33,10 +37,6 @@ void BSTree::remove(std::string data) {
 //
 }
 
-BSTNode* BSTree::min(BSTNode* node) {
-//
-}
-
 void BSTree::remove(std::string data, BSTNode *node) {
 //
 }
@@ -46,55 +46,35 @@ unsigned int BSTree::treeHeight(BSTNode *node) {
 }
 
 unsigned int BSTree::treeHeight() {
-    return treeHeight(root);
+//
 }
 
-void BSTree::printPreorder(){
-    printPreorder(root);
-    std::cout << std::endl;
-}
-void BSTree::printInorder(){
-    printInorder(root);
-    std::cout << std::endl;
-}
-void BSTree::printPostorder(){
-    printPostorder(root);
-    std::cout << std::endl;
+void BSTree::genPreorderArray(std::string* arr) {
+    int idx = 0;
+    genPreorderArray(root, arr, &idx);
 }
 
-void BSTree::printPostorder(BSTNode* node)
-{
-     if (node == NULL)
+void BSTree::genPreorderArray(BSTNode* node, std::string* arr, int* idx) {
+    if (!node) {
         return;
-
-     printPostorder(node->left);
-
-     printPostorder(node->right);
-
-     std::cout << node->data << " ";
+    }
+    arr[*idx] = node->data;
+    (*idx)++;
+    genPreorderArray(node->left, arr, idx);
+    genPreorderArray(node->right, arr, idx);
 }
 
-void BSTree::printInorder(BSTNode* node)
-{
-     if (node == NULL)
-          return;
-
-     printInorder(node->left);
-
-     std::cout << node->data << " ";
-
-     printInorder(node->right);
+void BSTree::genInorderArray(std::string* arr) {
+    int idx = 0;
+    genInorderArray(root, arr, &idx);
 }
 
-
-void BSTree::printPreorder(BSTNode* node)
-{
-     if (node == NULL)
-          return;
-
-     std::cout << node->data << " ";
-
-     printPreorder(node->left);
-
-     printPreorder(node->right);
+void BSTree::genInorderArray(BSTNode* node, std::string* arr, int* idx) {
+    if (!node) {
+        return;
+    }
+    genInorderArray(node->left, arr, idx);
+    arr[*idx] = node->data;
+    (*idx)++;
+    genInorderArray(node->right, arr, idx);
 }
