@@ -51,12 +51,15 @@ unsigned int BSTree::treeHeight() {
 
 void BSTree::printPreorder(){
     printPreorder(root);
+    std::cout << std::endl;
 }
 void BSTree::printInorder(){
     printInorder(root);
+    std::cout << std::endl;
 }
 void BSTree::printPostorder(){
     printPostorder(root);
+    std::cout << std::endl;
 }
 
 void BSTree::printPostorder(BSTNode* node)
