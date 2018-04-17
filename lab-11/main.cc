@@ -53,12 +53,15 @@ int main() {
 	bstTest.insert("aaz");
 	bstTest.insert("aaa");
 	
+	string preOrder[] = {"abc", "aam", "aaa", "aaz", "xyz", "abd", "wxy"};
 	//pre-order: abc, aam, aaa, aaz, xyz, abd, wxy
 	bstTest.printPreOrder();
 	
+	string inOrder[] = {"aaa", "aam", "aaz", "abc", "xyz", "abd", "wxy"};
 	//in-order: aaa, aam, aaz, abc, xyz, abd, wxy
 	bstTest.printInOrder();
 	
+	string postOrder[] = {"aaa", "aaz", "aam", "wxy", "abd", "xyz", "abc"};
 	//post-order: aaa, aaz, aam, wxy, abd, xyz, abc
 	bstTest.printPostOrder();
 	
