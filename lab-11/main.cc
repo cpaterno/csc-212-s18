@@ -52,10 +52,19 @@ int main() {
 	bstTest.insert("aam");
 	bstTest.insert("aaz");
 	bstTest.insert("aaa");
+	//pre-order: abc, aam, aaa, aaz, xyz, abd, wxy
+	//in-order: aaa, aam, aaz, abc, xyz, abd, wxy
+	//post-order: aaa, aaz, aam, wxy, abd, xyz, abc
+	
 	//Remove Testing
-	bstTest.remove("abc");
+	//leaf
+	bstTest.remove("wxy");
+	//parent with one child
 	bstTest.remove("xyz");
-	bstTest.remove("abe");
+	//parent with two children
+	bstTest.remove("aam");
+	//root node
+	bstTest.remove("abc");
 	assert(bstTest.BST_Height() == 1);
 
 
