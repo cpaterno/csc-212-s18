@@ -53,7 +53,7 @@ void BSTree::printPostorder(BSTNode* node)
 
      printPostorder(node->right);
 
-     printf("%d ", node->data);
+     std::cout << node->data << " ";
 }
  
 void BSTree::printInorder(BSTNode* node)
@@ -63,7 +63,7 @@ void BSTree::printInorder(BSTNode* node)
 
      printInorder(node->left);
  
-     printf("%d ", node->data);  
+     std::cout << node->data << " ";  
  
      printInorder(node->right);
 }
@@ -74,9 +74,10 @@ void BSTree::printPreorder(BSTNode* node)
      if (node == NULL)
           return;
  
-     printf("%s ", node->data);  
+     std::cout << node->data << " ";  
  
      printPreorder(node->left);  
  
      printPreorder(node->right);
 }    
+
