@@ -44,8 +44,16 @@ int main() {
 	//Test Both BSTree functions insert and BST_Height
 	BSTree bstTest;
 	assert(bstTest.BST_Height() == 0);
+	//Insert Testing
 	bstTest.insert("abc");
-	bstTest.insert("abc");
+	bstTest.insert("xyz");
+	bstTest.insert("abd");
+	bstTest.insert("wxy");
+	bstTest.insert("abe");
+	//Remove Testing
+	bstTest.remove("abc");
+	bstTest.remove("xyz");
+	bstTest.remove("abe");
 	assert(bstTest.BST_Height() == 1);
 
 
