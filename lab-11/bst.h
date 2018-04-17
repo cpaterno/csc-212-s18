@@ -37,6 +37,9 @@ class BSTree
         void remove(BSTNode*, std::string);
         void destroy(BSTNode*);
         unsigned int treeHeight(BSTNode*);
+	void printPreorder(BSTNode* node);
+	void printInorder(BSTNode* node);
+	void printPostorder(BSTNode* node);
 
     public:
         BSTree();
@@ -48,9 +51,9 @@ class BSTree
         bool search(std::string);
         unsigned int treeHeight();
 	//Traversals
-	void printPreorder(BSTNode* node);
-	void printInorder(BSTNode* node);
-	void printPostorder(BSTNode* node);
+	void printPreorder();
+	void printInorder();
+	void printPostorder();
 };
 
 #endif
