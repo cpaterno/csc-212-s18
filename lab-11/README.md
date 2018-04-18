@@ -123,7 +123,7 @@ In addition to the above, you will have implement your own public methods, and p
 
 ## 5. What to Submit
 
-The google form for submitting can be found at [here.](https://docs.google.com/forms/d/e/1FAIpQLScKmAYjsGLEKsNXbOhjc-wszyEKUJP5uJyD4N848tJP9FRM-g/viewform?usp=sf_link) The instructors will inform you when the link is active.
+The google form for submitting can be found at [here.](https://goo.gl/forms/76B1w5JilZUBMYmj1) The instructors will inform you when the link is active.
 
 You will need to submit the source code for your bst.cc. After that, there are four questions to answer:
 
