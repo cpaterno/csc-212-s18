@@ -34,7 +34,7 @@ class BSTree
         /* Helper Methods */
         int search(std::string data, BSTNode* node);
         void insert(std::string data, BSTNode* node);
-        void remove(std::string data, BSTNode* node);
+        BSTNode* remove(std::string data, BSTNode* node);
         void clear(BSTNode* node);
         int treeHeight(BSTNode* node);
         /* Test Methods */
