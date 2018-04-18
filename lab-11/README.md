@@ -21,9 +21,9 @@ Your typical BST constructor and destructor, `BSTree()` must initialize all of t
 For the following four methods (`search()`, `insert()`, `remove()`, and `treeHeight()`) you should use the associated private helper function, which additionally takes a `BSTNode*` as a parameter, to accomplish the algorithm recursively.
 
 ```c++
-bool search(std::string);
+int search(std::string);
 ```
-This function will search the BST for the given string, returning `true` if the string is found, and `false` otherwise.
+This function will search the BST for the given string, returning `count` if the string is found, 0 otherwise.
 
 ```c++
 void insert(std::string);
@@ -36,9 +36,9 @@ void remove(std::string);
 This function will search for the given string in the BST. If it finds the string, it will decrement the node's counter if it is greater than 1, or delete the node entirely (making any necessary changes to keep the tree a BST).
 
 ```c++
-unsigned int treeHeight();
+int treeHeight();
 ```
-This function will return the height of the tree.
+This function will return the height of the tree, -1 if the tree is empty.
 
 ```c++
 void destroy(BSTNode*);
