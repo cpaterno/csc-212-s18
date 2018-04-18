@@ -16,9 +16,9 @@ Here are the functions you will be required to implement
 BSTree();
 ~BSTree();
 ```
-Your typical BST constructor and destructor, `BSTree()` must initialize all of the tree's variables and `~BSTree()` must delete all of the tree's nodes (you may use `destroy()`, as specified below).
+Your typical BST constructor and destructor, `BSTree()` must initialize all of the tree's variables and `~BSTree()` must delete all of the tree's nodes (you may use `clear()`, as specified below).
 
-For the following four methods (`search()`, `insert()`, `remove()`, and `treeHeight()`) you should use the associated private helper function, which additionally takes a `BSTNode*` as a parameter, to accomplish the algorithm recursively.
+For the remaining methods you should use the associated private helper function, which additionally takes a `BSTNode*` as a parameter, to accomplish the algorithm recursively.
 
 ```c++
 int search(std::string);
@@ -41,9 +41,9 @@ int treeHeight();
 This function will return the height of the tree, -1 if the tree is empty.
 
 ```c++
-void destroy(BSTNode*);
+void clear();
 ```
-This function will delete the entire tree in which the given `BSTNode` is the root. This may be just a subtree, or the entire BST.
+This function will delete every node in the tree. Since the recursive counterpart takes just a node as a parameter, it could technically also be used to internally delete specific subtrees of the BST. However, the implementation of a BST performed in this lab does not make use of this feature.
 
 Once you have implemented and tested each of these methods, you may continue on to the rest of the lab.
 
