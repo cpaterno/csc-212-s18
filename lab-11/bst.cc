@@ -25,11 +25,11 @@ void BSTree::insert(std::string data, BSTNode *node) {
 //
 }
 
-bool BSTree::search(std::string data) {
+int BSTree::search(std::string data) {
 //
 }
 
-bool BSTree::search(std::string data, BSTNode *node) {
+int BSTree::search(std::string data, BSTNode *node) {
 //
 }
 
@@ -41,11 +41,11 @@ void BSTree::remove(std::string data, BSTNode *node) {
 //
 }
 
-unsigned int BSTree::treeHeight(BSTNode *node) {
+int BSTree::treeHeight(BSTNode *node) {
 //
 }
 
-unsigned int BSTree::treeHeight() {
+int BSTree::treeHeight() {
 //
 }
 
