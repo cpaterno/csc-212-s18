@@ -2,6 +2,8 @@
 
 Today we will be reading books. More specifically, we will be taking large text files, parsing individual words, and then indexing them using a **binary search tree**. However, before doing any of that, we must actually implement a binary search tree. *You may use any code you've written involving BSTs as a basis for this lab.*
 
+[Per usual, here is a link to the form](https://goo.gl/forms/76B1w5JilZUBMYmj1)
+
 ## 1. Tree Functions
 
 For the first part of this lab you will be implementing a binary search tree, using the provided header file `bst.h`. You may notice that, unlike our previous BSTs, we are using `strings` instead of `ints` as keys. This means all the methods you write must deal with `strings`, **not** `ints`. In addition to this, each BST node also has an `int count`, which is the frequency (or number of occurrences) of that word. 
