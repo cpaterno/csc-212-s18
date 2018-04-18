@@ -37,7 +37,7 @@ void BSTree::remove(std::string data) {
 //
 }
 
-void BSTree::remove(std::string data, BSTNode *node) {
+BSTNode* BSTree::remove(std::string data, BSTNode *node) {
 //
 }
 
