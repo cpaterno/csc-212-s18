@@ -3,8 +3,8 @@
 #include "bst.h"
 #include <assert.h>
 
-void removePunctuation(std::string*);
-void toLower(std::string*);
+void removePunctuation(std::string* str);
+void toLower(std::string* str);
 
 
 int main() {
@@ -122,9 +122,9 @@ int main() {
 }
 
 
-void removePunctuation(std::string*) {
+void removePunctuation(std::string* str) {
 	//TODO
 }
-void toLower(std::string*) {
+void toLower(std::string* str) {
 	//TODO
 }
