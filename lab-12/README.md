@@ -2,10 +2,12 @@
 
 ## 1. Introduction
 In today's lab we will be spell checking large text files using Hash Tables and Balanced Binary Search Trees. This may sound like a lot of work, but luckily you don't actually have to implement the data structures you're going to be using this time. Instead, you will be utilizing the C++ implementations of four different types of containers, provided through the C++11 Standard Template Library (STL). Specfically we will use the following classes:
+
 + [`set`](http://en.cppreference.com/w/cpp/container/set)
 + [`unordered_set`](http://en.cppreference.com/w/cpp/container/unordered_set)
 + [`map`](http://en.cppreference.com/w/cpp/container/map), and 
 + [`unordered_map`](http://en.cppreference.com/w/cpp/container/unordered_map)
+
 The STL implements `set` and `map` as Red-Black Trees, and `unordered_set` and `unordered_map` as Hash Tables.
 
 ## 2. Hash Tables
