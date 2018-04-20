@@ -3,16 +3,16 @@
 ## 1. Introduction
 In today's lab we will be spell checking large text files using Hash Tables and Balanced Binary Search Trees. This may sound like a lot of work, but luckily you don't actually have to implement the data structures you're going to be using this time. Instead, you will be utilizing the C++ implementations of four different types of containers, provided through the C++11 Standard Template Library (STL). Specfically we will use the following classes:
 
-+ [`set`](http://en.cppreference.com/w/cpp/container/set)
 + [`unordered_set`](http://en.cppreference.com/w/cpp/container/unordered_set)
-+ [`map`](http://en.cppreference.com/w/cpp/container/map), and 
-+ [`unordered_map`](http://en.cppreference.com/w/cpp/container/unordered_map)
++ [`set`](http://en.cppreference.com/w/cpp/container/set)
++ [`unordered_map`](http://en.cppreference.com/w/cpp/container/unordered_map), and
++ [`map`](http://en.cppreference.com/w/cpp/container/map)
 
 The STL implements `set` and `map` as Red-Black Trees, and `unordered_set` and `unordered_map` as Hash Tables.
 
-## 2. Hash Tables
+## 2. Unordered Sets (a la Hash Tables)
 
-The first implementation we will look at is a [`unordered_set`](http://en.cppreference.com/w/cpp/container/unordered_set). They are called unordered sets for a reason. Think about a hash table, are the elements sorted in a specific order? Not really, you can't simply read the elements low to high for example. They are called a set, because in set theory (a branch of mathematics), a set is a collection of distinct object. Long story short, there can only ever be one of the same element. The linked reference below suggests that these are typically implemented using hash tables with separate chaining. There are a myriad of operations that you can perform on a set. Look at the site below on sets to familiarize yourself with the basic operations. [Unordered Sets (reference)](http://en.cppreference.com/w/cpp/container/unordered_set)
+The first implementation we will look at is an [`unordered_set`](http://en.cppreference.com/w/cpp/container/unordered_set), named as such for a good reason. Consider a hash table, are the elements sorted in a specific order? Not really, as you can't simply read the elements low to high for example. Additionally, the reason for being called a "set" comes directly from set theory, a branch of mathematics, in which a set is a collection of distinct object. In other words, each element that *could* be in the set is either in the set or not in the set, there is no "amount" associated with a given element. The linked reference below suggests that unordered sets are typically implemented using hash tables with separate chaining. There are a myriad of operations that you can perform on a set. Look at the site below on sets to familiarize yourself with the basic operations. [Unordered Sets (reference)](http://en.cppreference.com/w/cpp/container/unordered_set)
 
 Here is an example of creating a basic set:
 
@@ -53,10 +53,9 @@ and the dictionary will be copied to you directory.
 
 Your goal is to read all of the words in the 'american-english' dictionary to the unordered set, and then you will read each of the book, and output words that have spelling errors. The starter code will include the necessary code to open the files, and get the tokens.
 
-## 3. Sets
+## 3. Sets (a la Red-Black Trees)
 
-Sets are very similar to unordered sets, except that the data inside is arranged in a specfic order. The way the STL achieves this is through a Red Black Tree. If you look at the reference site for a set, you will note that most of the operations are similar to that of an unordered set.
-[Set (reference)](http://en.cppreference.com/w/cpp/container/set)
+Sets are very similar to unordered sets, except that the data inside is arranged in a specfic order (shocking, isn't it?). The way the STL achieves this is through a Red-Black Tree. If you look at the [reference site for a set](http://en.cppreference.com/w/cpp/container/set), you will note that most of the operations are similar to that of an unordered set. This goes to show that even though these two types of containers have so much in common in terms of functionality, their underlying data structures are actually very different.
 
 ### 3.1 Your Turn
 
@@ -68,7 +67,15 @@ Make sure you compile with C++11, as we are using the chrono library to time the
 g++ -g -Wall -std=c++11 main.cc -o hashtables
 ```
 
-## 4. Questions
+## 4. Unordered Maps
+
+
+
+## 5. Maps
+
+
+
+## 6. Questions
 
 The google form is linked [here](https://docs.google.com/forms/d/e/1FAIpQLSdCnVWK7FqA3pbFfQaxuawVdiGuEUW9E2dWSw7S3Oja9p921A/viewform?usp=sf_link).
 
