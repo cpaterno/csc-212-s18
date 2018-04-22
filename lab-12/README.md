@@ -53,6 +53,14 @@ and the dictionary will be copied to you directory.
 
 Your goal is to read all of the words in the 'american-english' dictionary to the unordered set, and then you will read each of the book, and output words that have spelling errors. The starter code will include the necessary code to open the files, and get the tokens.
 
+#### How to code it
+
+There are a couple steps required to go from file to individual words.
+First, you will need to open the file given by `filename`. To do this, you should use `ifstream`.
+Once you have the file open, you will be able to iterate through each line in the file using `getline`.
+Now that you are able to access each line in the file, you can split the line into words using `istringstream`.
+You will now have each word as a string, and you will need write the word to the stdout if the word is not in `dict`
+
 ## 3. Sets (a la Red-Black Trees)
 
 Sets are very similar to unordered sets, except that the data inside is arranged in a specfic order (shocking, isn't it?). The way the STL achieves this is through a Red-Black Tree. If you look at the [reference site for a set](http://en.cppreference.com/w/cpp/container/set), you will note that most of the operations are similar to that of an unordered set. This goes to show that even though these two types of containers have so much in common in terms of functionality, their underlying data structures are actually very different.
