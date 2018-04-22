@@ -70,7 +70,7 @@ Read from the file or write to it.
 Close the file.
 
 Here is an example of using ifstream
-````c++
+```C++
 #include <fstream>
   int main(){
      ifstream table;                            // 1. Create instance
