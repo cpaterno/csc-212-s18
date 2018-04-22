@@ -101,6 +101,7 @@ Close the file.
 
 Here is an example of using ifstream
 ```C++
+#include <iostream>
 #include <fstream>
   int main(){
      ifstream table;                            // 1. Create instance
