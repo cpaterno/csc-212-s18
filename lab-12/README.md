@@ -56,10 +56,40 @@ Your goal is to read all of the words in the 'american-english' dictionary to th
 #### How to code it
 
 There are a couple steps required to go from file to individual words.
+
 First, you will need to open the file given by `filename`. To do this, you should use `ifstream`.
+
 Once you have the file open, you will be able to iterate through each line in the file using `getline`.
+
 Now that you are able to access each line in the file, you can split the line into words using `istringstream`.
+
 You will now have each word as a string, and you will need write the word to the stdout if the word is not in `dict`
+
+### Writing to file instead of stdout
+
+If there are a lot of words to output, or you want to save the output, writing to a file will make the program better.
+
+There are 3 steps to writing to a file:
+	1. Open the file
+	2. Write to the file
+	3. Close the file.
+Here is a basic example of what that looks like using `ofstream`
+
+```C++
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main () {
+  ofstream myfile;
+  myfile.open ("example.txt");
+  myfile << "Writing this to a file.\n";
+  myfile.close();
+  return 0;
+}
+```
+Using ofstream, make your program write the misspelled words to a file.
+
 
 #### More on reading files
 Here are the steps required for handling a file for either input or output:
