@@ -61,6 +61,31 @@ Once you have the file open, you will be able to iterate through each line in th
 Now that you are able to access each line in the file, you can split the line into words using `istringstream`.
 You will now have each word as a string, and you will need write the word to the stdout if the word is not in `dict`
 
+#### More on reading files
+Here are the steps required for handling a file for either input or output:
+
+Create an instance of ifstream or ofstream.
+Open the file. (Check for failure to open.)
+Read from the file or write to it.
+Close the file.
+
+Here is an example of using ifstream
+````c++
+#include <fstream>
+  int main(){
+     ifstream table;                            // 1. Create instance
+     float a[10];
+     table.open("tabledata");                   // 2. Open the file
+     if(table.fail()){                           //    Check open
+       cerr << "Can't open tabledata\n";
+       return 1;
+     }
+     for(int i = 0; i < 10; i++)table >> a[i];  // 3. Read data
+     table.close();                             // 4. Close the file
+     ...
+  }
+```
+
 ## 3. Sets (a la Red-Black Trees)
 
 Sets are very similar to unordered sets, except that the data inside is arranged in a specfic order (shocking, isn't it?). The way the STL achieves this is through a Red-Black Tree. If you look at the [reference site for a set](http://en.cppreference.com/w/cpp/container/set), you will note that most of the operations are similar to that of an unordered set. This goes to show that even though these two types of containers have so much in common in terms of functionality, their underlying data structures are actually very different.
