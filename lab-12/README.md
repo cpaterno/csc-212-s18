@@ -22,7 +22,7 @@ Here is an example of creating a basic set:
 
 int main()
 {
-	std::unordered_set<std::string> myset; // creating a set of strings
+    std::unordered_set<std::string> myset; // creating a set of strings
 	
 	myset.insert("cat");
 	myset.insert("dog");
@@ -51,7 +51,7 @@ $ cp /usr/share/dict/american-english .
 
 and the dictionary will be copied to you directory. 
 
-Your goal is to read all of the words in the 'american-english' dictionary to the unordered set, and then you will read each of the book, and output words that have spelling errors. The starter code will include the necessary code to open the files, and get the tokens.
+Your goal is to read all of the words in the 'american-english' dictionary to the unordered set, and then you will read each word of each of the books, and output words that have spelling errors. The starter code will include the necessary code to open the files, and get the tokens.
 
 #### How to code it
 
@@ -68,26 +68,35 @@ You will now have each word as a string, and you will need write the word to the
 ### Writing to file instead of stdout
 
 If there are a lot of words to output, or you want to save the output, writing to a file will make the program better.
+In this particular program, we want two different types of output: the status of the running program, and all of the words that are not contained in the English dictionary. For both debugging purposes and to achieve a cleaner output, we can output all of the misspelled words to an output file using the `<fstream>` library, and print the program status to stdout.
 
 There are 3 steps to writing to a file:
 	1. Open the file
-	2. Write to the file
-	3. Close the file.
-Here is a basic example of what that looks like using `ofstream`
+	2. Write to the file using the `<<` operator
+	3. Close the file
+Here is a basic example of what that looks like using `ofstream`:
 
 ```C++
 #include <iostream>
 #include <fstream>
-using namespace std;
 
 int main () {
-  ofstream myfile;
-  myfile.open ("example.txt");
-  myfile << "Writing this to a file.\n";
-  myfile.close();
-  return 0;
+    std::ofstream myfile;
+    myfile.open ("example.txt");
+    /* Here, the text is being INSERTED into the filestream
+     * using <<, the INSERTION operator
+     */
+    myfile << "Writing this to a file.\n";
+    myfile.close();
+    return 0;
 }
 ```
+The only problem with the above example is that if you want to write to the file `example.txt` multiple times, (i.e., after closing and reopening), you will end up overwriting the file each time you open it and write to it. To avoid this, open your output file as follows:
+```C++
+myfile.open("example.txt", std::ofstream::ate);
+```
+In this new statement, `ate` is an acronym which stands for `at the end`, meaning that writing to this file will *append* to the end of the file instead of *overwriting* it.
+
 Using ofstream, make your program write the misspelled words to a file.
 
 
@@ -103,18 +112,18 @@ Here is an example of using ifstream
 ```C++
 #include <iostream>
 #include <fstream>
-  int main(){
-     ifstream table;                            // 1. Create instance
-     float a[10];
-     table.open("tabledata");                   // 2. Open the file
-     if(table.fail()){                           //    Check open
-       cerr << "Can't open tabledata\n";
-       return 1;
-     }
-     for(int i = 0; i < 10; i++)table >> a[i];  // 3. Read data
-     table.close();                             // 4. Close the file
-     ...
-  }
+    int main(){
+        ifstream table;                             // 1. Create instance
+        float a[10];
+        table.open("tabledata");                    // 2. Open the file
+        if(table.fail()){                           //    Check open
+            cerr << "Can't open tabledata\n";
+            return 1;
+        }
+    for (int i = 0; i < 10; i++) table >> a[i];     // 3. Read data using >>, the EXTRACTION operator
+    table.close();                                  // 4. Close the file
+    // ...
+}
 ```
 
 ## 3. Sets (a la Red-Black Trees)
