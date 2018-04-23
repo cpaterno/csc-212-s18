@@ -50,7 +50,7 @@ $ cp /usr/share/dict/american-english .
 
 and the dictionary will be copied to you directory. 
 
-Your goal is to read all of the words in the 'american-english' dictionary to the unordered set, and then you will read each word of each of the books, and output words that have spelling errors. The starter code will include the necessary code to open the files, and get the tokens.
+Your goal is to read all of the words in the 'american-english' dictionary to the unordered set, and then you will read each word of each of the books, and output words that have spelling errors. The starter code will include the necessary code to open the files, and get the tokens. Be sure to use the string helper functions to sanitize each word before looking it up in the English dictionary set.
 
 #### How to code it
 
@@ -139,6 +139,8 @@ Make sure you compile with C++11, as we are using the chrono library to time the
 g++ -g -Wall -std=c++11 main.cc -o hashtables
 ```
 
+When you have completed this section, answer the questions on sets in section 5.
+
 ## 4. Maps & Unordered Maps
 
 Maps and unordered maps are similar to sets and unordered sets respectively, in that each contains a number of unique elements that are either in order and slower to access, or unordered and quicker to access. The *key* difference between sets and maps in general is that sets store elements all by themselves, whereas maps store *key-value pairs*. A key-value pair is a pair of two elements where the first element, the key, is used to index the map, and the second element, the value, is what is stored/returned. If you have ever written a Python program using dictionaries, then you've actually already used unordered maps before!
@@ -170,15 +172,23 @@ In the field of cryptography and code breaking, it is sometimes helpful to know 
 ```C++
 std::cout << "The letter " << let << " appears " << amt << " time(s), which is " percent "% of all the letters." << std::endl;
 ```
-After successfully implementing the first letter frequency counter, answer the following questions:
+You should make your modifications in either of the spell check methods, or in a separate method if you wish. Be sure to print each percent as a `double` to ensure more accurate results.
 
-* Did you choose to use a `map` or an `unordered_map`? Why?
-* Would you have chosen differently if you were counting the number of words that started with two- or three-letter clusters? Briefly explain your reasoning.
+After successfully implementing the first letter frequency counter, answer the related questions in section 5:
 
 ## 5. Questions
 
 The google form is linked [here](https://docs.google.com/forms/d/e/1FAIpQLSdCnVWK7FqA3pbFfQaxuawVdiGuEUW9E2dWSw7S3Oja9p921A/viewform?usp=sf_link).
 
+**Set questions:**
+
 * What is the time needed to run the spell checker across the three books using an unordered set?
 * What is the time needed to run the spell checker across the three books using a set?
 * Which one is faster, can you think of some reason why?
+
+**Map questions:**
+
+* Did you choose to use a `map` or an `unordered_map`? Why?
+* How did the starting letter percents of each word compare between the three books?
+* Which starting letter was most common for each of the three books?
+* Would you have chosen differently if you were counting the number of words that started with two- or three-letter clusters? Briefly explain your reasoning.
