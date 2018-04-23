@@ -7,6 +7,25 @@
 #include <set>
 #include <sstream>
 
+/* String-handling Helper Functions */
+void removePunctuation(std::string* s) {
+	int i = 0;
+	while (i < s->length()) {
+	    if (((*s)[i] >= 'A' && (*s)[i] <= 'Z') || ((*s)[i] >= 'a' && (*s)[i] <= 'z') || ((*s)[i] >= '0' && (*s)[i] <= '9')) {
+			i++;
+		} else {
+			s->erase(i, 1);
+		}
+	}
+}
+void toLower(std::string* s) {
+	for (int i = 0; i < s->length(); i++) {
+		if ((*s)[i] >= 'A' && (*s)[i] <= 'Z') {
+			(*s)[i] += 'a' - 'A';
+		}
+	}
+}
+
 void spellCheckHashTable(const std::string& filename, const std::unordered_set<std::string>& dict) {
 	std::cout << "Processing " << filename << " with a hash table ... ";
 	// TODO: open the file given by `filename` -- use `ifstream`
