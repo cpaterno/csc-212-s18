@@ -20,8 +20,7 @@ Here is an example of creating a basic set:
 #include <unordered_set>
 #include <string>
 
-int main()
-{
+int main() {
     std::unordered_set<std::string> myset; // creating a set of strings
 	
 	myset.insert("cat");
@@ -108,18 +107,18 @@ Open the file. (Check for failure to open.)
 Read from the file or write to it.
 Close the file.
 
-Here is an example of using ifstream
+Here is an example of using ifstream:
 ```C++
 #include <iostream>
 #include <fstream>
-    int main(){
-        ifstream table;                             // 1. Create instance
-        float a[10];
-        table.open("tabledata");                    // 2. Open the file
-        if(table.fail()){                           //    Check open
-            cerr << "Can't open tabledata\n";
-            return 1;
-        }
+int main() {
+    ifstream table;                             // 1. Create instance
+    float a[10];
+    table.open("tabledata");                    // 2. Open the file
+    if(table.fail()){                           //    Check open
+        cerr << "Can't open tabledata\n";
+        return 1;
+    }
     for (int i = 0; i < 10; i++) table >> a[i];     // 3. Read data using >>, the EXTRACTION operator
     table.close();                                  // 4. Close the file
     // ...
@@ -140,15 +139,43 @@ Make sure you compile with C++11, as we are using the chrono library to time the
 g++ -g -Wall -std=c++11 main.cc -o hashtables
 ```
 
-## 4. Unordered Maps
+## 4. Maps & Unordered Maps
 
+Maps and unordered maps are similar to sets and unordered sets respectively, in that each contains a number of unique elements that are either in order and slower to access, or unordered and quicker to access. The *key* difference between sets and maps in general is that sets store elements all by themselves, whereas maps store *key-value pairs*. A key-value pair is a pair of two elements where the first element, the key, is used to index the map, and the second element, the value, is what is stored/returned. If you have ever written a Python program using dictionaries, then you've actually already used unordered maps before!
 
+Here is an example of maps in action:
+```C++
+#include <iostream>
+#include <unordered_map>
 
-## 5. Maps
+int main() {
+    std::unordered_map<std::string, int> mymap;
 
+    mymap["dog"] = 7;
+    mymap.emplace("cat", 4); // This is the same as mymap["cat"] = 4
+    mymap.insert({{"fish", 11}}); // This is the same as mymap["fish"] = 11
+    mymap["cat"]++;
 
+    std::cout << mymap["dog"] << std::endl; // Prints 7
+    std::cout << mymap["cat"] << std::endl; // Prints 5
+    std::cout << mymap["fish"] << std::endl; // Prints 11
 
-## 6. Questions
+}
+```
+Note that when you use `emplace` or `insert` with a key that is *already in the map*, the value will **not** be replaced.
+
+### 4.1 Your Turn
+
+In the field of cryptography and code breaking, it is sometimes helpful to know how often a word will start with a given letter. Simply looking at the first letter of each word in the dictionary is insufficient, as the distribution of words is completely even, however a book provides a much more realistic representation of how often a word will start with a given letter. Thus, your goal for this part of the lab is to modify your program using *either* a `map` *or* and `unordered_map`, (without deleting any code), to determine how many words in each of the three books start with each letter, along with what percent of words started with that letter. Your print statement may be something similar to the following:
+```C++
+std::cout << "The letter " << let << " appears " << amt << " time(s), which is " percent "% of all the letters." << std::endl;
+```
+After successfully implementing the first letter frequency counter, answer the following questions:
+
+* Did you choose to use a `map` or an `unordered_map`? Why?
+* Would you have chosen differently if you were counting the number of words that started with two- or three-letter clusters? Briefly explain your reasoning.
+
+## 5. Questions
 
 The google form is linked [here](https://docs.google.com/forms/d/e/1FAIpQLSdCnVWK7FqA3pbFfQaxuawVdiGuEUW9E2dWSw7S3Oja9p921A/viewform?usp=sf_link).
 
