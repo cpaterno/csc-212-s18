@@ -191,6 +191,6 @@ The google form is linked [here](https://docs.google.com/forms/d/e/1FAIpQLSdCnVW
 **Map questions:**
 
 * Did you choose to use a `map` or an `unordered_map`? Why?
-* How did the starting letter percents of each word compare between the three books?
+* How did the starting letter percents of each word compare between the three books? Why might this be?
 * Which starting letter was most common for each of the three books?
 * Would you have chosen differently if you were counting the number of words that started with two- or three-letter clusters? Briefly explain your reasoning.
