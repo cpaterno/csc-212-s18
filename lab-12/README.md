@@ -172,6 +172,8 @@ In the field of cryptography and code breaking, it is sometimes helpful to know 
 ```C++
 std::cout << "The letter " << let << " appears " << amt << " time(s), which is " percent "% of all the letters." << std::endl;
 ```
+Where `let`, `amt` and `percent` represent the actual letter, the amount of words that start with that letter, and the percent of words that start with that letter respectively.
+
 You should make your modifications in either of the spell check methods, or in a separate method if you wish. Be sure to print each percent as a `double` to ensure more accurate results.
 
 After successfully implementing the first letter frequency counter, answer the related questions in section 5:
