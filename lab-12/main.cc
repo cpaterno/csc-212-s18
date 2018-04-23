@@ -5,6 +5,8 @@
 #include <ctime>
 #include <unordered_set>
 #include <set>
+#include <unordered_map>
+#include <map>
 #include <sstream>
 
 /* String-handling Helper Functions */
