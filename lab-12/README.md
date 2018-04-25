@@ -40,7 +40,7 @@ Congrats you just made a Hash Table!
 <p><img src="http://www.staples-3p.com/s7/is/image/Staples/s0105150_sc7?$splssku$" width="144"></p>
 
 ### 2.1 Your Turn
-Your job is to write a program to determine if the words of the three books that we used in [lab 9](https://github.com/URI-CSC/csc-212-f17/tree/master/lab-09) are in a dictonary. The script used to download the books has been included in this repository once again, and the command is once again:
+Your job is to write a program to determine if the words of the three books that we used in [lab 11](https://github.com/URI-CSC/csc-212-f17/tree/master/lab-11) are in a dictonary. The script used to download the books has been included in this repository once again, and the command is once again:
 
 ```bash
 $ source getbooks.sh
