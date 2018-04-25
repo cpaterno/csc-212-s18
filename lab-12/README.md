@@ -1,6 +1,10 @@
 # Lab 12: #hashtable spel checkinng
 
 ## 1. Introduction
+
+The google form is linked [here](https://goo.gl/forms/7P71IqVsU6T7khUU2).
+
+
 In today's lab we will be spell checking large text files using Hash Tables and Balanced Binary Search Trees. This may sound like a lot of work, but luckily you don't actually have to implement the data structures you're going to be using this time. Instead, you will be utilizing the C++ implementations of four different types of containers, provided through the C++11 Standard Template Library (STL). Specfically we will use the following classes:
 
 + [`unordered_set`](http://en.cppreference.com/w/cpp/container/unordered_set)
@@ -180,7 +184,7 @@ After successfully implementing the first letter frequency counter, answer the r
 
 ## 5. Questions
 
-The google form is linked [here](https://docs.google.com/forms/d/e/1FAIpQLSdCnVWK7FqA3pbFfQaxuawVdiGuEUW9E2dWSw7S3Oja9p921A/viewform?usp=sf_link).
+The google form is linked [here](https://goo.gl/forms/7P71IqVsU6T7khUU2).
 
 **Set questions:**
 
